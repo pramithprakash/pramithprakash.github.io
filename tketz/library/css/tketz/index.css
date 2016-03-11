@@ -167,7 +167,7 @@ section.login-section .register-link {
 .login-form input[type=password] {
   margin-bottom: 34px;
 }
-.login-form input[type=submit] {
+.login-form input[type=button] {
   background: #d61720;
   border: 1px solid #d61720;
   color: #ffffff;
