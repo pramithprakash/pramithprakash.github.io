@@ -1,0 +1,114 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td {
+  margin: 0;
+  padding: 0;
+  .borderbox();
+  font-family: 'Roboto', sans-serif;
+}
+a,a:hover,a:visited,a:active { 
+ outline: 0;
+ text-decoration: none;
+}
+.clear {
+  clear: both;
+}
+.hide {
+  display: none;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+html,body{
+  min-height: 100%;
+  height: 100%;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+}
+header{
+  width: 270px;
+  height: 100%;
+  background: @siteColor;
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  @trans: width 0.5s @easeInOutQuad;
+  .transition(@trans);
+  &.expanded{
+    width: 100%;
+  }
+  a{
+   background: url(@logo) no-repeat 0 0;
+   width: 134px;
+   height: 57px;
+   display: block;
+   text-indent: -9999px;
+   margin: 0 auto;
+   top: calc( 50% - 28px );
+   position: relative;
+ }
+}
+section{
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: calc( 100% - 270px );
+  background: @white;
+  z-index: 0;
+  &.login-section .register-link{
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    color: @siteColor;
+    font-size: 1em;
+    line-height: 1em;
+  }
+}
+.login-form{
+  width: 366px;
+  margin: auto 0 ;
+  text-align: center;
+  .center-center();
+  h2{
+    .fonts( 20 );
+    line-height: 20px;
+    padding: 0 0 44px;
+    color: @black;
+    text-transform: uppercase;
+  }
+  input{
+    .placeholder-color( #757575, center );
+    width: 366px;
+    height: 49px;
+    line-height: 49px;
+    .fonts( 16 );
+    .border-radius( 5px );
+    .borderbox();
+    &[type=text],&[type=password]{
+      background: #f7f7f7;
+      border: 1px solid #d9d9d9;
+      color: #757575;
+      margin-bottom: 24px;
+    }
+    &[type=password]{
+      margin-bottom: 34px;
+    }
+    &[type=submit]{
+      background: #d61720;
+      border: 1px solid #d61720;
+      color: #ffffff;
+      margin-bottom: 130px;
+    }
+    .forgot-link{
+      color: #505050;
+    }
+  }
+}
