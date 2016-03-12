@@ -3,6 +3,7 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input
   padding: 0;
   .borderbox();
   font-family: 'Roboto', sans-serif;
+  outline: none;
 }
 a,a:hover,a:visited,a:active { 
  outline: 0;
@@ -57,6 +58,30 @@ html,body{
         .scale( 1, 1 );
     }
 }
+@keyframes menuAnimTop {
+    from {
+        top: 0;
+    }
+    to {
+        top:-6px;
+    }
+}
+@keyframes menuAnimBottom {
+    from {
+        top: 0;
+    }
+    to {
+        top:6px;
+    }
+}
+@keyframes menuAnimLeft {
+    from {
+        left: -40px;
+    }
+    to {
+        left:40px;
+    }
+}
 header{
   width: 270px;
   height: 100%;
@@ -70,6 +95,33 @@ header{
   .transition(@transHeader);
   &.expanded{
     width: 100%;
+    button{
+      -webkit-animation: iconAnim .4s forwards linear;
+      -moz-animation: iconAnim .4s forwards linear;
+      animation: iconAnim .4s forwards linear;
+      -webkit-animation: menuAnimLeft .4s forwards linear;
+      -moz-animation: menuAnimLeft .4s forwards linear;
+      animation: menuAnimLeft .4s forwards linear;
+      -webkit-animation-delay: 1.7s;
+      -moz-animation-delay: 1.7s;
+      animation-delay: 1.7s;
+      .lines:before{
+        -webkit-animation: menuAnimTop .4s forwards linear;
+        -moz-animation: menuAnimTop .4s forwards linear;
+        animation: menuAnimTop .4s forwards linear;
+        -webkit-animation-delay: 2.3s;
+        -moz-animation-delay: 2.3s;
+        animation-delay: 2.3s;
+      }
+      .lines:after{
+        -webkit-animation: menuAnimBottom .4s forwards linear;
+        -moz-animation: menuAnimBottom .4s forwards linear;
+        animation: menuAnimBottom .4s forwards linear;
+        -webkit-animation-delay: 2.2s;
+        -moz-animation-delay: 2.2s;
+        animation-delay: 2.2s;
+      }
+    }
     a.logo{
       -webkit-animation: logoTopAnim .4s forwards linear;
       -moz-animation: logoTopAnim .4s forwards linear;
@@ -226,6 +278,47 @@ header{
         background-image: url( @payment );
         background-position: center bottom;
       }    
+    }
+  }
+  button{
+    @transMenu: left 0.5s @easeInOutQuad;
+    .transition(@transMenu);
+    display: inline-block;
+    position: absolute;
+    top: 40px;
+    left:-40px;
+    border: none;
+    background: none;
+    .lines {
+      display: inline-block;
+      width: 27px;
+      height: 3px;
+      background: #ffffff;
+      transition: 0.3s;
+      position: relative;
+      transition: background 0.3s 0.5s ease;
+      &:before {
+          top: 0;
+      }
+      &:after {
+          top: 0;
+      }
+      &:after,&:before{
+        display: inline-block;
+        width: 27px;
+        height: 3px;
+        background: #ffffff;
+        transition: 0.3s;
+        position: absolute;
+        left: 0;
+        content: '';
+        -webkit-transform-origin: 0.28571rem center;
+        transform-origin: 0.28571rem center;
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        transition: top 0.3s 0.6s ease,-webkit-transform 0.3s ease;
+        transition: top 0.3s 0.6s ease,transform 0.3s ease;
+      }
     }
   }
 }
