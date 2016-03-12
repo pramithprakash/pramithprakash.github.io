@@ -1,9 +1,8 @@
 section{
-  position: absolute;
+  position: relative;
   width: calc( 100% - 270px );
   height: 100%;
-  right: 0;
-  top: 0;
+  float: right;
   &.login-section .register-link{
     display: block;
     position: absolute;
@@ -17,7 +16,7 @@ section{
 header{
   width: 270px;
   height: 100%;
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   &.expanded{
