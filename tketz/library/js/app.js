@@ -10,3 +10,11 @@ $('[role="menu-close"]').on('click',function(){
     $('body').removeClass('open');
   },500);  
 });
+
+$('.logout').on('click',function(){
+  $('.menu-offcanvas').removeClass('open');
+  setTimeout(function(){
+    $('body').removeClass('open');
+  $('header').removeClass('expanded');
+  },500); 
+});

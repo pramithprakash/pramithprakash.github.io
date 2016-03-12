@@ -1,0 +1,148 @@
+section{
+  position: absolute;
+  width: calc( 100% - 270px );
+  height: 100%;
+  right: 0;
+  top: 0;
+  &.login-section .register-link{
+    display: block;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    color: @siteColor;
+    font-size: 1em;
+    line-height: 1em;
+  }
+}
+header{
+  width: 270px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  &.expanded{
+    width: 100%;
+    button{
+      -webkit-animation: iconAnim .4s forwards linear;
+      -moz-animation: iconAnim .4s forwards linear;
+      animation: iconAnim .4s forwards linear;
+      -webkit-animation: menuAnimLeft .4s forwards linear;
+      -moz-animation: menuAnimLeft .4s forwards linear;
+      animation: menuAnimLeft .4s forwards linear;
+      -webkit-animation-delay: 1.7s;
+      -moz-animation-delay: 1.7s;
+      animation-delay: 1.7s;
+      .lines:before{
+        -webkit-animation: menuAnimTop .4s forwards linear;
+        -moz-animation: menuAnimTop .4s forwards linear;
+        animation: menuAnimTop .4s forwards linear;
+        -webkit-animation-delay: 2.3s;
+        -moz-animation-delay: 2.3s;
+        animation-delay: 2.3s;
+      }
+      .lines:after{
+        -webkit-animation: menuAnimBottom .4s forwards linear;
+        -moz-animation: menuAnimBottom .4s forwards linear;
+        animation: menuAnimBottom .4s forwards linear;
+        -webkit-animation-delay: 2.2s;
+        -moz-animation-delay: 2.2s;
+        animation-delay: 2.2s;
+      }
+    }
+    a.logo{
+      -webkit-animation: logoTopAnim .4s forwards linear;
+      -moz-animation: logoTopAnim .4s forwards linear;
+      animation: logoTopAnim .4s forwards linear;
+      -webkit-animation-delay: .4s;
+      -moz-animation-delay: .4s;
+      animation-delay: .4s;
+    }
+    .icons{
+      display: block;  
+      a{
+        span{
+          -webkit-animation: iconAnim .4s forwards linear;
+          -moz-animation: iconAnim .4s forwards linear;
+          animation: iconAnim .4s forwards linear;
+          -webkit-animation-delay: 1.7s;
+          -moz-animation-delay: 1.7s;
+          animation-delay: 1.7s;
+        }
+        &.recharge:before{
+          opacity: 0;
+          webkit-animation: iconBeforeAnim 1s forwards linear;
+          -moz-animation: iconBeforeAnim 1s forwards linear;
+          animation: iconBeforeAnim .4s forwards linear;
+          -webkit-animation-delay: 1s;
+          -moz-animation-delay: 1s;
+          animation-delay: 1s;
+        }
+        &.dth:before{
+          opacity: 0;
+          webkit-animation: iconBeforeAnim .4s forwards linear;
+          -moz-animation: iconBeforeAnim .4s forwards linear;
+          animation: iconBeforeAnim .4s forwards linear;
+          -webkit-animation-delay: 1.1s;
+          -moz-animation-delay: 1.1s;
+          animation-delay: 1.1s;
+        }
+        &.bus:before{
+          opacity: 0;
+          webkit-animation: iconBeforeAnim .4s forwards linear;
+          -moz-animation: iconBeforeAnim .4s forwards linear;
+          animation: iconBeforeAnim .4s forwards linear;
+          -webkit-animation-delay: 1.2s;
+          -moz-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+        }
+        &.flight:before{
+          opacity: 0;
+          webkit-animation: iconBeforeAnim .4s forwards linear;
+          -moz-animation: iconBeforeAnim .4s forwards linear;
+          animation: iconBeforeAnim .4s forwards linear;
+          -webkit-animation-delay: 1.3s;
+          -moz-animation-delay: 1.3s;
+          animation-delay: 1.3s;
+        }
+        &.packages:before{
+          opacity: 0;
+          webkit-animation: iconBeforeAnim .4s forwards linear;
+          -moz-animation: iconBeforeAnim .4s forwards linear;
+          animation: iconBeforeAnim .4s forwards linear;
+          -webkit-animation-delay: 1.4s;
+          -moz-animation-delay: 1.4s;
+          animation-delay: 1.4s;
+        }
+        &.transfer:before{
+          opacity: 0;
+          webkit-animation: iconBeforeAnim .4s forwards linear;
+          -moz-animation: iconBeforeAnim .4s forwards linear;
+          animation: iconBeforeAnim .4s forwards linear;
+          -webkit-animation-delay: 1.5s;
+          -moz-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+        }  
+        &.payment:before{
+          opacity: 0;
+          webkit-animation: iconBeforeAnim .4s forwards linear;
+          -moz-animation: iconBeforeAnim .4s forwards linear;
+          animation: iconBeforeAnim .4s forwards linear;
+          -webkit-animation-delay: 1.6s;
+          -moz-animation-delay: 1.6s;
+          animation-delay: 1.6s;
+        }  
+      }     
+    }
+  }
+}
+.login-form{
+  margin-top: 0;
+  width: 366px;
+  .center-center();
+  input{
+    width: 366px;
+  }
+}
+.show-s{
+  display: none;
+}
