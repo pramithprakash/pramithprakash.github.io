@@ -1,0 +1,31 @@
+Options +Includes +Indexes +FollowSymLinks
+AddType image/svg+xml svg
+AddType 'text/html; charset=UTF-8' html
+AddHandler server-parsed .html .js # The ".js" is used only for local dev env parsing of SSIs in javascript files
+DirectoryIndex index.shtml index.html index.htm index.php
+
+# SSIETag off
+FileETag none
+
+
+
+# Make sure IE renders in standards mode
+Header set X-UA-Compatible "IE=edge"
+
+# Enable expirations
+ExpiresActive On
+ExpiresDefault "access plus 1 month"
+
+# Enable keep alive
+<IfModule mod_headers.c>
+  Header set Connection keep-alive
+</IfModule>
+
+
+# MAINTENANCE-PAGE REDIRECT
+#<IfModule mod_rewrite.c>
+# RewriteEngine on
+# RewriteCond %{REQUEST_URI} !/maintenance.html$ [NC]
+# RewriteCond %{REQUEST_URI} !\.(jpe?g?|png|gif|css) [NC]
+# RewriteRule .* /maintenance.html [R=302,L]
+#</IfModule>
