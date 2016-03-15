@@ -210,8 +210,8 @@ header{
   }
   @transMenuLeft: left 0.5s @easeInOutQuad;
   .transition(@transMenuLeft);
-  width: 302px;
-  left: -302px;
+  width: 100%;
+  left: -100%;
   position: fixed;
   top: 0;
   height: 100%;
@@ -220,6 +220,7 @@ header{
   overflow-y: auto;
   .user-section{
     height: 137px;
+    overflow: hidden;
     position: relative;
     .close{
       position: absolute;
@@ -281,6 +282,7 @@ header{
       top: 0;
       left: 0;
       z-index: 0;
+      width: 100%;
     }
   }
   .menu-list{
@@ -388,7 +390,7 @@ section{
       background: #d61720;
       border: 1px solid #d61720;
       color: #ffffff;
-      margin-bottom: 130px;
+      margin-bottom: 44px;
     }
     .forgot-link{
       color: #505050;
@@ -408,4 +410,45 @@ section{
 }
 body.open .grayed-bg{
   display: block;
+}
+//recharge packages
+header.slim-header{
+  height: 68px;
+  width: 100%;
+  .logo.home-icon{
+    width: 29px;
+    height: 25px;
+    position: absolute;
+    top: 22px;
+    right: 40px;
+    background-image: url( @home );
+  }
+  button{
+    top: 27px;
+    -webkit-animation: iconAnim .4s forwards linear;
+    -moz-animation: iconAnim .4s forwards linear;
+    animation: iconAnim .4s forwards linear;
+    -webkit-animation: menuAnimLeft .4s forwards linear;
+    -moz-animation: menuAnimLeft .4s forwards linear;
+    animation: menuAnimLeft .4s forwards linear;
+    -webkit-animation-delay: .7s;
+    -moz-animation-delay: .7s;
+    animation-delay: .7s;
+    .lines:before{
+      -webkit-animation: menuAnimTop .4s forwards linear;
+      -moz-animation: menuAnimTop .4s forwards linear;
+      animation: menuAnimTop .4s forwards linear;
+      -webkit-animation-delay: 1.3s;
+      -moz-animation-delay: 1.3s;
+      animation-delay: 1.3s;
+    }
+    .lines:after{
+      -webkit-animation: menuAnimBottom .4s forwards linear;
+      -moz-animation: menuAnimBottom .4s forwards linear;
+      animation: menuAnimBottom .4s forwards linear;
+      -webkit-animation-delay: 1.2s;
+      -moz-animation-delay: 1.2s;
+      animation-delay: 1.2s;
+    }
+  }
 }
