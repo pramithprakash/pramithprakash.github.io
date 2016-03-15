@@ -59,13 +59,39 @@
     <section class="recharge-section">
         <div class="recharge-form">
             <form>
-                
+                <div class="row radio">
+                    <div class="col l">
+                        <input id="prepaid" type="radio" checked name="rechargeType" />
+                        <label for="prepaid">Prepaid</label>
+                    </div>
+                    <div class="col r">
+                        <input id="postpaid" type="radio" name="rechargeType" />
+                        <label for="postpaid">Postpaid</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <input type="text" name="mobileNumber" class="style-text" placeholder="Enter prepaid mobile number" />
+                </div>
+                <div class="row">
+                    <input type="text" name="operator" class="style-text" placeholder="Operator / Circle" />
+                </div>
+                <div class="row amount-plan">
+                    <div class="col l">
+                        <input type="text" name="amount" class="amount" placeholder="Amount" />
+                    </div>
+                    <div class="col r">
+                        <input type="text" name="plans" placeholder="Plans" />
+                    </div>
+                </div>
+                <div class="row">
+                    <input type="button" value="recharge" />
+                </div>
             </form>
         </div>
     </section>
 
 <div class="grayed-bg"></div>
 </body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-<script src="library/js/app.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="library/js/app.js"></script> -->
 </html>

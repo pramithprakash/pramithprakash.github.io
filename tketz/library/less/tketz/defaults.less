@@ -31,7 +31,9 @@ html,body{
   font-size: 16px;
   font-family: 'Roboto', sans-serif;
 }
+html.minheight{
 
+}
 @keyframes logoTopAnim {
     from {
         top: calc( 50% - 28px );
@@ -350,6 +352,99 @@ section{
   margin: 0 auto;
   background: @white;
   z-index: 0;
+  &.recharge-section{
+    margin: 0 auto;
+    padding-top: 50px;
+    text-align: center;
+    color: #757575;
+    .fonts( 16 );
+    .row{
+      .clearfix();
+      padding: 0 0 36px;
+      &.radio{
+        padding: 0 0 40px;
+        input[type=radio ]:not(old) {
+          width: 28px;
+          margin: 0;
+          padding: 0;
+          opacity: 0;
+        }
+        input[type=radio ]:not(old) + label {
+          display: inline-block;
+          margin-left: -37px;
+          padding-left: 37px;
+          background: url(@radio) no-repeat 0 center;
+          line-height: 27px;
+        }
+        input[type=radio]:not(old):checked + label{
+          background: url(@radio-sel) no-repeat 0 center;
+        }
+      }
+      input{
+        color: #757575;
+        .fonts( 16 );
+        border: 0;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        .placeholder-color( #757575, center );
+      }
+      input[type=button]{
+        width: 63px;
+        height: 63px;
+        cursor: pointer;
+        text-indent: -99999px;
+        background: #d61720 url( @tick-l ) no-repeat center center;
+        .border-radius( 100% );
+      }
+      input.style-text{
+        height: 44px;
+        line-height: 44px;
+        margin: 0;
+        width: 100%;
+        
+        border-bottom: 1px solid #d61720;
+      }
+      .col{
+        width: calc( 50% - 10px );
+      }
+      &.amount-plan{
+        padding: 10px 0 64px;
+        .col{
+          width: calc( 50% - 10px );
+        }
+        input{
+          height: 47px;
+          line-height: 47px;
+          text-align: left;
+          padding: 0 21px;
+          width: 100%;
+          .placeholder-color( #757575, left );
+          .borderbox();
+          background-color: #e5e5e5;
+          &.amount{
+            padding-right: 50px;
+            background: #e5e5e5 url( @rupee ) no-repeat calc(100% - 21px) 14px; 
+          }
+        }
+      }
+      .col.l{
+        float: left;
+      }
+      .col.r{
+        float: right;
+      }
+    }
+// radio-22px
+// sel-27px
+// 
+// 
+// rup- 16-22
+// 63
+// 
+
+
+
+  }
   &.login-section {
     .register-link{
       display: none;

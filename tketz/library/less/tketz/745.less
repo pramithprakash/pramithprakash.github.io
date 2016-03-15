@@ -1,16 +1,32 @@
 section{
   position: relative;
-  width: calc( 100% - 270px );
-  height: 100%;
-  float: right;
-  &.login-section .register-link{
-    display: block;
-    position: absolute;
-    top: 40px;
-    right: 40px;
-    color: @siteColor;
-    font-size: 1em;
-    line-height: 1em;
+  width: 100%;
+  
+  &.recharge-section{
+    margin: 0 auto;
+    padding-top: 128px;
+    width: 382px;
+    .row{
+      &.amount-plan{
+        .col{
+          width: calc( 50% - 18px );
+        }
+      }
+    }
+  }
+  &.login-section {
+    float: right;
+    height: 100%;
+    width: calc( 100% - 270px );
+    .register-link{
+      display: block;
+      position: absolute;
+      top: 40px;
+      right: 40px;
+      color: @siteColor;
+      font-size: 1em;
+      line-height: 1em;
+    }
   }
 }
 header{
