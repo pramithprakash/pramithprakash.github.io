@@ -27,7 +27,7 @@
 
 </head>
 
-<body class="open">
+<body>
 
     <header class="slim-header">
         <a class="logo home-icon" href="index.html">tketz - merchant slate</a>
@@ -84,7 +84,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <input type="button" value="recharge" />
+                    <input type="button" value="recharge" class="open-confirm" />
                 </div>
             </form>
         </div>
@@ -92,10 +92,10 @@
 <div id="recharge-confirm" class="modal-popup">
     <a class="close-modal">Close</a>
     <div class="recharge-confirm">
-        <div>Airtel Prepaid - Kerala</div>
+        <p>Airtel Prepaid - Kerala</p>
         <h2>9544550810</h2>
         <div class="amount">100</div>
-        <div>Transaction ID : 0254578</div>
+        <p>Transaction ID : 0254578</p>
         <div class="passcode">
             <h5>Enter 4 Digit Passcode</h5>
             <input type="number" maxlength="1" />
@@ -110,11 +110,11 @@
     <a class="close-modal">Close</a>
     <div class="recharge-status success">
         <h2>Recharge Success!</h2>
-        <div class="status">
+        <h5 class="status">
             Hey Manjeri Recharge Store.<br> Your recharge for Rs.100 was successful
-        </div>
-        <div>Airtel Prepaid - Kerala : 9544550810</div>
-        <div>Transaction ID : 0254578</div>
+        </h5>
+        <p>Airtel Prepaid - Kerala : 9544550810</p>
+        <p>Transaction ID : 0254578</p>
         <div class="amount">100</div>
         <input type="button" value="Ok" />
     </div>
@@ -124,11 +124,11 @@
     <a class="close-modal">Close</a>
     <div class="recharge-status failed">
         <h2>Recharge Failed</h2>
-        <div class="status">
+        <h5 class="status">
             Hey Manjeri Recharge Store.<br> Your recharge for Rs.100 was unsuccessful
-        </div>
-        <div>Airtel Prepaid - Kerala : 9544550810</div>
-        <div>Transaction ID : 0254578</div>
+        </h5>
+        <p>Airtel Prepaid - Kerala : 9544550810</p>
+        <p>Transaction ID : 0254578</p>
         <div class="amount">100</div>
         <input type="button" value="Retry" />
     </div>

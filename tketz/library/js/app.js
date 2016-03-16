@@ -20,3 +20,26 @@ $('.logout').on('click',function(){
     $('.login-section').show();
   },500); 
 });
+$('.open-confirm').on('click',function(){
+  $('.modal-popup').hide();
+  $('body').addClass('open');
+  $('#recharge-confirm').show();
+});
+$('#recharge-confirm').find('input[type=button]').on('click',function(){
+  $('.modal-popup').hide();
+  $('body').addClass('open');
+  $('#recharge-success').show();
+});
+$('#recharge-success').find('input[type=button]').on('click',function(){
+  $('.modal-popup').hide();
+  $('body').addClass('open');
+  $('#recharge-failed').show();
+});
+$('#recharge-failed').find('input[type=button]').on('click',function(){
+  $('body').removeClass('open');
+  $('.modal-popup').hide();
+});
+$('.close-modal').on('click',function(){
+  $('body').removeClass('open');
+  $('.modal-popup').hide();
+});
