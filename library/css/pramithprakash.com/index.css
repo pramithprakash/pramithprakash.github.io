@@ -1084,7 +1084,7 @@ body {
   min-height: 540px;
   overflow: visible !important;
   position: relative;
-  top: 60px;
+  top: calc( 50% - 270px );
   left: 0;
   max-width: 1082px;
   margin: 0 auto;
