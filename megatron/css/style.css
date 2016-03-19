@@ -578,8 +578,13 @@ ul.social-buttons li a {
     -moz-transition: all .3s;
     transition: all .3s;
 }
+.cert{
+    float: right;
+    width: auto;
+    margin: 23px 0 0;
+}
 .cert img{
-    width: 90px;
+    width: 120px;
 }
 
 ul.social-buttons li a:hover,
