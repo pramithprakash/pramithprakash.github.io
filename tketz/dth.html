@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>tketz - recharge</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <!-- Custom CSS -->
+    <link href="library/css/tketz/index.css" rel="stylesheet">
+    
+    <!-- Custom Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500&subset=latin,greek-ext' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <header class="slim-header">
+        <a class="logo home-icon" href="index.html">tketz - merchant slate</a>
+        <button type="button" role="menu-open" aria-label="Toggle Navigation">
+            <span class="lines"></span>
+        </button>
+    </header>
+    <aside class="menu-offcanvas">
+        <div class="user-section">
+            <a class="close" role="menu-close"></a>
+            <div class="user-name">
+                <a>Fahad kc</a>
+            </div>
+            <img class="user-image" src="library/images/user.jpg" />
+        </div>
+        <div class="menu-list">
+            <ul>
+                <li><a class="wallet">Wallet</a></li>
+                <li><a class="transaction">Transaction History</a></li>
+                <li><a class="messages">Messages</a></li>
+                <li><a class="commision">Commision Structure</a></li>
+                <li><a class="offers">Offers</a></li>
+                <li><a class="points">Points</a></li>
+                <li><a class="settings">Settings</a></li>
+                <li><a class="logout" href="index.html">Logout</a></li>
+            </ul>
+        </div>
+    </aside>
+    <section class="recharge-section">
+        <div class="recharge-form">
+            <form>
+                <div class="row radio">
+                    <div class="col l">
+                        <input id="prepaid" type="radio" checked name="rechargeType" />
+                        <label for="prepaid">Prepaid</label>
+                    </div>
+                    <div class="col r">
+                        <input id="postpaid" type="radio" name="rechargeType" />
+                        <label for="postpaid">Postpaid</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <input type="number" name="mobileNumber" class="style-text" placeholder="Enter prepaid mobile number" />
+                </div>
+                <div class="row">
+                    <input type="text" name="operator" class="style-text" placeholder="Operator / Circle" />
+                </div>
+                <div class="row amount-plan">
+                    <div class="col l">
+                        <input type="number" name="amount" class="amount" placeholder="Amount" />
+                    </div>
+                    <div class="col r">
+                        <input type="text" name="plans" placeholder="Plans" />
+                    </div>
+                </div>
+                <div class="row">
+                    <input type="button" value="recharge" class="open-confirm" />
+                </div>
+            </form>
+        </div>
+    </section>
+<div id="recharge-confirm" class="modal-popup">
+    <a class="close-modal">Close</a>
+    <div class="recharge-confirm">
+        <p>Airtel Prepaid - Kerala</p>
+        <h2>9544550810</h2>
+        <div class="amount">100</div>
+        <p>Transaction ID : 0254578</p>
+        <div class="passcode">
+            <h5>Enter 4 Digit Passcode</h5>
+            <input type="number" maxlength="1" />
+            <input type="number" maxlength="1" />
+            <input type="number" maxlength="1" />
+            <input type="number" maxlength="1" />
+        </div>
+        <input type="button" value="Confrim" />
+    </div>
+</div>
+<div id="recharge-success" class="modal-popup" style="display:none">
+    <a class="close-modal">Close</a>
+    <div class="recharge-status success">
+        <h2>Recharge Success!</h2>
+        <h5 class="status">
+            Hey Manjeri Recharge Store.<br> Your recharge for Rs.100 was successful
+        </h5>
+        <p>Airtel Prepaid - Kerala : 9544550810</p>
+        <p>Transaction ID : 0254578</p>
+        <div class="amount">100</div>
+        <input type="button" value="Ok" />
+    </div>
+</div>
+
+<div id="recharge-failed" class="modal-popup" style="display:none">
+    <a class="close-modal">Close</a>
+    <div class="recharge-status failed">
+        <h2>Recharge Failed</h2>
+        <h5 class="status">
+            Hey Manjeri Recharge Store.<br> Your recharge for Rs.100 was unsuccessful
+        </h5>
+        <p>Airtel Prepaid - Kerala : 9544550810</p>
+        <p>Transaction ID : 0254578</p>
+        <div class="amount">100</div>
+        <input type="button" value="Retry" />
+    </div>
+</div>
+<div class="grayed-bg"></div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="library/js/app.js"></script>
+</html>
