@@ -36,17 +36,25 @@ html.minheight{
 }
 // @keyframes logoTopAnim {
 //     from {
+//         top: -webkit-calc( 50% - 28px );
+//         top: -moz-calc( 50% - 28px );
 //         top: calc( 50% - 28px );
 //     }
 //     to {
+//         top: -webkit-calc( 50% - 160px );
+//         top: -moz-calc( 50% - 160px );
 //         top: calc( 50% - 160px );
 //     }
 // }
 // @-webkit-keyframes logoTopAnim {
 //     from {
+//         top: -webkit-calc( 50% - 28px );
+//         top: -moz-calc( 50% - 28px );
 //         top: calc( 50% - 28px );
 //     }
 //     to {
+//         top: -webkit-calc( 50% - 160px );
+//         top: -moz-calc( 50% - 160px );
 //         top: calc( 50% - 160px );
 //     }
 // }
@@ -148,6 +156,8 @@ header{
     display: block;
     text-indent: -9999px;
     margin: 0 auto;
+    top: -webkit-calc( 50% - 28px );
+    top: -moz-calc( 50% - 28px );
     top: calc( 50% - 28px );
     position: relative;
     //@transLogo: top 0.5s @easeInOutQuad;
@@ -155,7 +165,7 @@ header{
   }
   .icons{
     span{
-      opacity: 0;
+      opacity: 1;
     }
     //@transIcon: opacity 0.5s @easeInOutQuad;
     //.transition(@transIcon);
@@ -167,6 +177,8 @@ header{
     max-width: 768px;
     margin: 0 auto;;
     text-transform: uppercase;
+    top: -webkit-calc(50% - 57px);
+    top: -moz-calc(50% - 57px);
     top: calc(50% - 57px);
     position: relative;
     a{
@@ -398,6 +410,8 @@ header{
   }
 }
 section{
+  width: -webkit-calc( 100% - 30px );
+  width: -moz-calc( 100% - 30px );
   width: calc( 100% - 30px );
   margin: 0 auto;
   background: @white;
@@ -455,11 +469,15 @@ section{
         border-bottom: 1px solid #d61720;
       }
       .col{
+        width: -webkit-calc( 50% - 10px );
+        width: -moz-calc( 50% - 10px );
         width: calc( 50% - 10px );
       }
       &.amount-plan{
         padding: 10px 0 64px;
         .col{
+          width: -webkit-calc( 50% - 10px );
+          width: -moz-calc( 50% - 10px );
           width: calc( 50% - 10px );
         }
         input{
@@ -473,6 +491,8 @@ section{
           background-color: #e5e5e5;
           &.amount{
             padding-right: 50px;
+            background: #e5e5e5 url( @rupee ) no-repeat -webkit-calc(100% - 21px) 14px;
+            background: #e5e5e5 url( @rupee ) no-repeat -moz-calc(100% - 21px) 14px;
             background: #e5e5e5 url( @rupee ) no-repeat calc(100% - 21px) 14px; 
           }
         }
@@ -506,6 +526,8 @@ section{
   }
   input{
     .placeholder-color( #757575, center );
+    width: -webkit-calc( 100% - 30px );
+    width: -moz-calc( 100% - 30px );
     width: calc( 100% - 30px );
     height: 49px;
     line-height: 49px;
