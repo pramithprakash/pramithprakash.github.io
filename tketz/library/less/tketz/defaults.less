@@ -460,14 +460,37 @@ section{
         background: #d61720 url( @tick-l ) no-repeat center center;
         .border-radius( 100% );
       }
-      input.style-text{
+      .style-text,.style-select{
         height: 44px;
         line-height: 44px;
         margin: 0;
         width: 100%;
-        
         border-bottom: 1px solid #d61720;
       }
+.style-select{
+  position: relative;
+  .style-text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  select{
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #757575;
+    .fonts( 16 );
+    border: 0;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    background: none;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  } 
+}
       .col{
         width: -webkit-calc( 50% - 10px );
         width: -moz-calc( 50% - 10px );
