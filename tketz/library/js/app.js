@@ -44,5 +44,5 @@ $('.close-modal').on('click',function(){
   $('.modal-popup').hide();
 });
 $('.style-select').find('input').on('click',function(){
-  $(this).parent('.style-select').find('select').trigger('click');
+  $(this).parent('.style-select').find('select').click();
 });
