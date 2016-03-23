@@ -452,9 +452,10 @@ section{
         font-family: 'Roboto', sans-serif;
         .placeholder-color( #757575, center );
       }
-      input[type=button]{
+      button{
         width: 63px;
         height: 63px;
+        border: 0;
         cursor: pointer;
         text-indent: -99999px;
         background: #d61720 url( @tick-l ) no-repeat center center;
@@ -550,6 +551,20 @@ section{
     color: @black;
     text-transform: uppercase;
   }
+  button{
+    background: #d61720;
+    border: 1px solid #d61720;
+    color: #ffffff;
+    margin-bottom: 44px;
+    width: -webkit-calc( 100% - 30px );
+    width: -moz-calc( 100% - 30px );
+    width: calc( 100% - 30px );
+    height: 49px;
+    line-height: 49px;
+    .fonts( 16 );
+    .border-radius( 5px );
+    .borderbox();
+  }
   input{
     .placeholder-color( #757575, center );
     width: -webkit-calc( 100% - 30px );
@@ -568,12 +583,6 @@ section{
     }
     &[type=password]{
       margin-bottom: 34px;
-    }
-    &[type=button]{
-      background: #d61720;
-      border: 1px solid #d61720;
-      color: #ffffff;
-      margin-bottom: 44px;
     }
     .forgot-link{
       color: #505050;
@@ -661,7 +670,7 @@ header.slim-header{
     line-height: 22px;
     font-weight: normal;
   }
-  input[type=button]{
+  button{
     .fonts( 16 );
     color: #fff;
     text-align: center;

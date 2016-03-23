@@ -58,7 +58,7 @@
     </aside>
     <section class="recharge-section">
         <div class="recharge-form">
-            <form>
+            <form action="#">
                 <div class="row radio">
                     <div class="col l">
                         <input id="prepaid" type="radio" checked name="rechargeType" />
@@ -90,55 +90,55 @@
                     </div>
                 </div>
                 <div class="row">
-                    <input type="button" value="recharge" class="open-confirm" />
+                    <button class="open-confirm">recharge</button>
                 </div>
             </form>
         </div>
     </section>
-<div id="recharge-confirm" class="modal-popup">
-    <a class="close-modal">Close</a>
-    <div class="recharge-confirm">
-        <p>Airtel Prepaid - Kerala</p>
-        <h2>9544550810</h2>
-        <div class="amount">100</div>
-        <p>Transaction ID : 0254578</p>
-        <div class="passcode">
-            <h5>Enter 4 Digit Passcode</h5>
-            <input type="number" maxlength="1" />
-            <input type="number" maxlength="1" />
-            <input type="number" maxlength="1" />
-            <input type="number" maxlength="1" />
+    <div id="recharge-confirm" class="modal-popup">
+        <a class="close-modal">Close</a>
+        <div class="recharge-confirm">
+            <p>Airtel Prepaid - Kerala</p>
+            <h2>9544550810</h2>
+            <div class="amount">100</div>
+            <p>Transaction ID : 0254578</p>
+            <div class="passcode">
+                <h5>Enter 4 Digit Passcode</h5>
+                <input type="number" maxlength="1" />
+                <input type="number" maxlength="1" />
+                <input type="number" maxlength="1" />
+                <input type="number" maxlength="1" />
+            </div>
+            <button>Confirm</button>
         </div>
-        <input type="button" value="Confrim" />
     </div>
-</div>
-<div id="recharge-success" class="modal-popup" style="display:none">
-    <a class="close-modal">Close</a>
-    <div class="recharge-status success">
-        <h2>Recharge Success!</h2>
-        <h5 class="status">
-            Hey Manjeri Recharge Store.<br> Your recharge for Rs.100 was successful
-        </h5>
-        <p>Airtel Prepaid - Kerala : 9544550810</p>
-        <p>Transaction ID : 0254578</p>
-        <div class="amount">100</div>
-        <input type="button" value="Ok" />
+    <div id="recharge-success" class="modal-popup" style="display:none">
+        <a class="close-modal">Close</a>
+        <div class="recharge-status success">
+            <h2>Recharge Success!</h2>
+            <h5 class="status">
+                Hey Manjeri Recharge Store.<br> Your recharge for Rs.100 was successful
+            </h5>
+            <p>Airtel Prepaid - Kerala : 9544550810</p>
+            <p>Transaction ID : 0254578</p>
+            <div class="amount">100</div>
+            <button>Ok</button>
+        </div>
     </div>
-</div>
 
-<div id="recharge-failed" class="modal-popup" style="display:none">
-    <a class="close-modal">Close</a>
-    <div class="recharge-status failed">
-        <h2>Recharge Failed</h2>
-        <h5 class="status">
-            Hey Manjeri Recharge Store.<br> Your recharge for Rs.100 was unsuccessful
-        </h5>
-        <p>Airtel Prepaid - Kerala : 9544550810</p>
-        <p>Transaction ID : 0254578</p>
-        <div class="amount">100</div>
-        <input type="button" value="Retry" />
+    <div id="recharge-failed" class="modal-popup" style="display:none">
+        <a class="close-modal">Close</a>
+        <div class="recharge-status failed">
+            <h2>Recharge Failed</h2>
+            <h5 class="status">
+                Hey Manjeri Recharge Store.<br> Your recharge for Rs.100 was unsuccessful
+            </h5>
+            <p>Airtel Prepaid - Kerala : 9544550810</p>
+            <p>Transaction ID : 0254578</p>
+            <div class="amount">100</div>
+            <button>Retry</button>
+        </div>
     </div>
-</div>
 <div class="grayed-bg"></div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
