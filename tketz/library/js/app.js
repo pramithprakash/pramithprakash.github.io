@@ -43,4 +43,6 @@ $('.close-modal').on('click',function(){
   $('body').removeClass('open');
   $('.modal-popup').hide();
 });
-
+$('.style-select').find('select').on('change',function(){
+  $(this).parent('.style-select').find('input').val($(this).val());
+});
