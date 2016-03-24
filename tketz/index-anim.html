@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>tketz</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <!-- Custom CSS -->
+    <link href="library/css/tketz-anim/index.css" rel="stylesheet">
+    
+    <!-- Custom Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500&subset=latin,greek-ext' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <header>
+        <a class="logo">tketz - merchant slate</a>
+        <div class="icons">
+            <a class="recharge" href="recharge.html"><span>Recharge</span></a>
+            <a class="dth" href="dth.html"><span>dth</span></a>
+            <a class="bus"><span>bus</span></a>
+            <a class="flight"><span>flight</span></a>
+            <a class="packages"><span>packages</span></a>
+            <a class="transfer"><span>money transfer</span></a>
+            <a class="payment"><span>utility payment</span></a>
+        </div>
+        <button type="button" role="menu-open" aria-label="Toggle Navigation">
+            <span class="lines"></span>
+        </button>
+    </header>
+    <aside class="menu-offcanvas">
+        <div class="user-section">
+            <a class="close" role="menu-close"></a>
+            <div class="user-name">
+                <a>Fahad kc</a>
+            </div>
+            <img class="user-image" src="library/images/user.jpg" />
+        </div>
+        <div class="menu-list">
+            <ul>
+                <li><a class="wallet">Wallet</a></li>
+                <li><a class="transaction">Transaction History</a></li>
+                <li><a class="messages">Messages</a></li>
+                <li><a class="commision">Commision Structure</a></li>
+                <li><a class="offers">Offers</a></li>
+                <li><a class="points">Points</a></li>
+                <li><a class="settings">Settings</a></li>
+                <li><a class="logout">Logout</a></li>
+            </ul>
+        </div>
+    </aside>
+    <section class="login-section">
+        <a class="register-link">Register Now!</a>
+        <div class="login-form">
+            <h2>Login to your account</h2>
+                <input type="text" placeholder="Username" />
+                <input type="password" placeholder="Password" />
+                <input type="button" onclick="login()" value="Login"/>
+            <div class="show-s"><a class="register-link">Register Now!</a></div>
+            <a class="forgot-link">Forgot Password?</a>
+        </div>
+    </section>
+
+<div class="grayed-bg"></div>
+</body>
+<script src="library/js/jquery.min.js"></script>
+<script src="library/js/app.js"></script>
+</html>

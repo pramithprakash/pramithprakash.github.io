@@ -1,0 +1,199 @@
+section{
+  position: relative;
+  width: 100%;
+  
+  &.recharge-section{
+    margin: 0 auto;
+    padding-top: 128px;
+    width: 382px;
+    .row{
+      &.amount-plan{
+        .col{
+          width: -webkit-calc( 50% - 18px );
+          width: -moz-calc( 50% - 18px );
+          width: calc( 50% - 18px );
+        }
+      }
+    }
+  }
+  &.login-section {
+    float: right;
+    height: 100%;
+    width: -webkit-calc( 100% - 270px );
+    width: -moz-calc( 100% - 270px );
+    width: calc( 100% - 270px );
+    .register-link{
+      display: block;
+      position: absolute;
+      top: 40px;
+      right: 40px;
+      color: @siteColor;
+      font-size: 1em;
+      line-height: 1em;
+    }
+  }
+}
+header{
+  width: 270px;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  &.expanded{
+    width: 100%;
+    button,input[type=button]{
+      //left: 40px;
+      -webkit-animation: iconAnim .4s forwards linear;
+      -moz-animation: iconAnim .4s forwards linear;
+      animation: iconAnim .4s forwards linear;
+      -webkit-animation: menuAnimLeft .4s forwards linear;
+      -moz-animation: menuAnimLeft .4s forwards linear;
+      animation: menuAnimLeft .4s forwards linear;
+      -webkit-animation-delay: 1.7s;
+      -moz-animation-delay: 1.7s;
+      animation-delay: 1.7s;
+      .lines:before{
+        //top: -6px;
+        -webkit-animation: menuAnimTop .4s forwards linear;
+        -moz-animation: menuAnimTop .4s forwards linear;
+        animation: menuAnimTop .4s forwards linear;
+        -webkit-animation-delay: 2.3s;
+        -moz-animation-delay: 2.3s;
+        animation-delay: 2.3s;
+      }
+      .lines:after{
+        //top: 6px;
+        -webkit-animation: menuAnimBottom .4s forwards linear;
+        -moz-animation: menuAnimBottom .4s forwards linear;
+        animation: menuAnimBottom .4s forwards linear;
+        -webkit-animation-delay: 2.2s;
+        -moz-animation-delay: 2.2s;
+        animation-delay: 2.2s;
+      }
+    }
+    a.logo{
+      // top: -webkit-calc( 50% - 160px );
+      // top: -moz-calc( 50% - 160px );
+      // top: calc( 50% - 160px );
+      -webkit-animation: logoTopAnim .4s forwards linear;
+      -moz-animation: logoTopAnim .4s forwards linear;
+      animation: logoTopAnim .4s forwards linear;
+      -webkit-animation-delay: .4s;
+      -moz-animation-delay: .4s;
+      animation-delay: .4s;
+    }
+    .icons{
+      display: block;  
+      a{
+        span{
+          opacity: 0;
+          -webkit-animation: iconAnim .4s forwards linear;
+          -moz-animation: iconAnim .4s forwards linear;
+          animation: iconAnim .4s forwards linear;
+          -webkit-animation-delay: 1.7s;
+          -moz-animation-delay: 1.7s;
+          animation-delay: 1.7s;
+        }
+        &.recharge:before{
+          opacity: 0;
+          webkit-animation: iconBeforeAnim 1s forwards linear;
+          -moz-animation: iconBeforeAnim 1s forwards linear;
+          animation: iconBeforeAnim .4s forwards linear;
+          -webkit-animation-delay: 1s;
+          -moz-animation-delay: 1s;
+          animation-delay: 1s;
+        }
+        &.dth:before{
+          opacity: 0;
+          webkit-animation: iconBeforeAnim .4s forwards linear;
+          -moz-animation: iconBeforeAnim .4s forwards linear;
+          animation: iconBeforeAnim .4s forwards linear;
+          -webkit-animation-delay: 1.1s;
+          -moz-animation-delay: 1.1s;
+          animation-delay: 1.1s;
+        }
+        &.bus:before{
+          opacity: 0;
+          webkit-animation: iconBeforeAnim .4s forwards linear;
+          -moz-animation: iconBeforeAnim .4s forwards linear;
+          animation: iconBeforeAnim .4s forwards linear;
+          -webkit-animation-delay: 1.2s;
+          -moz-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+        }
+        &.flight:before{
+          opacity: 0;
+          webkit-animation: iconBeforeAnim .4s forwards linear;
+          -moz-animation: iconBeforeAnim .4s forwards linear;
+          animation: iconBeforeAnim .4s forwards linear;
+          -webkit-animation-delay: 1.3s;
+          -moz-animation-delay: 1.3s;
+          animation-delay: 1.3s;
+        }
+        &.packages:before{
+          opacity: 0;
+          webkit-animation: iconBeforeAnim .4s forwards linear;
+          -moz-animation: iconBeforeAnim .4s forwards linear;
+          animation: iconBeforeAnim .4s forwards linear;
+          -webkit-animation-delay: 1.4s;
+          -moz-animation-delay: 1.4s;
+          animation-delay: 1.4s;
+        }
+        &.transfer:before{
+          opacity: 0;
+          webkit-animation: iconBeforeAnim .4s forwards linear;
+          -moz-animation: iconBeforeAnim .4s forwards linear;
+          animation: iconBeforeAnim .4s forwards linear;
+          -webkit-animation-delay: 1.5s;
+          -moz-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+        }  
+        &.payment:before{
+          opacity: 0;
+          webkit-animation: iconBeforeAnim .4s forwards linear;
+          -moz-animation: iconBeforeAnim .4s forwards linear;
+          animation: iconBeforeAnim .4s forwards linear;
+          -webkit-animation-delay: 1.6s;
+          -moz-animation-delay: 1.6s;
+          animation-delay: 1.6s;
+        }  
+      }     
+    }
+  }
+}
+.menu-offcanvas{
+  width: 302px;
+  left: -302px;
+}
+.login-form{
+  margin-top: 0;
+  width: 366px;
+  .center-center();
+  input,button,input[type=button]{
+    width: 366px;
+  }
+  button,input[type=button]{
+      margin-bottom: 130px;
+  }
+}
+.show-s{
+  display: none;
+}
+.modal-popup{
+  width: 516px;
+  left: -webkit-calc( 50% - 258px );
+  left: -moz-calc( 50% - 258px );
+  left: calc( 50% - 258px );
+  padding: 44px 46px 46px;
+  button,input[type=button]{
+    width: 100%;
+  }
+}
+.recharge-confirm{
+  .passcode{
+    padding: 35px 0 30px;
+    input[type=number]{
+      width: 60px;
+    }
+  }
+}
