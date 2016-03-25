@@ -975,7 +975,7 @@ a {
   left: auto !important;
 }
 body {
-  background: #000;
+  background: #000 !important;
   font-family: Georgia, "Times New Roman", Times, serif;
   overflow-y: scroll;
 }
@@ -1044,7 +1044,7 @@ body {
   position: relative;
   min-width: 1160px;
   min-height: 514px;
-  perspective: 1200px;
+  /*perspective: 1200px;*/
 }
 .bg {
   background: url(../../images/bg.jpg) repeat 0 0;
@@ -1112,7 +1112,7 @@ body {
 }
 .sd_1_1 {
   position: absolute;
-  left: -50%;
+  left: -50%;display: none;
   top: -108px;margin-left: 1px;
 }
 .contact.open_forced_anim,.links.open_forced_anim,
