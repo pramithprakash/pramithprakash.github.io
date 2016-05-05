@@ -3,7 +3,7 @@
   padding: 10px 10px 0;
 }
 .service-packages-n{
-padding: 10px 10px 0;
+  padding: 10px 10px 0;
 }
 .addtional-passengers-n h3,.payment-options-n h3,.service-packages-n h3{
   color: #FFFFFF;
@@ -30,7 +30,7 @@ padding: 10px 10px 0;
   color: green;
 }
 .addtional-passengers-n .passendger-lead{
-    padding: 12px 0;
+  padding: 12px 0;
 }
 .contact_div {
   font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
@@ -75,15 +75,15 @@ padding: 10px 10px 0;
   width: 100%;
 }
 .contact_div .star {
-    color: #990000;
-    width: 10px;
-    position: relative;
-    margin-right: 0px;
-    z-index: 10;
-    padding: 0px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    margin-left: 0px;
+  color: #990000;
+  width: 10px;
+  position: relative;
+  margin-right: 0px;
+  z-index: 10;
+  padding: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
 }
 .contact_div .input-style input.hasDatepicker{
   background: #F6FBFE url( "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAALCAYAAACksgdhAAAAU0lEQVQokWNg0QvpZtUP/c+sGzKJgYGBgVkvZCqrfuh/GGbRC2llYGBgYNUNLoTyuxmQFTAwMKDwcYljVUQIM7Dqh/4nBYxqolgTLEUQi1n0QroBEhaOAY8sZVMAAAAASUVORK5CYII=" ) no-repeat 218px 12px;
@@ -144,12 +144,12 @@ padding: 10px 10px 0;
   background-position: -webkit-calc(100% - 10px) 12px;
   background-position: -moz-calc(100% - 10px) 12px;
   background-position: calc(100% - 10px) 12px;
-    border: 1px solid #111112;
-    border-radius: 4px;
-    height: 32px;
-    width: 100%;
-    color: #525252;
-    position: relative;
+  border: 1px solid #111112;
+  border-radius: 4px;
+  height: 32px;
+  width: 100%;
+  color: #525252;
+  position: relative;
 }
 .contact_div .dd-container {
   position: relative;
@@ -160,37 +160,37 @@ padding: 10px 10px 0;
   line-height: 23px;
 }
 .contact_div .dd-container .dd-options {
-    border: solid 1px #ccc;
-    border-top: none;
-    list-style: none;
-    position: absolute;
-    z-index: 2000;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    background: #F6FBFE;
-border: 1px solid #111112;
-margin-top: -1px;
-
-    overflow: auto;
+  border: solid 1px #ccc;
+  border-top: none;
+  list-style: none;
+  position: static;
+  z-index: 2000;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: #F6FBFE;
+  border: 1px solid #111112;
+  margin-top: -1px;
+  overflow: auto;
 }
 .contact_div .dd-container .dd-options li {
   padding-bottom: 0;
+  padding-right: 0;
+  width: 100%;
 }
 .contact_div .dd-container .dd-options li .dd-option{
   padding: 8px;
-    border-bottom: solid 1px #ddd;
-    display: block;
-    
-    text-decoration: none;
-    color: #9C9C9C;
+  border-bottom: solid 1px #ddd;
+  display: block;  
+  text-decoration: none;
+  color: #9C9C9C;
 }
 .contact_div .dd-container .dd-options li .dd-option.dd-option-selected{
   background: #f6f6f6;
 }
 .contact_div .dd-container li:last-child .dd-option-text{
-    color: red;
-font-size: 9px;
+  color: red;
+  font-size: 9px;
 }
 .payment-options-n .contact_div .contact_div_ul .input-style{
   margin: 0 0 10px;
@@ -218,7 +218,7 @@ font-size: 9px;
 }
 .fo-submit .terms-conditions a{
   text-decoration: none;
-      color: #808080;
+  color: #808080;
 }
 .fo-submit .continue_btn{
   background-color: rgb(255, 255, 255);
@@ -263,6 +263,9 @@ font-size: 9px;
     margin-right: 0;
     border-right: 0;
   }
+  .contact_div .dd-container .dd-options{
+    position: absolute;
+  }
 }
 @media screen and (min-width: 1024px){
   .contact_div .contact_div_ul li{
@@ -293,68 +296,59 @@ font-size: 9px;
 }
 </style>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-
 <div class="addtional-passengers-n">
   <h3> Passenger Information</h3>
   <div class="passendger-select">
-  <strong>Note : </strong> <span>Please ensure that the passenger details matches the names on your passports.</span> 
+    <strong>Note : </strong> <span>Please ensure that the passenger details matches the names on your passports.</span> 
   </div> 
   <div class="passendger-lead"><i>Lead Passenger</i></div>
   <div class="contact_div">
     <ul class="contact_div_ul">
-    <li>
-    <label>Title</label>
-    <div class="input-style select">
-      <select id="title_a1" name="title[]" tabindex="32" >
-      	<option value="Mr.">Mr.</option>
-      	<option value="Mrs.">Mrs.</option>
-      	<option value="Ms.">Ms.</option>
-      </select>
-    </div>
-    </li>
-    <li>
-      <label>First + Middle Name <span class="star">*</span></label>
-      <div class="input-style">
-        <input type="text" name="firstname[]" id="firstname[]" ''="" value="" tabindex="33" />
-      </div>
-    </li>
-    <li>
-    <label>Last Name <span class="star">*</span></label>
-    <div class="input-style">
-      <input type="text" name="lastname[]" id="lastname[]" ''="" value="" tabindex="34" />
-      <input type="hidden" name="persontype[]" value="A">
-    </div>
-    </li>
-    <li>
-      <label>Gender <span class="star">*</span></label>
+      <li>
+      <label>Title</label>
       <div class="input-style select">
-        <select id="gender_a1" ''="" name="gender[]" tabindex="35" />
-        	<option value="">Please Select</option>
-        	<option value="M">Male</option>
-        	<option value="F">Female</option>
+        <select id="title_a1" name="title[]" tabindex="32" >
+        	<option value="Mr.">Mr.</option>
+        	<option value="Mrs.">Mrs.</option>
+        	<option value="Ms.">Ms.</option>
         </select>
       </div>
-    </li>
-    <li>
-      <label>Date of Birth <span class="star">*</span></label>
+      </li>
+      <li>
+        <label>First + Middle Name <span class="star">*</span></label>
+        <div class="input-style">
+          <input type="text" name="firstname[]" id="firstname[]" ''="" value="" tabindex="33" />
+        </div>
+      </li>
+      <li>
+      <label>Last Name <span class="star">*</span></label>
       <div class="input-style">
-        <input type="text"  id="datepicker_a1" name="dob[]" maxlength="10" tabindex="36" value="dd-mm-yyyy" onfocus="dateform(this)" onkeyup="hyphen(this,event);" class="hasDatepicker ui-datepicker-trigger">
+        <input type="text" name="lastname[]" id="lastname[]" ''="" value="" tabindex="34" />
+        <input type="hidden" name="persontype[]" value="A">
       </div>
-    </li>
-    <li>
-    <label>Country of Birth</label>
-    <div class="input-style select">
-      <span id="getcountrylist_a_pass_country1"><select name="passport_country[]" id="a_pass_country1" tabindex="37"><option value="">Country of Birth</option><option value="Afghanistan">Afghanistan</option><option value="Albania">Albania</option><option value="Algeria">Algeria</option><option value="Andorra">Andorra</option><option value="Angola">Angola</option><option value="Antigua and Barbuda">Antigua and Barbuda</option><option value="Argentina">Argentina</option><option value="Armenia">Armenia</option><option value="Australia">Australia</option><option value="Austria">Austria</option><option value="Azerbaijan">Azerbaijan</option><option value="Bahamas, The">Bahamas, The</option><option value="Bahrain">Bahrain</option><option value="Bangladesh">Bangladesh</option><option value="Barbados">Barbados</option><option value="Belarus">Belarus</option><option value="Belgium">Belgium</option><option value="Belize">Belize</option><option value="Benin">Benin</option><option value="Bermuda">Bermuda</option><option value="Bhutan">Bhutan</option><option value="Bolivia">Bolivia</option><option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option><option value="Botswana">Botswana</option><option value="Brazil">Brazil</option><option value="Brunei">Brunei</option><option value="Bulgaria">Bulgaria</option><option value="Burkina Faso">Burkina Faso</option><option value="Burundi">Burundi</option><option value="Cambodia">Cambodia</option><option value="Cameroon">Cameroon</option><option value="Canada">Canada</option><option value="Cape Verde">Cape Verde</option><option value="Central African Republic">Central African Republic</option><option value="Chad">Chad</option><option value="Chile">Chile</option><option value="China, People" s="" republic="" of'="">China, People's Republic of</option><option value="Colombia">Colombia</option><option value="Comoros">Comoros</option><option value="Costa Rica">Costa Rica</option><option value="Cote d" ivoire="" (ivory="" coast)'="">Cote d'Ivoire (Ivory Coast)</option><option value="Croatia">Croatia</option><option value="Cuba">Cuba</option><option value="Cyprus">Cyprus</option><option value="Czech Republic">Czech Republic</option><option value="Denmark">Denmark</option><option value="Djibouti">Djibouti</option><option value="Dominica">Dominica</option><option value="Dominican Republic">Dominican Republic</option><option value="Ecuador">Ecuador</option><option value="Egypt">Egypt</option><option value="El Salvador">El Salvador</option><option value="Equatorial Guinea">Equatorial Guinea</option><option value="Eritrea">Eritrea</option><option value="Estonia">Estonia</option><option value="Ethiopia">Ethiopia</option><option value="Fiji">Fiji</option><option value="Finland">Finland</option><option value="France">France</option><option value="Gabon">Gabon</option><option value="Gambia, The">Gambia, The</option><option value="Georgia">Georgia</option><option value="Germany">Germany</option><option value="Ghana">Ghana</option><option value="Greece">Greece</option><option value="Grenada">Grenada</option><option value="Guatemala">Guatemala</option><option value="Guinea">Guinea</option><option value="Guinea-Bissau">Guinea-Bissau</option><option value="Guyana">Guyana</option><option value="Haiti">Haiti</option><option value="Honduras">Honduras</option><option value="Hungary">Hungary</option><option value="Iceland">Iceland</option><option value="India">India</option><option value="Indonesia">Indonesia</option><option value="Iran">Iran</option><option value="Iraq">Iraq</option><option value="Ireland">Ireland</option><option value="Israel">Israel</option><option value="Italy">Italy</option><option value="Jamaica">Jamaica</option><option value="Japan">Japan</option><option value="Jordan">Jordan</option><option value="Kazakhstan">Kazakhstan</option><option value="Kenya">Kenya</option><option value="Kiribati">Kiribati</option><option value="Korea, North">Korea, North</option><option value="Korea, South">Korea, South</option><option value="Kuwait">Kuwait</option><option value="Kyrgyzstan">Kyrgyzstan</option><option value="Laos">Laos</option><option value="Latvia">Latvia</option><option value="Lebanon">Lebanon</option><option value="Lesotho">Lesotho</option><option value="Liberia">Liberia</option><option value="Libya">Libya</option><option value="Liechtenstein">Liechtenstein</option><option value="Lithuania">Lithuania</option><option value="Luxembourg">Luxembourg</option><option value="Macedonia">Macedonia</option><option value="Madagascar">Madagascar</option><option value="Malawi">Malawi</option><option value="Malaysia">Malaysia</option><option value="Maldives">Maldives</option><option value="Mali">Mali</option><option value="Malta">Malta</option><option value="Marshall Islands">Marshall Islands</option><option value="Mauritania">Mauritania</option><option value="Mauritius">Mauritius</option><option value="Mexico">Mexico</option><option value="Micronesia">Micronesia</option><option value="Moldova">Moldova</option><option value="Monaco">Monaco</option><option value="Mongolia">Mongolia</option><option value="Montenegro">Montenegro</option><option value="Morocco">Morocco</option><option value="Mozambique">Mozambique</option><option value="Myanmar (Burma)">Myanmar (Burma)</option><option value="Namibia">Namibia</option><option value="Nauru">Nauru</option><option value="Nepal">Nepal</option><option value="Netherlands">Netherlands</option><option value="New Zealand">New Zealand</option><option value="Nicaragua">Nicaragua</option><option value="Niger">Niger</option><option value="Nigeria">Nigeria</option><option value="Norway">Norway</option><option value="Oman">Oman</option><option value="Pakistan">Pakistan</option><option value="Palau">Palau</option><option value="Panama">Panama</option><option value="Papua New Guinea">Papua New Guinea</option><option value="Paraguay">Paraguay</option><option value="Peru">Peru</option><option value="Philippines">Philippines</option><option value="Poland">Poland</option><option value="Portugal">Portugal</option><option value="Qatar">Qatar</option><option value="Romania">Romania</option><option value="Russia">Russia</option><option value="Rwanda">Rwanda</option><option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option><option value="Saint Lucia">Saint Lucia</option><option value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option><option value="Samoa">Samoa</option><option value="San Marino">San Marino</option><option value="Sao Tome and Principe">Sao Tome and Principe</option><option value="Saudi Arabia">Saudi Arabia</option><option value="Senegal">Senegal</option><option value="Serbia">Serbia</option><option value="Seychelles">Seychelles</option><option value="Sierra Leone">Sierra Leone</option><option value="Singapore">Singapore</option><option value="Slovakia">Slovakia</option><option value="Slovenia">Slovenia</option><option value="Solomon Islands">Solomon Islands</option><option value="Somalia">Somalia</option><option value="South Africa">South Africa</option><option value="Spain">Spain</option><option value="Sri Lanka">Sri Lanka</option><option value="Sudan">Sudan</option><option value="Suriname">Suriname</option><option value="Swaziland">Swaziland</option><option value="Sweden">Sweden</option><option value="Switzerland">Switzerland</option><option value="Syria">Syria</option><option value="Tajikistan">Tajikistan</option><option value="Taiwan">Taiwan</option><option value="Tanzania">Tanzania</option><option value="Thailand">Thailand</option><option value="Timor-Leste (East Timor)">Timor-Leste (East Timor)</option><option value="Togo">Togo</option><option value="Tonga">Tonga</option><option value="Trinidad and Tobago">Trinidad and Tobago</option><option value="Tunisia">Tunisia</option><option value="Turkey">Turkey</option><option value="Turkmenistan">Turkmenistan</option><option value="Tuvalu">Tuvalu</option><option value="Uganda">Uganda</option><option value="Ukraine">Ukraine</option><option value="United Arab Emirates">United Arab Emirates</option><option value="United Kingdom">United Kingdom</option><option value="United States">United States</option><option value="Uruguay">Uruguay</option><option value="Uzbekistan">Uzbekistan</option><option value="Vanuatu">Vanuatu</option><option value="Vatican City">Vatican City</option><option value="Venezuela">Venezuela</option><option value="Vietnam">Vietnam</option><option value="Yemen">Yemen</option><option value="Zambia">Zambia</option><option value="Zimbabwe">Zimbabwe</option></select></span>
-    </div>
-    </li>
-    <li>
-      <label></label>
-      <div class="input-style">
-        
-      </div>
-    </li>
+      </li>
+      <li>
+        <label>Gender <span class="star">*</span></label>
+        <div class="input-style select">
+          <select id="gender_a1" ''="" name="gender[]" tabindex="35" />
+          	<option value="">Please Select</option>
+          	<option value="M">Male</option>
+          	<option value="F">Female</option>
+          </select>
+        </div>
+      </li>
+      <li>
+        <label>Date of Birth <span class="star">*</span></label>
+        <div class="input-style">
+          <input type="text"  id="datepicker_a1" name="dob[]" maxlength="10" tabindex="36" value="dd-mm-yyyy" onfocus="dateform(this)" onkeyup="hyphen(this,event);" class="hasDatepicker ui-datepicker-trigger">
+        </div>
+      </li>
+      <li>
+        <label>Country of Birth</label>
+        <div class="input-style select">
+          <span id="getcountrylist_a_pass_country1"><select name="passport_country[]" id="a_pass_country1" tabindex="37"><option value="">Country of Birth</option><option value="Afghanistan">Afghanistan</option><option value="Albania">Albania</option><option value="Algeria">Algeria</option><option value="Andorra">Andorra</option><option value="Angola">Angola</option><option value="Antigua and Barbuda">Antigua and Barbuda</option><option value="Argentina">Argentina</option><option value="Armenia">Armenia</option><option value="Australia">Australia</option><option value="Austria">Austria</option><option value="Azerbaijan">Azerbaijan</option><option value="Bahamas, The">Bahamas, The</option><option value="Bahrain">Bahrain</option><option value="Bangladesh">Bangladesh</option><option value="Barbados">Barbados</option><option value="Belarus">Belarus</option><option value="Belgium">Belgium</option><option value="Belize">Belize</option><option value="Benin">Benin</option><option value="Bermuda">Bermuda</option><option value="Bhutan">Bhutan</option><option value="Bolivia">Bolivia</option><option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option><option value="Botswana">Botswana</option><option value="Brazil">Brazil</option><option value="Brunei">Brunei</option><option value="Bulgaria">Bulgaria</option><option value="Burkina Faso">Burkina Faso</option><option value="Burundi">Burundi</option><option value="Cambodia">Cambodia</option><option value="Cameroon">Cameroon</option><option value="Canada">Canada</option><option value="Cape Verde">Cape Verde</option><option value="Central African Republic">Central African Republic</option><option value="Chad">Chad</option><option value="Chile">Chile</option><option value="China, People" s="" republic="" of'="">China, People's Republic of</option><option value="Colombia">Colombia</option><option value="Comoros">Comoros</option><option value="Costa Rica">Costa Rica</option><option value="Cote d" ivoire="" (ivory="" coast)'="">Cote d'Ivoire (Ivory Coast)</option><option value="Croatia">Croatia</option><option value="Cuba">Cuba</option><option value="Cyprus">Cyprus</option><option value="Czech Republic">Czech Republic</option><option value="Denmark">Denmark</option><option value="Djibouti">Djibouti</option><option value="Dominica">Dominica</option><option value="Dominican Republic">Dominican Republic</option><option value="Ecuador">Ecuador</option><option value="Egypt">Egypt</option><option value="El Salvador">El Salvador</option><option value="Equatorial Guinea">Equatorial Guinea</option><option value="Eritrea">Eritrea</option><option value="Estonia">Estonia</option><option value="Ethiopia">Ethiopia</option><option value="Fiji">Fiji</option><option value="Finland">Finland</option><option value="France">France</option><option value="Gabon">Gabon</option><option value="Gambia, The">Gambia, The</option><option value="Georgia">Georgia</option><option value="Germany">Germany</option><option value="Ghana">Ghana</option><option value="Greece">Greece</option><option value="Grenada">Grenada</option><option value="Guatemala">Guatemala</option><option value="Guinea">Guinea</option><option value="Guinea-Bissau">Guinea-Bissau</option><option value="Guyana">Guyana</option><option value="Haiti">Haiti</option><option value="Honduras">Honduras</option><option value="Hungary">Hungary</option><option value="Iceland">Iceland</option><option value="India">India</option><option value="Indonesia">Indonesia</option><option value="Iran">Iran</option><option value="Iraq">Iraq</option><option value="Ireland">Ireland</option><option value="Israel">Israel</option><option value="Italy">Italy</option><option value="Jamaica">Jamaica</option><option value="Japan">Japan</option><option value="Jordan">Jordan</option><option value="Kazakhstan">Kazakhstan</option><option value="Kenya">Kenya</option><option value="Kiribati">Kiribati</option><option value="Korea, North">Korea, North</option><option value="Korea, South">Korea, South</option><option value="Kuwait">Kuwait</option><option value="Kyrgyzstan">Kyrgyzstan</option><option value="Laos">Laos</option><option value="Latvia">Latvia</option><option value="Lebanon">Lebanon</option><option value="Lesotho">Lesotho</option><option value="Liberia">Liberia</option><option value="Libya">Libya</option><option value="Liechtenstein">Liechtenstein</option><option value="Lithuania">Lithuania</option><option value="Luxembourg">Luxembourg</option><option value="Macedonia">Macedonia</option><option value="Madagascar">Madagascar</option><option value="Malawi">Malawi</option><option value="Malaysia">Malaysia</option><option value="Maldives">Maldives</option><option value="Mali">Mali</option><option value="Malta">Malta</option><option value="Marshall Islands">Marshall Islands</option><option value="Mauritania">Mauritania</option><option value="Mauritius">Mauritius</option><option value="Mexico">Mexico</option><option value="Micronesia">Micronesia</option><option value="Moldova">Moldova</option><option value="Monaco">Monaco</option><option value="Mongolia">Mongolia</option><option value="Montenegro">Montenegro</option><option value="Morocco">Morocco</option><option value="Mozambique">Mozambique</option><option value="Myanmar (Burma)">Myanmar (Burma)</option><option value="Namibia">Namibia</option><option value="Nauru">Nauru</option><option value="Nepal">Nepal</option><option value="Netherlands">Netherlands</option><option value="New Zealand">New Zealand</option><option value="Nicaragua">Nicaragua</option><option value="Niger">Niger</option><option value="Nigeria">Nigeria</option><option value="Norway">Norway</option><option value="Oman">Oman</option><option value="Pakistan">Pakistan</option><option value="Palau">Palau</option><option value="Panama">Panama</option><option value="Papua New Guinea">Papua New Guinea</option><option value="Paraguay">Paraguay</option><option value="Peru">Peru</option><option value="Philippines">Philippines</option><option value="Poland">Poland</option><option value="Portugal">Portugal</option><option value="Qatar">Qatar</option><option value="Romania">Romania</option><option value="Russia">Russia</option><option value="Rwanda">Rwanda</option><option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option><option value="Saint Lucia">Saint Lucia</option><option value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option><option value="Samoa">Samoa</option><option value="San Marino">San Marino</option><option value="Sao Tome and Principe">Sao Tome and Principe</option><option value="Saudi Arabia">Saudi Arabia</option><option value="Senegal">Senegal</option><option value="Serbia">Serbia</option><option value="Seychelles">Seychelles</option><option value="Sierra Leone">Sierra Leone</option><option value="Singapore">Singapore</option><option value="Slovakia">Slovakia</option><option value="Slovenia">Slovenia</option><option value="Solomon Islands">Solomon Islands</option><option value="Somalia">Somalia</option><option value="South Africa">South Africa</option><option value="Spain">Spain</option><option value="Sri Lanka">Sri Lanka</option><option value="Sudan">Sudan</option><option value="Suriname">Suriname</option><option value="Swaziland">Swaziland</option><option value="Sweden">Sweden</option><option value="Switzerland">Switzerland</option><option value="Syria">Syria</option><option value="Tajikistan">Tajikistan</option><option value="Taiwan">Taiwan</option><option value="Tanzania">Tanzania</option><option value="Thailand">Thailand</option><option value="Timor-Leste (East Timor)">Timor-Leste (East Timor)</option><option value="Togo">Togo</option><option value="Tonga">Tonga</option><option value="Trinidad and Tobago">Trinidad and Tobago</option><option value="Tunisia">Tunisia</option><option value="Turkey">Turkey</option><option value="Turkmenistan">Turkmenistan</option><option value="Tuvalu">Tuvalu</option><option value="Uganda">Uganda</option><option value="Ukraine">Ukraine</option><option value="United Arab Emirates">United Arab Emirates</option><option value="United Kingdom">United Kingdom</option><option value="United States">United States</option><option value="Uruguay">Uruguay</option><option value="Uzbekistan">Uzbekistan</option><option value="Vanuatu">Vanuatu</option><option value="Vatican City">Vatican City</option><option value="Venezuela">Venezuela</option><option value="Vietnam">Vietnam</option><option value="Yemen">Yemen</option><option value="Zambia">Zambia</option><option value="Zimbabwe">Zimbabwe</option></select></span>
+        </div>
+      </li>
     </ul>
     <div class="preferences_div">
       <span class="pref-mainspan" id="mainspan-1">
@@ -362,53 +356,55 @@ font-size: 9px;
       </span>
       <ul class="contact_div_ul preferences" id="pass_preferences_1" name="pass_preferences">
         <li>
-              <label>Seat</label>
-              <input type="hidden" id="seats_a1" value="" name="seat[]" class="seats">
-            <div class="input-style">
-              <div id="seats_a_select1" class="dd-container">
-          <div class="dd-select"><input class="dd-selected-value" type="hidden" value=""><a class="dd-selected"><label class="dd-selected-text">No Preference</label></a><span class="dd-pointer dd-pointer-down"></span></div>
-          <ul class="dd-options dd-click-off-close" style="display:none">
-          <li>
-            <a class="dd-option dd-option-selected"> <label class="dd-option-text" >No Preference</label></a></li><li ><a class="dd-option"> <input class="dd-option-value" type="hidden" value="window"> <img class="dd-option-image" src="components/com_airbooking/assets/images/seat_window.png"> <label class="dd-option-text" >Window</label></a></li>
-          <li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="middle"> <img class="dd-option-image" src="components/com_airbooking/assets/images/seat_middle.png"> <label class="dd-option-text">Middle</label></a></li>
-          <li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="aisle"> <img class="dd-option-image" src="components/com_airbooking/assets/images/seat_aisle.png"> <label class="dd-option-text">Aisle</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="*Selections cannot be guaranteed until confirmed by the airline." /> 
-            <label class="dd-option-text">*Selections cannot be guaranteed until confirmed by the airline.</label></a></li></ul></div>
+          <label>Seat</label>
+          <input type="hidden" id="seats_a1" value="" name="seat[]" class="seats">
+          <div class="input-style">
+            <div id="seats_a_select1" class="dd-container">
+              <div class="dd-select"><input class="dd-selected-value" type="hidden" value=""><a class="dd-selected"><label class="dd-selected-text">No Preference</label></a><span class="dd-pointer dd-pointer-down"></span></div>
+                <ul class="dd-options dd-click-off-close" style="display:none">
+                  <li>
+                    <a class="dd-option dd-option-selected"> <label class="dd-option-text" >No Preference</label></a></li><li ><a class="dd-option"> <input class="dd-option-value" type="hidden" value="window"> <img class="dd-option-image" src="components/com_airbooking/assets/images/seat_window.png"> <label class="dd-option-text" >Window</label></a></li>
+                  <li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="middle"> <img class="dd-option-image" src="components/com_airbooking/assets/images/seat_middle.png"> <label class="dd-option-text">Middle</label></a></li>
+                  <li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="aisle"> <img class="dd-option-image" src="components/com_airbooking/assets/images/seat_aisle.png"> <label class="dd-option-text">Aisle</label></a></li><li><a class="dd-option"> <input class="dd-option-value" type="hidden" value="*Selections cannot be guaranteed until confirmed by the airline." /> 
+                    <label class="dd-option-text">*Selections cannot be guaranteed until confirmed by the airline.</label></a></li>
+                </ul>
+              </div>
             </div>
-            </li>
-            <li>
-              <label>Meal</label>
-              <div class="input-style select">
-                <select id="meal_a1[]" ''="" name="meal[]" tabindex="40">
-                <option value="">No Preference</option>
-                      <option value="1">Gluten Free</option>
-                      <option value="2">Kosher</option>
-                      <option value="3">Childs Meal</option>
-                      <option value="4">Vegetarian</option>
-                      <option value="5">Low Sodium</option>
-                      <option value="6">Hindu</option>
-                      <option value="7">Halal</option>
-                      <option value="8">Diabetic</option>
-                      <option value="9">Vegan</option>
-                      <option value="10">Infants Meal</option>
-                      <option value="11">Low Lactose</option>
-                      <option disabled="" style="float:right; font-size:9px; color:red;text-align:right;">
-                      *Selections cannot be guaranteed until confirmed by the airline. </option>
-                     <option disabled="" style="float:right; font-size:9px; color:red;text-align:right;">
-                        *Meals may not be supplied on your selected flights</option>
-              </select>
-              </div>
-            </li>
-            <li>
-              <label>Frequent Flyer</label>
-              <div class="input-style flyerpgm">
-                <input type="text" name="flyerpgm[]" aria-autocomplete="list" placeholder="Enter Program..." id="flyer-pgm_a1" value="" autocomplete="OFF" class="flyer-pgm" >
-                <input type="text" name="flyerno[]" id="flyer-no_a1" placeholder="Enter Number..." class="flyer-no" >
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
+        </li>
+        <li>
+          <label>Meal</label>
+          <div class="input-style select">
+            <select id="meal_a1[]" ''="" name="meal[]" tabindex="40">
+              <option value="">No Preference</option>
+              <option value="1">Gluten Free</option>
+              <option value="2">Kosher</option>
+              <option value="3">Childs Meal</option>
+              <option value="4">Vegetarian</option>
+              <option value="5">Low Sodium</option>
+              <option value="6">Hindu</option>
+              <option value="7">Halal</option>
+              <option value="8">Diabetic</option>
+              <option value="9">Vegan</option>
+              <option value="10">Infants Meal</option>
+              <option value="11">Low Lactose</option>
+              <option disabled="" style="float:right; font-size:9px; color:red;text-align:right;">
+              *Selections cannot be guaranteed until confirmed by the airline. </option>
+              <option disabled="" style="float:right; font-size:9px; color:red;text-align:right;">
+              *Meals may not be supplied on your selected flights</option>
+            </select>
+          </div>
+        </li>
+        <li>
+          <label>Frequent Flyer</label>
+          <div class="input-style flyerpgm">
+            <input type="text" name="flyerpgm[]" aria-autocomplete="list" placeholder="Enter Program..." id="flyer-pgm_a1" value="" autocomplete="OFF" class="flyer-pgm" >
+            <input type="text" name="flyerno[]" id="flyer-no_a1" placeholder="Enter Number..." class="flyer-no" >
+          </div>
+        </li>
+      </ul>
     </div>
+  </div>
+</div>
 
 <div class="payment-options-n">
   <h3>Contact Details</h3>
@@ -467,7 +463,7 @@ font-size: 9px;
           <input type="text" name="confirm_email" id="confirm_email" value="" tabindex="52">
         </div>
       </li>
-  </ul>
+    </ul>
   </div>
 </div>
 
@@ -482,44 +478,41 @@ font-size: 9px;
 				<li>Amendments without any charge by Alternative Airlines. An amendment may be an itinerary modification or a date change, <i> if offered by the Airline</i>. Airline charges will apply depending on the fare rules. These can be viewed in the terms and conditions below.</li>
 				
 				</ul>
-			<a onclick="showPackageTerms()" class="show_package" style="cursor:pointer;"><span>&gt;</span>Premium Service Package Terms and conditions</a>
+			 <a onclick="showPackageTerms()" class="show_package" style="cursor:pointer;"><span>&gt;</span>Premium Service Package Terms and conditions</a>
 				<div class="term_and_condition" id="premium_terms_condition" style="display:none;">
 				<p><b>1. Free Cancellation </b> <br>
 				In the case of a client requesting a cancellation of a booked service, provided that the booking is eligible for cancellation according to the regulations of 
-the airline, Alternative Airlines will waive the administration fee of $60.00 per person, which is typically applied in the Standard Service Package. Any other 
-or additional fees that may be raised directly by the airline are excluded from this service package and can be found in the terms and conditions of the 
-respective airline. 
+  the airline, Alternative Airlines will waive the administration fee of $60.00 per person, which is typically applied in the Standard Service Package. Any other 
+  or additional fees that may be raised directly by the airline are excluded from this service package and can be found in the terms and conditions of the 
+  respective airline. 
 
-</p><p><b>2. Free booking alterations </b> <br>
-In the case of a client requesting booking alterations (e.g. change of date, re-routing) on the booked service, provided that the booking is eligible to 
-such amendments according to the regulations of the airline, Alternative Airlines will waive the administration fee of $60.00 per person, which is typically 
-applied in Standard Service Package. Any other or additional fees that may be raised directly by the airline are excluded from this service package and can 
-be found in the terms and conditions of the respective airline. </p>
-<p>
-<b>
-The waiver of the administration fee is exclusively available to customers who have purchased the premium service package, which may only be 
-purchased at the time of the ticket purchase and is non-transferable to other bookings.</b></p>
-			 	
-				</div>
-			
-			</td>
-		
-		</tr>
-		<tr><td><hr></td></tr>
-		<tr>
-			<td>
-			<input type="radio" name="service_package_radio" id="standard_service_package_radio" checked="checked" onclick="addStandard(0)" value="no" disabled="disabled"><span style="margin-left:10px;"><b>Standard Service Package: £0.00</b></span>
-			<ul id="standard_service_package">
-				<li>$60.00 cancellation fee will be charged per person by Alternative Airlines. Additional charges by the Airline will apply depending on the fare rules, which can be viewed in the Airline Terms.</li>
-				<li>$60.00 amendment fee will be charged per person by Alternative Airlines. Additional charges by the Airline will apply depending on the fare rules. An amendment may be an itinerary modification or a date change,<b> if offered by the Airline.</b></li>
-			</ul>
-			<hr>
-			</td>
-		</tr>
-		
-		<input type="hidden" name="package_val" id="package_val" value="0">
-	</tbody>
-</table>
+  </p><p><b>2. Free booking alterations </b> <br>
+  In the case of a client requesting booking alterations (e.g. change of date, re-routing) on the booked service, provided that the booking is eligible to 
+  such amendments according to the regulations of the airline, Alternative Airlines will waive the administration fee of $60.00 per person, which is typically 
+  applied in Standard Service Package. Any other or additional fees that may be raised directly by the airline are excluded from this service package and can 
+  be found in the terms and conditions of the respective airline. </p>
+  <p>
+  <b>
+  The waiver of the administration fee is exclusively available to customers who have purchased the premium service package, which may only be 
+  purchased at the time of the ticket purchase and is non-transferable to other bookings.</b></p> 	
+  				</div>
+  			</td>
+  		
+  		</tr>
+  		<tr><td><hr></td></tr>
+  		<tr>
+  			<td>
+  			<input type="radio" name="service_package_radio" id="standard_service_package_radio" checked="checked" onclick="addStandard(0)" value="no" disabled="disabled"><span style="margin-left:10px;"><b>Standard Service Package: £0.00</b></span>
+  			<ul id="standard_service_package">
+  				<li>$60.00 cancellation fee will be charged per person by Alternative Airlines. Additional charges by the Airline will apply depending on the fare rules, which can be viewed in the Airline Terms.</li>
+  				<li>$60.00 amendment fee will be charged per person by Alternative Airlines. Additional charges by the Airline will apply depending on the fare rules. An amendment may be an itinerary modification or a date change,<b> if offered by the Airline.</b></li>
+  			</ul>
+  			<hr>
+  			</td>
+  		</tr>
+  		<input type="hidden" name="package_val" id="package_val" value="0">
+  	</tbody>
+  </table>
 </div>
 <div class="fo-submit">
   <div class="terms-conditions"><input id="termsandcond" tabindex="54" type="checkbox">&nbsp;I have read and accepted the <a id="termscondLink" href="#">Terms and Conditions</a> and the <a id="fareruleLink" href="javascript: void(0)">Fare Rules</a></div>
