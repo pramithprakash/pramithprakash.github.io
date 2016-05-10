@@ -28,12 +28,16 @@
 </head>
 
 <body ng-controller="dataController">
+<div class="top"></div>
+<div class="page">
   <section class="wrapper">
-    <div class="box logo">Logo</div>
-    <div class="box colored title">Title <br> Devloper</div>
+    <div class="box logo"><div class="center">Logo</div></div>
+    <div class="box colored title"><div class="center">Title <br> Devloper</div></div>
     <div class="box m about">
-      <h5>Hello</h5>
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+      <div class="">
+        <h5>Hello</h5>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+      </div>
     </div>
     <div class="box colored exp">10+<span>text</span></div>
     <div class="box m colored skills">
@@ -51,6 +55,7 @@
       </ul>
     </section> 
   </footer>
+</div>  
 </body>
 <script data-desc="requirejs runtime config" src="library/js/config/require-config.js"></script>
 <script src="library/js/vendor/require.js" data-main="mediators/app"></script>
