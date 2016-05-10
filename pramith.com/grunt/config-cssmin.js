@@ -17,7 +17,7 @@ module.exports = function ( grunt ) {
 
             files: [ {
                 expand: true,
-                cwd: 'uncompressed/css/',
+                cwd: 'css/',
                 src: [ '**/*.css' ],
                 dest: 'css/',
                 ext: '.css'

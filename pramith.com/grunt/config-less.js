@@ -6,37 +6,6 @@
 module.exports = function( grunt ) {
 
     grunt.config( 'less', {
-        dist: {
-            options: {
-                compress: true,
-                sourceMap: false,
-                strictMath: true,
-                relativeUrls: true
-            },
-            files: [
-                {
-                    expand: true,
-                    cwd: 'library',
-                    src: [
-                        '**/index.less'
-                    ],
-                    dest: 'library',
-                    ext: '.css',
-
-                    // Set the destination to a directory named "css"
-                    rename: function( dest, src ) {
-
-                        var path = require( 'path' )
-                            , splitDirs = src.split( '/' )
-                            ;
-
-                        splitDirs[ splitDirs.indexOf( 'less' ) ] = 'css';
-
-                        return path.join( dest, splitDirs.join( '/' ) );
-                    }
-                }
-            ]
-        },
         dev: {
             options: {
                 sourceMap: true,
@@ -46,7 +15,7 @@ module.exports = function( grunt ) {
             files: [
                 {
                     expand: true,
-                    cwd: 'library',
+                    cwd: 'uncompressed',
                     src: [
                         '**/index.less'
                     ],
