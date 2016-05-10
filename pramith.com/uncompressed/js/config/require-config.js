@@ -37,8 +37,8 @@ var require = {
      Referenced in both RequireJS and Uglify Grunt files.
     */
     modules: [ {
-        name: 'mediators/app',
-        exclude: globalExcludes
+        name: 'mediators/app'
+        //exclude: globalExcludes
     } ],
 
     /*

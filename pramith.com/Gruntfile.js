@@ -22,7 +22,8 @@ module.exports = function ( grunt ) {
        'clean:css',
        'less:dev',
        'cssmin:dist',
-       'requirejs:dist'
+       'requirejs:dist',
+       'uglify:dist'
     ] );
 
     grunt.registerTask( 'develop', 'Build to compile Less files during development.', [
