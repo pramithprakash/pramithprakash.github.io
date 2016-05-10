@@ -36,7 +36,7 @@ define(
 
                 var init = function () {
 
-                    var url = ( 'http://localhost/pramith/working/pramithprakash.github.io/pramith.com/data/data.json' );
+                    var url = ( 'http://localhost/pramith/working/pramithprakash.github.io/pramith/data/data.json' );
 
                     $http.get( url )
                         .success( function ( data, status, headers, config ) {

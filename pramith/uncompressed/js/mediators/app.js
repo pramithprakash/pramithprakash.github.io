@@ -20,6 +20,40 @@ require(
             init: function () {
 
                 $( this.initUI.bind( this ) );
+
+                function isScrolledIntoView( elem ) {
+
+                    var $elem = $( elem );
+                    var $window = $( window );
+
+                    var docViewTop = $window.scrollTop();
+                    var docViewBottom = docViewTop + $window.height();
+
+                    var elemTop = $elem.offset()
+                        .top;
+                    var elemBottom = elemTop + $elem.height();
+
+                    return ( elemTop <= docViewBottom );
+                }
+
+                $('.box').each(function(){
+
+                    if( isScrolledIntoView( $(this) )){
+
+                        $(this).addClass('inview');
+                    }
+                });
+
+                $( window ).scroll(function(){
+
+                    $('.box').each(function(){
+
+                        if( isScrolledIntoView( $(this) )){
+
+                            $(this).addClass('inview');
+                        } 
+                    });
+                });
             },
 
             initUI: function () {
