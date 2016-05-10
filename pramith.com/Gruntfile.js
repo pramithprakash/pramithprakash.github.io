@@ -26,7 +26,8 @@ module.exports = function ( grunt ) {
        'uglify:dist'
     ] );
 
-    grunt.registerTask( 'lessDev', 'Build to compile Less files during development.', [
+    grunt.registerTask( 'develop', 'Build to compile Less files during development.', [
+        'requirejs:dev',
         'clean:css',
         'less:dev'
     ] );

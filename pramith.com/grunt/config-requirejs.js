@@ -52,10 +52,10 @@ module.exports = function( grunt ) {
          },*/
 
         // Set 'none' so you can see how the files are concatenated.
-        // optimize: 'none',
+        //optimize: 'none',
         
         // Ignore the css files
-        optimizeCss: 'none',
+        //optimizeCss: 'none',
         
         /*
          Introduced in 2.1.2: If using "dir" for an output directory, normally the
@@ -142,6 +142,14 @@ module.exports = function( grunt ) {
         dist: {
             options: _.assign( _.clone( common, true ), {
 				dir: 'library/js',
+                skipDirOptimize: false
+            })
+        },
+        dev: {
+            options: _.assign( _.clone( common, true ), {
+                dir: 'library/js',
+                optimize: 'none',
+                optimizeCss: 'none',
                 skipDirOptimize: false
             })
         }
