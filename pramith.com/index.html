@@ -27,19 +27,33 @@
 
 </head>
 
-<body>
-  <section class="wrapper" ng-controller="dataController">
-    <div class="box logo"></div>
-    <div class="box colored title"></div>
-    <div class="box about">
-      <h5 ng-bind="data.title"></h5>
-      <p ng-bind="data.about"></p>
+<body ng-controller="dataController">
+  <section class="wrapper">
+    <div class="box logo">Logo</div>
+    <div class="box colored title">Title <br> Devloper</div>
+    <div class="box m about">
+      <h5>Hello</h5>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+    </div>
+    <div class="box colored exp">10+<span>text</span></div>
+    <div class="box m colored skills">
+      
     </div>
   </section>
+  <footer>
+    <section class="wrapper">
+      <div class="counter-text"><span>201695849</span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</div>
+      <ul class="social">
+        <li><a class="facebook"></a></li>
+        <li><a class="twitter"></a></li>
+        <li><a class="linkedin"></a></li>
+        <li><a class="hangout"></a></li>
+      </ul>
+    </section> 
+  </footer>
 </body>
 <script data-desc="requirejs runtime config">
   <!--#include virtual="library/js/config/require-config.js" -->
 </script>
 <script src="library/js/vendor/require.js" data-main="mediators/app"></script>
-
 </html>
