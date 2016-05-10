@@ -3,19 +3,17 @@
  *
  * See all options: https://github.com/jrburke/r.js/blob/master/build/example.build.js
  */
-module.exports = function( grunt ) {
+module.exports = function ( grunt ) {
 
     //require('time-grunt')(grunt);
-    
+
     var pathToMainConfigFile = 'uncompressed/js/config/require-config.js';
-    
-    var vm = require( 'vm' )
-        , _ = require( 'lodash' )
-        ;
-    
-    var mainConfig = {}
-        , mainConfigFile = grunt.file.read( pathToMainConfigFile )
-        ;
+
+    var vm = require( 'vm' ),
+        _ = require( 'lodash' );
+
+    var mainConfig = {},
+        mainConfigFile = grunt.file.read( pathToMainConfigFile );
 
     vm.runInNewContext( mainConfigFile, mainConfig );
 
@@ -27,13 +25,13 @@ module.exports = function( grunt ) {
          This path is relative to this file.
         */
         appDir: './uncompressed/js',
-        
+
         /*
          This is the main path to which our modules are relative.
          This path is relative to the `appDir` option.
         */
         baseUrl: '.',
-        
+
         /*
          If using UglifyJS for script optimization, these config options will be
          passed to UglifyJS.
@@ -53,10 +51,10 @@ module.exports = function( grunt ) {
 
         // Set 'none' so you can see how the files are concatenated.
         //optimize: 'none',
-        
+
         // Ignore the css files
         //optimizeCss: 'none',
-        
+
         /*
          Introduced in 2.1.2: If using "dir" for an output directory, normally the
          optimize setting is used to optimize the build bundles (the "modules"
@@ -76,7 +74,7 @@ module.exports = function( grunt ) {
          Paths are relative to `baseUrl`.
         */
         paths: mainConfig.require.paths,
-        
+
         /*
          If shim config is used in the app during runtime, duplicate the config
          here. Necessary if shim config is used, so that the shim's dependencies
@@ -89,7 +87,7 @@ module.exports = function( grunt ) {
          'moduleA' and instead get 'moduleB'.
         */
         map: mainConfig.require.map,
-        
+
         /*
          Create an object for each bootstrap to be optimized. Their immediate
          and deep dependencies will be built into the main module's file.
@@ -104,56 +102,25 @@ module.exports = function( grunt ) {
         */
         //normalizeDirDefines: 'all',
 
-        /*
-         A function that if defined will be called for every file read in the
-         build that is done to trace JS dependencies. This allows transforms of
-         the content.
-        */
-        onBuildRead: function ( moduleName, path, contents ) {
-            
-            // If file is not in 'vendor' directory remove console statements
-            var data = ( path.indexOf( 'vendor' ) >= 0 ) ? contents : contents.replace( /console(.*)\(.*\);/g, '' );
-
-            /*
-             Run 'ng-annotate' during r.js concatenation process to fix any
-             AngularJS dependency errors on minification
-             REFERENCE: https://github.com/olov/ng-annotate
-            */
-            var res = require( 'ng-annotate' )( data, {
-                add: true,
-            });
-
-            if ( res.errors ) {
-                
-                // do something with this, res.errors is now an array of strings
-                throw new Error( res.errors.join( '\n' ) );
-                
-            } else {
-
-                return res.src;
-            }
-
-        }
     };
-
 
     grunt.config( 'requirejs', {
 
         dist: {
             options: _.assign( _.clone( common, true ), {
-				dir: 'library/js',
+                dir: 'library/js',
                 skipDirOptimize: false
-            })
+            } )
         },
         dev: {
             options: _.assign( _.clone( common, true ), {
-                dir: 'library/js',
+                dir: [ 'library/js/', ],
                 optimize: 'none',
                 optimizeCss: 'none',
                 skipDirOptimize: false
-            })
+            } )
         }
-    });
-    
+    } );
+
     grunt.loadNpmTasks( 'grunt-contrib-requirejs' );
 };

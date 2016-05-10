@@ -1,1 +1,100 @@
-define("controllers/data-controller",["jquery","vendor/angular-min"],function(a,b){"use strict";return b.module("Data.controllers",[]).controller("dataController",["$scope","$parse","$http","$window",function(a,b,c,d){var e=function(){var b="http://localhost/pramith/working/pramithprakash.github.io/pramith.com/data/data.json";c.get(b).success(function(b,c,d,e){a.data=b})};e()}])}),require(["jquery","controllers/data-controller","vendor/angular-min"],function(a,b,c){"use strict";var d={init:function(){a(this.initUI.bind(this))},initUI:function(){this.initAngular()},initAngular:function(){c.module("Pramith",["Data.controllers"]),c.bootstrap(document,["Pramith"])}};d.init()}),define("mediators/app",function(){});
+define(
+    'controllers/data-controller',[
+        'jquery',
+        // Angular-specific dependencies
+        'vendor/angular-min'
+    ],
+
+    function (
+
+        $,
+        // Angular-specific dependencies
+        angular
+
+    ) {
+
+        'use strict';
+
+        /* Controllers */
+        return angular.module( 'Data.controllers', [] )
+
+        .controller( 'dataController', [
+
+            '$scope',
+            '$parse',
+            '$http',
+            '$window',
+
+            function (
+
+                $scope,
+                $parse,
+                $http,
+                $window
+
+            ) {
+
+                var init = function () {
+
+                    var url = ( 'http://localhost/pramith/working/pramithprakash.github.io/pramith.com/data/data.json' );
+
+                    $http.get( url )
+                        .success( function ( data, status, headers, config ) {
+                            $scope.data = data;
+                        } );
+
+                };
+
+                init();
+            }
+        ] );
+    }
+);
+
+require(
+    [
+        'jquery',
+        'controllers/data-controller',
+        'vendor/angular-min'
+    ],
+
+    function (
+
+        $,
+        dataController,
+        angular
+
+    ) {
+
+        'use strict';
+
+        var pramith = {
+
+            init: function () {
+
+                $( this.initUI.bind( this ) );
+            },
+
+            initUI: function () {
+
+                this.initAngular();
+
+            },
+
+            initAngular: function () {
+
+                angular.module( 'Pramith', [
+                    'Data.controllers'
+                ] );
+
+                angular.bootstrap( document, [ 'Pramith' ] );
+            }
+
+        };
+
+        pramith.init();
+    }
+);
+
+define("mediators/app", function(){});
+
