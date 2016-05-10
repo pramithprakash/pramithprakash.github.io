@@ -46,7 +46,7 @@ require(
 
                 $( window ).scroll(function(){
 
-                    $('.box').each(function(){
+                    $('.box').off().each(function(){
 
                         if( isScrolledIntoView( $(this) )){
 
