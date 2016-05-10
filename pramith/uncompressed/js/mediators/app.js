@@ -36,7 +36,7 @@ require(
                     return ( elemTop <= docViewBottom );
                 }
 
-                $('.box').each(function(){
+                $('.box, footer').each(function(){
 
                     if( isScrolledIntoView( $(this) )){
 
@@ -46,7 +46,7 @@ require(
 
                 $( window ).scroll(function(){
 
-                    $('.box').off().each(function(){
+                    $('.box, footer').off().each(function(){
 
                         if( isScrolledIntoView( $(this) )){
 

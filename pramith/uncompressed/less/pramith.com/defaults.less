@@ -63,6 +63,9 @@ html {
   color: #111111;
   font-family: 'Roboto', sans-serif;
 }
+.wrapper{
+  margin: 15px 0 0;
+}
 .box{
   .transition(all .2s ease-out);
   &.inview{
@@ -101,8 +104,16 @@ html {
   }
 }
 footer{
+  .transition(all .2s ease-out);
+  &.inview{
+    opacity: 1;
+    margin: 0;
+  } 
+  opacity: 0;
+  margin: 150px 0 0;
   background-color: #ff512f;
   .wrapper{
+    margin-top: 0;
     padding: 15px;
   }
   .counter-text{
