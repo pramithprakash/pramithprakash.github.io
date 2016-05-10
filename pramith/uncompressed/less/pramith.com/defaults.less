@@ -27,7 +27,6 @@ ul {
   margin: 0;
   padding: 0;
   .borderbox();
-  font-family: 'Roboto', sans-serif;
   outline: none;
 }
 a,
@@ -54,6 +53,13 @@ a:visited {
   padding: 0;
   .borderbox();
 }
+@font-face {
+    font-family: 'fontLight';
+    src :  url('../../fonts/fontLight.woff') format("woff");
+    font-weight: 100;
+    font-style: normal;
+    -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale
+}
 body,
 html {
   min-height: 100%;
@@ -61,25 +67,37 @@ html {
   .fonts( 16 );
   line-height: 22px;
   color: #111111;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'fontLight','Open Sans', sans-serif;
+  font-weight: 300;
 }
 .wrapper{
   margin: 15px 0 0;
 }
 .box{
   .transition(all .2s ease-out);
+  &.sh{
+    box-shadow: 0 15px 100px rgba(0,0,0,.06);
+  }
   &.inview{
     opacity: 1;
     margin: 0 15px 15px;
   }
+  a{
+    text-decoration: none;
+    color: #ff512f;
+  }
   position: relative;
   opacity: 0;
-  background-color: #f6f6f6;
+  background-color: transparent;
   margin: 20px 15px 15px;
   padding: 15px;
+  &.title{
+    font-weight: 700;
+  }
   &.exp{
     .fonts( 100 );
     line-height: 72px;
+    font-weight: 700;
     padding: 22px 10px;
     span{
       .fonts( 12 );
@@ -88,6 +106,7 @@ html {
       position: absolute;
       right: 10px;
       bottom: 20px;
+      font-weight: 300;
       line-height: 12px;
     }
   }
@@ -101,6 +120,7 @@ html {
   h5{
     font-size: 30px;
     padding: 0 0 10px;
+    font-weight: 400;
   }
 }
 footer{
@@ -117,8 +137,9 @@ footer{
     padding: 15px;
   }
   .counter-text{
-    span{
+    strong{
       .fonts( 30 );
+      font-weight: 600;
       margin: 0 8px 0 0;
     }
   }
@@ -149,5 +170,51 @@ footer{
         }
       }
     }
+  }
+}
+.page{
+  &:after{
+    position: absolute;
+    width: 200px;
+    height: 100%;
+    left: 15px;
+    content: '';
+    display: block;
+    top: 0;    opacity: .6;
+    box-shadow: 0 15px 100px rgba(0,0,0,.06);
+  }
+  &:before{
+    position: absolute;
+    width: 140px;
+    height: 100%;
+    left: 0;
+    content: '';
+    display: block;
+    top: 0;    opacity: .6;
+    box-shadow: 0 15px 100px rgba(0,0,0,.06);
+    //background: rgba(0,0,0,.06);
+  }
+}
+.page > .wrapper{
+  &:after{
+    position: absolute;
+    width: 140px;
+    height: 100%;
+    left: 15px;
+    content: '';
+    display: block;
+    top: 0;
+    box-shadow: 0 15px 100px rgba(0,0,0,.06);
+  }
+  &:before{
+    position: absolute;
+    width: 249px;
+    height: 100%;
+    left: 0;
+    content: '';
+    display: block;
+    top: 0;
+    box-shadow: 0 15px 100px rgba(0,0,0,.06);
+    //background: rgba(0,0,0,.06);
   }
 }

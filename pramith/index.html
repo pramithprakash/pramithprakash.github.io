@@ -16,7 +16,7 @@
   <link href="library/css/pramith.com/index.css" rel="stylesheet">
 
   <!-- Custom Fonts -->
-  <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500&subset=latin,greek-ext' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -28,30 +28,29 @@
 </head>
 
 <body ng-controller="dataController">
-<div class="top"></div>
 <div class="page">
   <section class="wrapper">
-    <div class="box logo"><div class="center">Logo</div></div>
-    <div class="box colored title"><div class="center">Title <br> Devloper</div></div>
-    <div class="box m about">
-      <div class="">
-        <h5>Hello</h5>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+    <div class="box logo"><a href="http://pramith.com"><strong>&#60;&#47;&#62;</strong><span ng-bind-html="data.logoText | trust"></span></a></div>
+    <div class="box sh colored title"><div class="center" ng-bind-html="data.title | trust"></div></div>
+    <div class="box sh m about">
+      <div>
+        <h5 ng-bind="data.aboutTitle"></h5>
+        <p ng-bind="data.aboutText"></p>
       </div>
     </div>
-    <div class="box colored exp">10+<span>text</span></div>
-    <div class="box m colored skills">
+    <div class="box sh colored exp"><strong ng-bind="data.years"></strong><span ng-bind="data.yearsText"></span></div>
+    <div class="box sh m colored skills">
       
     </div>
   </section>
   <footer>
     <section class="wrapper">
-      <div class="counter-text"><span>201695849</span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</div>
+      <div class="counter-text"><strong ng-bind="miliseconds"></strong><span ng-bind-html="data.secondsText | trust"></span></div>
       <ul class="social">
-        <li><a class="facebook"></a></li>
-        <li><a class="twitter"></a></li>
-        <li><a class="linkedin"></a></li>
-        <li><a class="hangout"></a></li>
+        <li><a class="facebook" href="{{data.facebook}}" target="_blank"></a></li>
+        <li><a class="twitter" href="{{data.twitter}}" target="_blank"></a></li>
+        <li><a class="linkedin" href="{{data.linkedin}}" target="_blank"></a></li>
+        <li><a class="hangout" href="{{data.hangout}}" target="_blank"></a></li>
       </ul>
     </section> 
   </footer>

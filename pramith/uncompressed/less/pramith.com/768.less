@@ -12,19 +12,43 @@
     height: auto;
   }
   &.logo{
-    top: 15px;
+    top: 50px;
     left: 15px;
+    height: 30px;
+    width: 400px;
+    background: #FFF;
+    z-index: 99;
+    padding: 8px 10px 0;
+    margin: 0 0 0 -30px !important;
+    line-height: 20px;
+    .fonts( 12 );
+    text-transform: uppercase;
+    a:hover{
+      span{
+        color: #000;
+      }
+    }
+    strong{
+      font-weight: 800;
+      margin-right: 10px;
+    }
+    span{
+      color: rgba(0,0,0,.5);
+      span{
+        opacity: .4; 
+      }
+    }
   }
   &.title{
     top: 130px;
     left: 15px;
   }
   &.about{
-    left: 170px;
+    left: 260px;
     top: 130px;
   }
   &.skills{
-    right: 84px;
+    right: 0;
     top: 245px;
     background-color: #ff512f;
   }
@@ -42,6 +66,7 @@
 }
 footer {
   margin-top: 0 !important;
+  opacity: 1 !important;
 }
 footer .wrapper{
   min-height: initial;
