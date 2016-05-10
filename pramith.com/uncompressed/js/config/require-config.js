@@ -32,16 +32,14 @@ var require = {
         }
     },
 
-
-
     /*
      Add modules to compile here with their respective includes/excludes.
      Referenced in both RequireJS and Uglify Grunt files.
     */
-    modules: [{
+    modules: [ {
         name: 'mediators/app',
         exclude: globalExcludes
-    }],
+    } ],
 
     /*
      Map a module's ID to another ID. This allows a
