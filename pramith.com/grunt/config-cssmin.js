@@ -7,24 +7,24 @@
 * See all options: https://github.com/gruntjs/grunt-contrib-cssmin
 
 */
-module.exports = function(grunt) {
+module.exports = function ( grunt ) {
 
     //require('time-grunt')(grunt);
 
-    grunt.config('cssmin', {
+    grunt.config( 'cssmin', {
 
         dist: {
 
-            files: [{
+            files: [ {
                 expand: true,
                 cwd: 'uncompressed/css/',
-                src: ['**/*.css'],
+                src: [ '**/*.css' ],
                 dest: 'css/',
                 ext: '.css'
-            }]
+            } ]
 
         }
-    });
-    grunt.loadNpmTasks('grunt-contrib-cssmin');
+    } );
+    grunt.loadNpmTasks( 'grunt-contrib-cssmin' );
 
 };

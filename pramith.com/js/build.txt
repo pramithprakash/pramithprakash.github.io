@@ -1,5 +1,0 @@
-
-mediators/app.js
-----------------
-controllers/data-controller.js
-mediators/app.js

@@ -3,7 +3,7 @@
  *
  * See all options: https://github.com/gruntjs/grunt-contrib-clean
  */
-module.exports = function( grunt ) {
+module.exports = function ( grunt ) {
 
     //require('time-grunt')(grunt);
 
@@ -31,7 +31,7 @@ module.exports = function( grunt ) {
             'library/less/mgmGrand/global/icons/delete/',
             'library/images/mgmGrand/svg-min/'
         ]
-    });
+    } );
 
     grunt.loadNpmTasks( 'grunt-contrib-clean' );
 };

@@ -141,7 +141,7 @@ module.exports = function( grunt ) {
 
         dist: {
             options: _.assign( _.clone( common, true ), {
-				dir: 'js',
+				dir: 'library/js',
                 skipDirOptimize: false
             })
         }

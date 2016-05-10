@@ -18,7 +18,7 @@ module.exports = function( grunt ) {
     /* Load tasks */
     grunt.loadTasks( 'grunt' );
     
-    grunt.registerTask( 'default', 'Build for integration handoff.', [
+    grunt.registerTask( 'build', 'Build for integration handoff.', [
        'cssmin:dist',
        'requirejs:dist',
        'uglify:dist'

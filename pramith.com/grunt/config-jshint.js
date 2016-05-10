@@ -10,9 +10,9 @@ module.exports = function( grunt ) {
             jshintrc: '.jshintrc'
         },
         all: [
-            'library/**/*.js',
-            '!library/**/config/*.js',
-            '!library/**/vendor/**/*.js',
+            'uncompressed/**/*.js',
+            '!uncompressed/**/config/*.js',
+            '!uncompressed/**/vendor/**/*.js',
         ]
     });
     
