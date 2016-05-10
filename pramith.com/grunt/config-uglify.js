@@ -21,14 +21,11 @@ module.exports = function( grunt ) {
     for ( var i = 0; i < length; i++ ) {
 
         path = modules[ i ].name;
-
-        distFiles[ '<%= buildPath.dist %>library/js/' + path + '.js' ] = '<%= buildPath.dist %>library/js/' + path + '.js';
+        distFiles[ 'library/js/' + path + '.js' ] = 'library/js/' + path + '.js';
     }
     
     // Concatenate require.js and common.js to fix mediator race condition
-    distFiles[ '<%= buildPath.dist %>library/js/vendor/require.js' ] = [
-        '<%= buildPath.dist %>library/js/vendor/require.js'
-    ];
+    distFiles[ 'library/js/vendor/require.js' ] = ['library/js/vendor/require.js'];
 
     grunt.config( 'uglify', {
 
