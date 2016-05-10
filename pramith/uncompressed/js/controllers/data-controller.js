@@ -54,7 +54,7 @@ define(
 
                 var init = function () {
 
-                    var url = ( '../../data/data.json' );
+                    var url = ( 'data/data.json' );
 
                     $scope.miliseconds = "164630000";
 
