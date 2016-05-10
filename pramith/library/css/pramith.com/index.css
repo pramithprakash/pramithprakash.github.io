@@ -101,6 +101,31 @@ html {
   text-decoration: none;
   color: #ff512f;
 }
+.box.logo {
+  height: 30px;
+  width: 100%;
+  background: #FFF;
+  z-index: 99;
+  padding: 8px 10px 0;
+  margin: 0 !important;
+  line-height: 20px;
+  font-size: 12px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+.box.logo a:hover span {
+  color: #000;
+}
+.box.logo strong {
+  font-weight: 800;
+  margin-right: 10px;
+}
+.box.logo span {
+  color: rgba(0, 0, 0, 0.5);
+}
+.box.logo span span {
+  opacity: .4;
+}
 .box.title {
   font-weight: 700;
 }
@@ -267,23 +292,6 @@ footer .social li a.hangout {
     z-index: 99;
     padding: 8px 10px 0;
     margin: 0 0 0 -30px !important;
-    line-height: 20px;
-    font-size: 12px;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-  }
-  .box.logo a:hover span {
-    color: #000;
-  }
-  .box.logo strong {
-    font-weight: 800;
-    margin-right: 10px;
-  }
-  .box.logo span {
-    color: rgba(0, 0, 0, 0.5);
-  }
-  .box.logo span span {
-    opacity: .4;
   }
   .box.title {
     top: 130px;
