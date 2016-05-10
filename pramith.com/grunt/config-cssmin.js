@@ -17,9 +17,9 @@ module.exports = function ( grunt ) {
 
             files: [ {
                 expand: true,
-                cwd: 'css/',
+                cwd: 'library/css/',
                 src: [ '**/*.css' ],
-                dest: 'css/',
+                dest: 'library/css/',
                 ext: '.css'
             } ]
 
