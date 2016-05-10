@@ -1,0 +1,83 @@
+.borderbox() {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.translate(@x, @y) {
+    -webkit-transform: ~"translate(@{x}, @{y})";
+    -moz-transform: ~"translate(@{x}, @{y})";
+    -ms-transform: ~"translate(@{x}, @{y})";
+    -o-transform: ~"translate(@{x}, @{y})";
+    transform: ~"translate(@{x}, @{y})";
+}
+.center-center() {
+    top:50%;
+    left:50%;
+    position:absolute;
+    .translate(-50%,-50%);
+}
+.border-radius(@arguments) {
+    -webkit-border-radius: @arguments;
+    -moz-border-radius: @arguments;
+    border-radius: @arguments;
+}
+.calculate( @arguments ) {
+    width: -moz-calc( @arguments );
+    width: -webkit-calc( @arguments );
+    width: -o-calc( @arguments );
+    width: calc( @arguments );
+}
+.fonts(@sizeValue) {
+    @remValue: (@sizeValue / 16);
+    @pxValue: @sizeValue;
+    font-size: ~"@{pxValue}px"; 
+    font-size: ~"@{remValue}rem";
+}
+.transition(@arguments) {
+    -webkit-transition: @arguments;
+    -moz-transition: @arguments;
+    -o-transition: @arguments;
+    transition: @arguments;
+}
+.transition-delay(@arguments) {
+    -webkit-transition-delay: @arguments;
+    -moz-transition-delay: @arguments;
+    -o-transition-delay: @arguments;
+    transition-delay: @arguments;
+}
+.scale(@x, @y) {
+    -webkit-transform: ~"scale(@{x}, @{y})";
+    -moz-transform: ~"scale(@{x}, @{y})";
+    -ms-transform: ~"scale(@{x}, @{y})";
+    -o-transform: ~"scale(@{x}, @{y})";
+    transform: ~"scale(@{x}, @{y})";
+}
+.placeholder-color( @clr, @align ) {
+    &::-webkit-input-placeholder { color: @clr; }
+    &:-moz-placeholder { color: @clr; opacity: 1; } /* firefox 18- */
+    &::-moz-placeholder { color: @clr; opacity: 1; } /* firefox 19+ */
+    &:-ms-input-placeholder { color: @clr; } /* ie */
+    text-align: @align;
+}
+.rotate(@deg) {
+    -webkit-transform: ~"rotate(@{deg}deg)";
+    -moz-transform: ~"rotate(@{deg}deg)";
+    -ms-transform: ~"rotate(@{deg}deg)";
+    -o-transform: ~"rotate(@{deg}deg)";
+    transform: ~"rotate(@{deg}deg)";
+}
+
+.clearfix() {
+    &:after {
+        content: " "; // 1
+        display: table; // 2
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+@easeOutQuad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+@easeInOutQuad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+@easeInQuint: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+@easeJQuerySwing: cubic-bezier(.02, .01, .47, 1);
