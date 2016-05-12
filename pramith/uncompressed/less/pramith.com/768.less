@@ -13,17 +13,21 @@
   }
   &.logo{
     top: 50px;
-    left: 15px;
+    left: 40px;
     height: 30px;
     width: 400px;
-    background: #FFF;
     z-index: 99;
     padding: 8px 10px 0;
     margin: 0 0 0 -30px !important;
   }
   &.title{
-    top: 130px;
-    left: 15px;
+    .rotate( -90 );
+    left: -20px;
+    text-align: center;
+    width: 206px;
+    background: none;
+    box-shadow: 0 0 0;
+    bottom: 100px;
   }
   &.about{
     left: 260px;
@@ -32,7 +36,7 @@
   &.skills{
     right: 0;
     top: 245px;
-    background-color: #ff512f;
+    background-color: @white;
   }
   &.exp{
     right: 15px;
@@ -46,9 +50,15 @@
   position: relative;
   min-height: 600px;
 }
+.pre-load footer {
+   margin-top: 500px !important;
+   opacity: 0 !important;
+}
 footer {
-  margin-top: 0 !important;
-  opacity: 1 !important;
+  .transition(all .8s ease-out);
+  .transition-delay(1.5s);
+   margin-top: 0 !important;
+   opacity: 1 !important;
 }
 footer .wrapper{
   min-height: initial;

@@ -21,6 +21,12 @@ require(
 
                 $( this.initUI.bind( this ) );
 
+                setTimeout(function(){
+
+                    $('body').removeClass( 'pre-load' );
+
+                },1000)
+
                 function isScrolledIntoView( elem ) {
 
                     var $elem = $( elem );
