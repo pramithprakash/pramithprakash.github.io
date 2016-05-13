@@ -121,8 +121,12 @@ html {
     margin: 0 15px 15px;
   }
   a{
+    color: rgba(0,0,0,.5);
+    opacity: .4; 
     text-decoration: none;
-    color: @brandColor;
+    &:hover{
+      opacity: 1;
+    }
   }
   position: relative;
   opacity: 0;
@@ -130,6 +134,10 @@ html {
   margin: 20px 15px 15px;
   padding: 15px;
   &.logo{
+    a{
+      opacity: 1; 
+      color: @brandColor;
+    }
     height: 30px;
     width: 100%;
     z-index: 99;
@@ -286,6 +294,7 @@ footer{
 }
 .pre-load .bg{
   opacity: .8;
+  z-index: 2;
 }
 .bg{
   .center-center();
@@ -295,7 +304,7 @@ footer{
   text-align: center;
   opacity: 0;
   line-height: 1;
-  z-index: 2;
+  z-index: -1;
   font-weight: 700;
   .fonts( 40 );
 }
