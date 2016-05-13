@@ -12,7 +12,7 @@
     height: auto;
   }
   &.logo{
-    top: 50px;
+    top: 15vh;
     left: 40px;
     height: 30px;
     width: 400px;
@@ -27,21 +27,36 @@
     width: 206px;
     background: none;
     box-shadow: 0 0 0;
-    bottom: calc(9vh);
+    bottom: calc(6.5vw);
   }
   &.about{
     left: 260px;
     top: auto;
+    height: 100%;
     bottom: 0;
+    > div{
+      position: absolute;
+      bottom: calc(9vh);
+    }
   }
-  &.skills{
+  &.menu{
     right: 0;
-    top: 245px;
-    background-color: @white;
+    top: auto;
+    bottom: 0;
+    height: 100%;
+    nav{
+      .rotate( 90 );
+      width: 400px;
+      position: absolute;
+      bottom: 30vh;
+      a{
+        margin: 0 5vh 0 0;
+      }     
+    }
   }
   &.exp{
     right: 0;
-    top: 130px;
+    top: 15vh;
     .fonts( 60 );
   }
 }
