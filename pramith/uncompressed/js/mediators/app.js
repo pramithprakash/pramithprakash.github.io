@@ -2,14 +2,18 @@ require(
     [
         'jquery',
         'controllers/data-controller',
-        'vendor/angular-min'
+        'vendor/angular-min',
+        'vendor/angular-route-min',
+        'vendor/angular-animate-min'
     ],
 
     function (
 
         $,
         dataController,
-        angular
+        angular,
+        angularRoute,
+        angularAnimate
 
     ) {
 
@@ -24,8 +28,9 @@ require(
                 setTimeout(function(){
 
                     $('body').removeClass( 'pre-load' );
+                    window.location.hash = '#home';
 
-                },1000)
+                },5000)
 
                 function isScrolledIntoView( elem ) {
 
@@ -71,8 +76,32 @@ require(
             initAngular: function () {
 
                 angular.module( 'Pramith', [
-                    'Data.controllers'
-                ] );
+                    'Data.controllers',
+                    'ngRoute',
+                    'ngAnimate'
+                ] ).config(['$routeProvider',
+                    function($routeProvider){
+                        $routeProvider.
+                        when('/home',{
+                            templateUrl: 'home.html'
+                        }).
+                        when('/about',{
+                            templateUrl: 'about.html'
+                        }).
+                         when('/links',{
+                            templateUrl: 'links.html'
+                        }).
+                        when('/contact',{
+                           templateUrl: 'home.html'
+                        }).
+                        when('/skills',{
+                           templateUrl: 'skills.html'
+                        }).
+                         otherwise({
+                           redirectTo: '/home' 
+                        });
+                    }
+                ]);
 
                 angular.bootstrap( document, [ 'Pramith' ] );
             }

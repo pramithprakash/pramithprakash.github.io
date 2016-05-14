@@ -5,7 +5,9 @@
 */
 var globalExcludes = [
     'jquery',
-    'vendor/angular-min'
+    'vendor/angular-min',
+    'vendor/angular-route-min',
+    'vendor/angular-animate-min'
 ];
 
 var require = {

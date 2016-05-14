@@ -35,7 +35,6 @@ define(
                 };
             }
         ])
-
         .controller( 'dataController', [
 
             '$scope',
@@ -58,6 +57,10 @@ define(
 
                     $scope.miliseconds = "164630000";
 
+                    $scope.hash = 'home';
+
+                    $window.onhashchange = hashChangeHandler;
+
                     var counter
                         , counter1
                         , ct1
@@ -67,6 +70,19 @@ define(
                         ;
                     
                     ct1 = parseInt(Math.abs(dif)/ 1000 - 1000);
+
+                    function hashChangeHandler() {
+                        
+                        var hash = window.location.hash;
+
+                        hash = $.trim( '' + hash.substring(1) );
+
+                        if ( hash.charAt( 0 ) === '/' ) {
+
+                            hash = $.trim( '' + hash.substring( 1 ) );
+                        }
+                        $scope.hash = hash;
+                    }
 
                     function timerLoop() {
                         
@@ -80,10 +96,12 @@ define(
                         $scope.$apply();
                         
                     }
+
                     function scopeApply() {
 
                         if ( !$scope.$$phase ) { $scope.$apply(); }
                     }
+
                     function counterLoop() {
 
                         ct1 = ct1 + 1 ;
@@ -96,6 +114,7 @@ define(
                           clearInterval( counter1 );		
                         }	
                     }
+
                     counter1 = setInterval( counterLoop, 1 );
 
                     $http.get( url )

@@ -1,4 +1,7 @@
 .box {
+  h5{
+    line-height: 50px;
+  }
   width: 140px;
   height: 100px;
   position: absolute;
@@ -29,6 +32,9 @@
     background: none;
     box-shadow: 0 0 0;
     bottom: 120px;
+    &.contact{
+      bottom: calc( 50vh + 80px );
+    }
   }
   &.include{
     left: 260px;
@@ -46,14 +52,20 @@
     bottom: 0;
     height: 100%;
     nav{
+      .transition(all .2s ease-out);
+      display: block;
       .rotate( 90 );
       width: 100%;
       text-align: center;
       position: absolute;
       bottom: 30vh;
-      left: -70px;
+      left: -75px;
+      &.hoz{
+        .rotate( 0 );
+        bottom: 50vh;
+      }
       a{
-        margin: 0 30px 0 0;
+        margin: 0 18px 0 0;
         cursor: pointer;
         &:last-child{
           margin-right: 0;
@@ -94,6 +106,19 @@ footer {
   .transition-delay(1.5s);
    margin-top: 0 !important;
    opacity: 1 !important;
+  &.active{
+    .transition(height .2s ease-out);
+    .transition-delay(0);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: @white;
+    z-index: 99;
+    min-height: 50vh;
+    .close{
+      display: block;
+    }
+  }
 }
 footer .wrapper{
   min-height: initial !important;
@@ -101,4 +126,37 @@ footer .wrapper{
 }
 .bg{
   .fonts( 90 );
+}
+.close{
+  .transition(all .1s ease-out);
+  position: fixed;
+  z-index: 9;
+  top: 20px;
+  right: 20px;
+  height: 80px;
+  width: 80px;
+  background: url( @closeIcon ) no-repeat 0 0;
+  background-size: cover;
+  &:hover{
+    .rotate( 90 );
+  }
+}
+.reach-out{
+  position: absolute;
+  top: 100px;
+  right: 12%;
+  text-align: right;
+}
+.links-active{
+  .include{
+    z-index: 99;
+    .transition(all 0 ease-out);
+    width: calc( 100% - 260px );
+    .close{
+      display: block;
+    }
+  }
+  nav,.exp > div{
+    display: none !important;
+  }
 }

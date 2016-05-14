@@ -21,11 +21,6 @@
 .box.logo{
   left: 12%;
 }
-.box.menu{
-  nav{
-    bottom: 40vh;
-  }
-}
 .box.exp{
   right: 12%;
 }
@@ -35,4 +30,59 @@ footer .wrapper {
 .box.menu{
   width: calc( 50% - 260px );
   box-shadow: -1px 0px 7px rgba(111, 96, 96, 0.08);
+  nav{
+    bottom: 47vh;
+  }
+}
+.pre-load{
+  background: transparent !important;
+  color: @black !important;
+  .page-anim{
+    width: 100%;
+    position: fixed;
+    height: 100%;
+    &:after,&:before{
+      opacity: 1 !important;
+      opacity: 1!important;
+      box-shadow: 0 15px 10px rgba(0, 0, 0, 0.43);
+      background: rgba(125, 125, 125, 0.08);
+    }
+  }
+}
+.page-anim{
+  &:after{
+    .transition(all .8s ease-out);
+    .transition-delay(1s);
+    position: absolute;
+    width: 140px;
+    height: 100%;
+    content: '';
+    display: block;
+    top: 0;
+    box-shadow: 0 15px 100px rgba(0, 0, 0, 0.06);
+    animation: 3s anim ease-out infinite; 
+  }
+  &:before{
+    .transition(all .8s ease-out);
+    .transition-delay(2s);
+    position: absolute;
+    width: 249px;
+    height: 100%;
+    content: '';
+    display: block;
+    top: 0;
+    box-shadow: 0 15px 100px rgba(0,0,0,.06);
+    background: rgba(236, 74, 20, 0.02);
+    animation: 1s animr ease-out infinite; 
+  }
+}
+@keyframes anim {
+  0% {left: 0;opacity: .1;}
+  60%{left: 100%;opacity: .4;}
+  100% {left: 0;opacity: .1;}
+}
+@keyframes animr {
+  0% {right: 0;opacity: .4;}
+  60%{right: 100%;opacity: .1;}
+  100% {right: 0;opacity: .4;}
 }
