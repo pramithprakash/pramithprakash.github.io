@@ -1,422 +1,67 @@
 <!DOCTYPE html>
-<html ng-app="pramithprakashApp" prefix="og: http://ogp.me/ns#">
+<html lang="en">
+
 <head>
-<!-- Twitter Card data -->
-<meta name="twitter:card" value="summary">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta property="og:image" content="http://www.pramithprakash.com/library/images/logo.png" />
-<title>Pramith Prakash</title>
-<meta name="Keywords" content="Pramith Prakash, Pramith, pramith, PramithPrakash, pramithprakash, UI Developer, Web Developer, HTML5 Developer">
-<meta name="Description" content="Pramith Prakash, a UI developer with more than 6 years of experience in web development">
-<meta name="viewport" content="width=device-width, initial-scale=0.5,maximum-scale = 0.5"/>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
+  <title>pramith.com</title>
+  <link rel="shortcut icon" href="library/images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="library/images/favicon.ico" type="image/x-icon">
 
-<link rel="shortcut icon" href="library/images/favicon.ico" >
-<style type="text/css">
-<!--
- @import url(library/css/pramithprakash.com/index.css);
--->
-</style>
-<!--[if lt IE 9]>
-  <div id="ie-lower" style="font-size:20px;font-family:Arial;padding:12px;display:none;">
-    <center><br><br><br><br><img src="data:image/png;base64,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"><br><br><br>Your browser is obsolete. Please upgrade to latest
-      version of <a style="color:#966f10" class="" href="http://www.getfirefox.com " target="_new">Mozilla Firefox</a>,
-      <a style="color:#966f10" class="" href="http://www.google.com/chrome/ " target="_new">Chrome</a>,<a class=""
-                                                                                                          style="color:#391a96"
-                                                                                                          href="http://www.microsoft.com/windows/ie/ "
-                                                                                                          target="_new">IE</a>.
-    </center>
-  </div>
-  <style rel="stylesheet" type="text/css">.sd_1_wrapper {
-    display: none;
-  }
+  <!-- Custom CSS -->
+  <link href="library/css/pramith.com/index.css" rel="stylesheet">
 
-  body {
-    overflow: hidden;
-  }
+  <!-- Custom Fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 
-  #ie-lower {
-    display: block !important;
-  }</style>
-  <![endif]-->
-<script type="text/javascript" src="library/js/jquery-1.7.1.min.js"></script>
-<script type="text/javascript" src="library/js/angular.min.js"></script>
-<script type="text/javascript" src="library/js/angular-route.min.js"></script>
-    <script type="text/javascript" src="library/js/angular-app.js"></script>
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
 </head>
-<script type="text/javascript">
-$(document).ready(function(){changeBg();
-themeColor_p=randomthemeColor_p();switch(themeColor_p){case"cyan":$('body').removeClass();$('body').addClass('cyan');break;case"magenta":$('body').removeClass();$('body').addClass('magenta');break;case"green":$('body').removeClass();$('body').addClass('green');break;case"orange":$('body').removeClass();$('body').addClass('orange');case"yellow":$('body').removeClass();$('body').addClass('orange');break;default:$('body').addClass('orange');}function randomthemeColor_p(){var themeColor_ps=["cyan","magenta","green","orange","yellow"];setthemeColor_p=themeColor_ps[Math.random()*themeColor_ps.length>>0];return setthemeColor_p;}
-$('.website_view,.mobile_view').css('opacity','0');
-loaderchange = self.setInterval('changeLoader();',100); 
-});
-</script>
-<body class="">
-<div class="posts" id="wrapper" style="display:none">
-<div id="header">
-    <div id="page-curl"></div>
-    <div class="content">
-        <h1 id="title-top" style=""><a href="#">POST</a></h1>
-    </div><!--CONTENT-->
-</div><!--HEADER-->
 
-<div id="body">
-  <div class="content">
-    <div id="posts">
-        <div class="post">
-           <h4 class="post-date">Monday, June 15, 2015</h4>
-           <h3 class="post-title"><a href="#"><div class="slab">"Code like a girl"</div></a></h3>
-           <div class="excerpt"><p>Tim Cook promised that the last WWDC 2015 would be more female presence and it was. In this video you can see how they lived 5 young developers who have already made their first steps within iOS apps. I leave the video that I find very interesting and encouraging.</p>
-           </div>
-           <div class="the-categories"><ul class="post-categories">
-               <li><a href="#" rel="category tag">AngularJs</a></li>
-               <li><a href="#" rel="category tag">Css</a></li></ul></div>
-           </div><!--POST-->
-           <div class="navigation">
-            <a href="#">+</a>
-           </div>
-        </div><!--POSTS-->
-    </div><!--CONTENT-->
-</div><!--BODY-->
-
-<div id="footer">
-    <div class="content">
-        <p><a href="http://codygo.es" target="_self"><strong> POST </strong></a> has been designed <strong> &amp;</strong> developed by <a href="http://mononelo.es" target="_blank"><strong>pramithprakash</strong></a>@ pramithprakash.com &copy; 2015</p>
-    </div><!--CONTENT-->
-</div><!--FOOTER-->
-</div>
-</div>
-<div id="loader"></div>
-<div class="website_view" style="visibility:hidden;opacity:0">
-<div class="sd_1_wrapper" style="visibility:hidden;">
-<div class="sd_1">
-<div class="sd_1_1">
-<div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div>
-</div>
-<div class="sd_1_2">
-<div ng-controller="pramithprakashTimerCtrl"  class="miliseconds block">
-<b>{{miliseconds}}</b> seconds of experience 
-in web technologies<br>Simplicity is the ultimate sophistication
-</div>
-<div class="block_dw block hidden skills"><span>angularjs</span></div>
-<div class="block_h5 block hidden skills"><i>html5</i></div>
-<div class="block_c3 block hidden skills"><i>css3</i></div>
-<div class="block_ps block hidden skills"><span>Ps</span></div>
-<div class="block_jq block hidden skills"><i></i></div>
-<div class="block_js block hidden skills"><span>Js</span></div>
-<div class="block_ex block hidden about"><span><strong>6</strong>+</span><span>years</span></div>
-<div class="block_about about" style="display:none;"><div ng-view></div></div>
-<div class="block_links links" style="display:none;"><div ng-view></div></div>
-<div class="block hidden block_menu">
-<div class="menu" style="visibility:hidden !important;">
- <span class="m1"></span><span class="m2"></span><span class="m3"></span><span class="m4"></span></div>
-<a class="menus" href="#/about"><span>a</span><strong class="close">x</strong><span>about us</span></a>
-<a class="menus"><span>s</span><strong class="close">x</strong><span>skills</span></a>
-<a class="menus" href="#/links"><span>l</span><strong class="close">x</strong><span>links</span></a>
-<a class="menus"><span>c</span><strong class="close">x</strong><span>contact me</span></a></div>
-<div class="block_tw block hidden contact"><a href="http://twitter.com/pramithprakash" target="_blank"><i class="s i"></i><i class="l i"></i><span class="at a1">@</span><span class="name a2">pramithprakash</span></a></div>
-<div class="block_fb block hidden contact"><a href="http://www.facebook.com/pramithprakash" target="_blank"><i class="s i"></i><i class="l i"></i><span class="at a1">pramithprakash</span><span class="name a2">http://www.facebook.com/pramithprakash</span></a></div>
-<div class="block_ad block hidden contact"><a href="javascript:void(0)"><i class="s i"></i><i class="l i"></i><span class="at a1"><code class="scroll">96<br />63<br />39<br />30<br />36</code></span><span class="name a2">nexus</span></a></div>
-<div class="block_em block hidden contact "><a href="mailto:pramithprakash@gmail.com"><i class="s i"></i><i class="l i"></i><span class="at a1"> </span><span class="name a2">pramithprakash@gmail.com</span></a></div>
-<div class="block_gp block hidden contact"><a href="https://profiles.google.com/pramithprakash" target="_blank"><i class="s"></i></a></div>
-<div class="block_w8 block hidden "><a href="javascript:void(0)"><i class="s"></i></a></div>
-<div class="block_ln block hidden contact"><a href="http://www.linkedin.com/pub/pramith-prakash/20/520/54b" target="_blank"><i class="s"></i></a></div>
-<div class="block_logo block hidden"><a href="http://www.pramithprakash.com"><span>P</span><span>P</span></a></div>
-
-<div class="block_dw block anim skills"><span>angularjs</span></div>
-<div class="block_h5 block anim skills"><i>html5</i></div>
-<div class="block_h5 html block skills"><i>html</i></div>
-<div class="block_c3 block anim skills"><i>css3</i></div>
-<div class="block_c3 css block skills"><i>css</i></div>
-<div class="block_ps block anim skills"><span>Ps</span></div>
-<div class="block_jq block anim skills"><i></i></div>
-<div class="block_js block anim skills"><span>Js</span></div>
-<div class="click"></div>
-</div>
-</div>
-</div>
-</div>
-<div id="wrapper" class="mobile_view" style="display:none;visibility:hidden;opacity:0">
-<div class="block_logo block" style="z-index: 1; top: 0px; left: 0px; width: 215px; height: 215px; opacity: 1;"><a href="http://www.pramithprakash.com" class="orange"><span>P</span><span>P</span></a></div>
-<div class="m_menu">
-<a href="#m_about" class="m_menu_link m_menu_l m_menu_1"><span>a</span><span>about us</span></a>
-<a href="javascript:void(0)" class="m_menu_link m_menu_r m_menu_2"><span style="opacity:0.3" >l</span><span style="opacity:0.3">links</span></a>
-<div class="clear"></div>
-<a href="#m_skills" class="m_menu_link m_menu_l m_menu_3"><span>s</span><span>skills</span></a>
-<a href="#m_contact" class="m_menu_link m_menu_r m_menu_4"><span>c</span><span>contact me</span></a>
-<div class="clear"></div>
+<body class="pre-load" ng-controller="dataController">
+<div class="page-anim"></div>
+<span class="bg">&#60;&#47;&#62; pramithprakash</span>
+<div class="page" ng-class="{'links-active' : hash !== 'home' && hash !== 'contact' }" >
+  <section class="wrapper">
+    <div class="box logo" ng-class="{'contact' : hash === 'contact' }"><a href="http://pramith.com"><strong>&#60;&#47;&#62;</strong><span ng-bind-html="data.logoText | trust"></span></a></div>
+    <div class="box sh colored title" ng-class="{'contact' : hash === 'contact' }"><div class="center" ng-bind-html="data.title | trust"></div></div>
+    <div class="box sh m inview include" ng-view></div>
+    <div class="box sh colored exp"><div><strong ng-bind="data.years"></strong><span ng-bind="data.yearsText"></span></div></div>
+    <div class="box sh m colored menu">
+      <nav ng-class="{'hoz' : hash !== 'home' }">
+        <a href="#about">about</a>
+        <a href="#skills">skills</a>
+        <a href="#links">links</a>
+        <a href="#contact">contact</a>
+      </nav>
+    </div>
+  </section>
+  <footer ng-class="{'active' : hash === 'contact' }">    
+    <section class="wrapper">
+      <div class="counter-text"><strong ng-bind="miliseconds"></strong><span ng-bind-html="data.secondsText | trust"></span></div>
+      <ul class="social">
+        <li><a class="facebook" href="{{data.facebook}}" target="_blank"></a></li>
+        <li><a class="twitter" href="{{data.twitter}}" target="_blank"></a></li>
+        <li><a class="linkedin" href="{{data.linkedin}}" target="_blank"></a></li>
+        <li><a class="hangout" href="{{data.hangout}}" target="_blank"></a></li>
+      </ul>
+      <div class="reach-out">
+        <a href="mailto:pramithprakash@gmail.com">pramithprakash@gmail.com</a>
+      </div>
+    </section> 
+    <a href="#home" class="close"></a>
+  </footer>
 </div>  
-
-<div class="m_skills" id="m_skills">
-<div class="m_block_h5 m_skills_bk"><i></i></div>
-<div class="m_block_dw m_skills_bk"><span>angularjs</span></div>
-<div class="m_block_jq m_skills_bk"><i></i></div>
-<div class="m_block_c3 m_skills_bk "><i></i></div>
-<div class="m_block_ps m_skills_bk"><span>Ps</span></div>
-<div class="m_block_js m_skills_bk"><span>Js</span></div>
-
-<div class="clear"></div>
-</div>
-
-<div class="m_about" id="m_about">
-<div class="m_block_ex"><span class=""><strong>6</strong>+</span><span>years</span></div>
-<div class="m_block_about">
-<div ng-include src="'about.html'"></div>
-</div>
-<div class="clear"></div>
-</div>
-
-<div class="m_contact" id="m_contact">
-<div class="m_block_tw"><a href="http://twitter.com/pramithprakash" target="_blank"><i class="l i"></i><span class="at a1">@</span><span class="name a2">pramithprakash</span></a></div>
-<div class="m_block_fb"><a href="http://www.facebook.com/pramithprakash" target="_blank"><i class="l i"></i><span class="at a1">pramithprakash</span><span class="name a2">http://www.facebook.com/pramithprakash</span></a></div>
-<div class="clear"></div>
-<div class="m_block_em"><a href="mailto:pramithprakash@gmail.com"><i class="l i"></i><span class="at a1">@</span><span class="name a2">pramithprakash@gmail.com</span></a></div>
-
-</div>
-
-<div class="clear"></div>
-
-
-<div class="clear"></div>
-</div>
-
-<script type="text/javascript" src="library/js/jquery.easing.1.3.js"></script>
-<script type="text/javascript" src="library/js/flexscroll.js"></script>    
-<script type="text/javascript">setTimeout(function(){$('#removeScript').remove()},4000);</script>
-<script type="text/javascript" id="removeScript">
-function breakDIV(els){
-	$('.block_em').addClass('pos_right');$('.block_tw').addClass('pos_right');
-	$('.block_em').css('left','auto').css('right',$('.sd_1').width()-648);
-	$('.block_tw').css('left','auto').css('right',$('.sd_1').width()-323);
-	jQuery.easing['jswing']=jQuery.easing['swing'];jQuery.extend(jQuery.easing,{def:'easeOutQuad',swing:function(x,t,b,c,d){return jQuery.easing[jQuery.easing.def](x,t,b,c,d);},easeInQuad:function(x,t,b,c,d){return c*(t/=d)*t+b;},easeOutQuad:function(x,t,b,c,d){return-c*(t/=d)*(t-2)+b;},easeInOutQuad:function(x,t,b,c,d){if((t/=d/2)<1)return c/2*t*t+b;return-c/2*((--t)*(t-2)-1)+b;},easeInCubic:function(x,t,b,c,d){return c*(t/=d)*t*t+b;},easeOutCubic:function(x,t,b,c,d){return c*((t=t/d-1)*t*t+1)+b;},easeInOutCubic:function(x,t,b,c,d){if((t/=d/2)<1)return c/2*t*t*t+b;return c/2*((t-=2)*t*t+2)+b;},easeInQuart:function(x,t,b,c,d){return c*(t/=d)*t*t*t+b;},easeOutQuart:function(x,t,b,c,d){return-c*((t=t/d-1)*t*t*t-1)+b;},easeInOutQuart:function(x,t,b,c,d){if((t/=d/2)<1)return c/2*t*t*t*t+b;return-c/2*((t-=2)*t*t*t-2)+b;},easeInQuint:function(x,t,b,c,d){return c*(t/=d)*t*t*t*t+b;},easeOutQuint:function(x,t,b,c,d){return c*((t=t/d-1)*t*t*t*t+1)+b;},easeInOutQuint:function(x,t,b,c,d){if((t/=d/2)<1)return c/2*t*t*t*t*t+b;return c/2*((t-=2)*t*t*t*t+2)+b;},easeInSine:function(x,t,b,c,d){return-c*Math.cos(t/d*(Math.PI/2))+c+b;},easeOutSine:function(x,t,b,c,d){return c*Math.sin(t/d*(Math.PI/2))+b;},easeInOutSine:function(x,t,b,c,d){return-c/2*(Math.cos(Math.PI*t/d)-1)+b;},easeInExpo:function(x,t,b,c,d){return(t==0)?b:c*Math.pow(2,10*(t/d-1))+b;},easeOutExpo:function(x,t,b,c,d){return(t==d)?b+c:c*(-Math.pow(2,-10*t/d)+1)+b;},easeInOutExpo:function(x,t,b,c,d){if(t==0)return b;if(t==d)return b+c;if((t/=d/2)<1)return c/2*Math.pow(2,10*(t-1))+b;return c/2*(-Math.pow(2,-10*--t)+2)+b;},easeInCirc:function(x,t,b,c,d){return-c*(Math.sqrt(1-(t/=d)*t)-1)+b;},easeOutCirc:function(x,t,b,c,d){return c*Math.sqrt(1-(t=t/d-1)*t)+b;},easeInOutCirc:function(x,t,b,c,d){if((t/=d/2)<1)return-c/2*(Math.sqrt(1-t*t)-1)+b;return c/2*(Math.sqrt(1-(t-=2)*t)+1)+b;},easeInElastic:function(x,t,b,c,d){var s=1.70158;var p=0;var a=c;if(t==0)return b;if((t/=d)==1)return b+c;if(!p)p=d*.3;if(a<Math.abs(c)){a=c;var s=p/4;}
-else var s=p/(2*Math.PI)*Math.asin(c/a);return-(a*Math.pow(2,10*(t-=1))*Math.sin((t*d-s)*(2*Math.PI)/p))+b;},easeOutElastic:function(x,t,b,c,d){var s=1.70158;var p=0;var a=c;if(t==0)return b;if((t/=d)==1)return b+c;if(!p)p=d*.3;if(a<Math.abs(c)){a=c;var s=p/4;}
-else var s=p/(2*Math.PI)*Math.asin(c/a);return a*Math.pow(2,-10*t)*Math.sin((t*d-s)*(2*Math.PI)/p)+c+b;},easeInOutElastic:function(x,t,b,c,d){var s=1.70158;var p=0;var a=c;if(t==0)return b;if((t/=d/2)==2)return b+c;if(!p)p=d*(.3*1.5);if(a<Math.abs(c)){a=c;var s=p/4;}
-else var s=p/(2*Math.PI)*Math.asin(c/a);if(t<1)return-.5*(a*Math.pow(2,10*(t-=1))*Math.sin((t*d-s)*(2*Math.PI)/p))+b;return a*Math.pow(2,-10*(t-=1))*Math.sin((t*d-s)*(2*Math.PI)/p)*.5+c+b;},easeInBack:function(x,t,b,c,d,s){if(s==undefined)s=1.70158;return c*(t/=d)*t*((s+1)*t-s)+b;},easeOutBack:function(x,t,b,c,d,s){if(s==undefined)s=1.70158;return c*((t=t/d-1)*t*((s+1)*t+s)+1)+b;},easeInOutBack:function(x,t,b,c,d,s){if(s==undefined)s=1.70158;if((t/=d/2)<1)return c/2*(t*t*(((s*=(1.525))+1)*t-s))+b;return c/2*((t-=2)*t*(((s*=(1.525))+1)*t+s)+2)+b;},easeInBounce:function(x,t,b,c,d){return c-jQuery.easing.easeOutBounce(x,d-t,0,c,d)+b;},easeOutBounce:function(x,t,b,c,d){if((t/=d)<(1/2.75)){return c*(7.5625*t*t)+b;}else if(t<(2/2.75)){return c*(7.5625*(t-=(1.5/2.75))*t+.75)+b;}else if(t<(2.5/2.75)){return c*(7.5625*(t-=(2.25/2.75))*t+.9375)+b;}else{return c*(7.5625*(t-=(2.625/2.75))*t+.984375)+b;}},easeInOutBounce:function(x,t,b,c,d){if(t<d/2)return jQuery.easing.easeInBounce(x,t*2,0,c,d)*.5+b;return jQuery.easing.easeOutBounce(x,t*2-d,0,c,d)*.5+c*.5+b;}});
-	$.pramith_pMov=function(el,options){var base=this,origWidth,origHeight,newWidth,origLeft,origTop;base.$el=$(el);base.$el.data("pramith_pMov",base);base.stopAnimation=function(){base.options.keepGoing=false;}
-base.runAnimation=function(){if(base.options.keepGoing){origWidth=base.$el.width();origHeight=base.$el.height();origLeft=base.$el.position().left;origTop=base.$el.position().top;if(base.options.sizeAdjustment==100){newWidth=origWidth;newHeight=origHeight;halfWayWidth=origWidth;halfWayHeight=origHeight;}else{newWidth=parseInt(origWidth)*(base.options.sizeAdjustment/100);newHeight=parseInt(origHeight)*(base.options.sizeAdjustment/100);halfWayWidth=(parseInt(origWidth)+newWidth)/2;halfWayHeight=(parseInt(origHeight)+newHeight)/2;};if(base.$el.css("position")!="absolute"){base.$el.css("position","relative");}
-base.$el.css("z-index",base.options.zIndexValues[0]);base.$el.animate({top:["+="+(base.options.height/2)+"px",'easeInQuad'],left:["+="+(base.options.width/2)+"px",'easeOutQuad'],width:[halfWayWidth,'linear'],height:[halfWayHeight,'linear'],opacity:1},base.options.speed,function(){base.$el.css("z-index",base.options.zIndexValues[1]);}).animate({top:["+="+(base.options.height/2)+"px",'easeOutQuad'],left:["-="+(base.options.width/2)+"px",'easeInQuad'],width:[newWidth,'linear'],height:[newHeight,'linear']},base.options.speed,function(){base.$el.css("z-index",base.options.zIndexValues[2]);}).animate({top:["-="+(base.options.height/2)+"px",'easeInQuad'],left:["-="+(base.options.width/2)+"px",'easeOutQuad'],width:[halfWayWidth,'linear'],height:[halfWayHeight,'linear']},base.options.speed,function(){base.$el.css("z-index",base.options.zIndexValues[3]);}).animate({top:["-="+(base.options.height/2)+"px",'easeOutQuad'],left:["+="+(base.options.width/2)+"px",'easeInQuad'],width:[origWidth,'linear'],height:[origHeight,'linear']},base.options.speed,function(){base.$el.css("z-index",base.options.zIndexValues[0]);if(base.options.loop===true){base.runAnimation();}});}};base.init=function(){base.options=$.extend({},$.pramith_pMov.defaultOptions,options);base.runAnimation();};base.init();};$.pramith_pMov.defaultOptions={speed:400,height:200,width:200,sizeAdjustment:100,loop:false,zIndexValues:[1,1,1,1],keepGoing:true};$.fn.pramith_pMov=function(options){if(typeof(options)==="string"){return this.each(function(){var safeGuard=$(this).data('pramith_pMov');if(safeGuard){safeGuard.stopAnimation();}});}else{return this.each(function(){(new $.pramith_pMov(this,options));});}};$('.hidden').each(function(){$(this).pramith_pMov({speed:Math.floor(Math.random()*300)+100,height:Math.floor(Math.random()*1000)-470,width:Math.floor(Math.random()*1000)-470});});$(els).each(function(){}).mouseenter(function(){$(this).pramith_pMov({speed:Math.floor(Math.random()*300)+100,height:Math.floor(Math.random()*1000)-470,width:Math.floor(Math.random()*1000)-470});});}$(window).resize(function(){$('.block_em').addClass('pos_right');$('.block_tw').addClass('pos_right');$('.block_em').css('left','auto').css('right',$('.sd_1').width()-648);setTimeout(function(){
-
-  $('.block_em').css('right',$('.sd_1').width()-648);$('.block_tw').css('right',$('.sd_1').width()-323);
-});
-
-$('.block_tw').css('left','auto').css('right',$('.sd_1').width()-323);$('.sd_1_wrapper').css('width',$(window).width()).css('height',$(window).height()).css('overflow','hidden');$('.sd_1').css('width',$(window).width()+200).css('height',$(window).height()).css('overflow','hidden');});$(document).ready(function(){	$('.sd_1_wrapper').css('width',$(window).width()).css('height',$(window).height()).css('overflow','hidden').css('visibility','visible');;$('.sd_1').css('width',$(window).width()+200).css('overflow','hidden').css('height',$(window).height());setTimeout(function(){$('.anim.block').css('z-index','1').css('opacity','0.2');	});
-});
-function changeLogo(){
-themeColor_logo=randomthemeColor_logo();switch(themeColor_logo){case"cyan":$('.block_logo a').removeClass();$('.block_logo a').addClass('cyan');break;case"magenta":$('.block_logo a').removeClass();$('.block_logo a').addClass('magenta');break;case"green":$('.block_logo a').removeClass();$('.block_logo a').addClass('green');break;case"orange":$('.block_logo a').removeClass();$('.block_logo a').addClass('orange');break;case"yellow":$('.block_logo a').removeClass();$('.block_logo a').addClass('yellow');break;default:$('.block_logo a').addClass('orange');}
-function randomthemeColor_logo(){var themeColor_logo=["cyan","magenta","green","orange"];setthemeColor_logo=themeColor_logo[Math.random()*themeColor_logo.length>>0];return setthemeColor_logo;}
-}
-function changeLoader(){
-themeColor_loader=randomthemeColor_loader();switch(themeColor_loader){case"cyan":$('#loader').removeClass();$('#loader').addClass('cyan');break;case"magenta":$('#loader').removeClass();$('#loader').addClass('magenta');break;case"green":$('#loader').removeClass();$('#loader').addClass('green');break;case"orange":$('#loader').removeClass();$('#loader').addClass('orange');break;case"yellow":$('#loader').removeClass();$('#loader').addClass('yellow');break;default:$('.block_logo a').addClass('orange');}
-function randomthemeColor_loader(){var themeColor_loader=["cyan","magenta","green","yellow","orange"];setthemeColor_loader=themeColor_loader[Math.random()*themeColor_loader.length>>0];return setthemeColor_loader;}
-}
-function changeBg(){
-themeColor_bg=randomthemeColor_bg();switch(themeColor_bg){case"bg":$('.sd_1_wrapper').removeClass().addClass('sd_1_wrapper');$('.sd_1_wrapper').addClass('bg');break;case"bg1":$('.sd_1_wrapper').removeClass().addClass('sd_1_wrapper');$('.sd_1_wrapper').addClass('bg1');break;case"bg2":$('.sd_1_wrapper').removeClass().addClass('sd_1_wrapper');$('.sd_1_wrapper').addClass('bg2');break;case"bg3":$('.sd_1_wrapper').removeClass().addClass('sd_1_wrapper');$('.sd_1_wrapper').addClass('bg3');break;case"bg4":$('.sd_1_wrapper').removeClass().addClass('sd_1_wrapper');$('.sd_1_wrapper').addClass('bg4');break;case"bg5":$('.sd_1_wrapper').removeClass().addClass('sd_1_wrapper');$('.sd_1_wrapper').addClass('bg5');break;case"bg6":$('.sd_1_wrapper').removeClass().addClass('sd_1_wrapper');$('.sd_1_wrapper').addClass('bg6');break;case"bg7":$('.sd_1_wrapper').removeClass().addClass('sd_1_wrapper');$('.sd_1_wrapper').addClass('bg7');break;case"bg8":$('.sd_1_wrapper').removeClass().addClass('sd_1_wrapper');$('.sd_1_wrapper').addClass('bg8');break;case"bg9":$('.sd_1_wrapper').removeClass().addClass('sd_1_wrapper');$('.sd_1_wrapper').addClass('bg9');break;default:$('.sd_1_wrapper').addClass('bg');}
-function randomthemeColor_bg(){var themeColor_bg=["bg","bg1","bg2","bg3","bg4","bg5","bg6","bg7","bg8","bg9"];setthemeColor_bg=themeColor_bg[Math.random()*themeColor_bg.length>>0];return setthemeColor_bg;}
-}
-var loaderchange;
-$(window).load(function(){window.location.hash = ''; setTimeout(function(){breakDIV('.anim');breakDIV('.sh');$('.hidden.block').removeClass('hidden');
-var logochange = self.setInterval('changeLogo();',1500); 
-$('.website_view,.mobile_view').css('visibility','visible');
-$('#loader').fadeOut('slow', function() {
-	clearInterval(loaderchange);
-    $('#loader').remove();
-	$('.website_view,.mobile_view ').animate({
-		opacity:1
-	},2000);
-});
-},1000);
-setTimeout(function(){
-$('.block_menu').addClass('open');
-$('.block_menu').find('.menus:nth-child(2)').addClass('a');
-$('.block_menu').find('.menus:nth-child(3)').addClass('s');
-$('.block_menu').find('.menus:nth-child(4)').addClass('l');
-$('.block_menu').find('.menus:nth-child(5)').addClass('c');
-},3000);
-});
-
-
-$('.block_ad').hover(function(){
-  if($('.menus.c').hasClass('open_forced')){
-  }
-  else{
-    $(this).removeClass('resetscroll');
-	$(this).find('code').addClass('scroll');
-	$(this).find('code').removeClass('scrolltop');
-  }	
-},function(){
- if($('.menus.c').hasClass('open_forced')){
-  }
-  else{
-    $(this).removeClass('resetscroll');
-	$(this).find('code').removeClass('scroll');
-	$(this).find('code').addClass('scrolltop');
-  }
-});
-
-$('.menus').click(function(){
- if($('.menus').hasClass('open_forced')){
- 	
-      setTimeout(function(){
-        if((!$('.menus').hasClass('open_forced'))&&(!$('.block').not('.block_menu').hasClass('open'))){
-            window.location.hash = '#'; 
-        }
-        $('.block').css('opacity','1');
-    },500);  
-	$('.menus').removeClass('open_forced');
-	$('.menus').find('.close').removeClass('visibleActive');
-	$('.block').removeClass('open_forced');
-	$('.about,.links,.contact').removeClass('open_forced_anim');
-	$('.block').removeClass('normal');
-	if($(this).hasClass('a')){
-		$('.about').removeClass('open');
-		$('.block_about').removeClass('open_forced');
-		$('.block_ex span:first-child').addClass('yearAnim');
-	   setTimeout(function(){$('.block_ex span:first-child').removeClass('yearAnim');},100);
-	   setTimeout(function(){$('.block_ex span:first-child').removeClass('yearfull')},500);
-	}
-	if($(this).hasClass('c')){
-	   if($('.contact').hasClass('open_forced')){}else{$('.contact').removeClass('open');}
-	   $('.block_ad').addClass('resetscroll');
-	    $('.block_ad').find('code').removeClass('scrolltop');
-		 $('.block_ad').find('code').addClass('scroll');   
-	}
-	else if($(this).hasClass('s')){
-	   if($('.skills').hasClass('open_forced')){}else{$('.skills').removeClass('open');}
-       $('.block.anim.skills').css('visibility','visible');
-        $('.block.normal.skills').removeClass('opacity');
-	}
-	else if($(this).hasClass('a')){
-	   if($('.about').hasClass('open_forced')){}else{$('.about').removeClass('open');}
-	}
-    else if($(this).hasClass('l')){
-        $('.block_links').removeClass('open_forced');
- 	$("div[id^='ascrail']").remove(); 
-        if($('.links').hasClass('open_forced')){}else{$('.links').removeClass('open');}  
-    }
-}
-else{
-	$('.block').css('opacity','0.1');
-	if($(this).hasClass('c')){
-		$('.contact').addClass('open').addClass('open_forced');
-		setTimeout(function(){
-			$('.contact').addClass('open_forced_anim');
-		 },1000);
-		$('.block_ad').addClass('resetscroll');
-		$('.block_ad').removeClass('resetscroll');
-		$('.block_ad').find('code').removeClass('scrolltop');
-		 $('.block_ad').find('code').addClass('scroll');
-		$(this).addClass('open_forced');
-	}
-	if($(this).hasClass('s')){
-		$('.skills').addClass('open').delay(800).addClass('open_forced');
-		$(this).addClass('open_forced');
-        setTimeout(function(){
-            $('.block.anim.skills').css('visibility','hidden');
-            $('.block.normal.skills').addClass('opacity');
-        },0); 
-	}
-	if($(this).hasClass('a')){
-		$('.about').addClass('open').addClass('open_forced');
-		setTimeout(function(){
-			$('.about').addClass('open_forced_anim');
-		 },1000); 
-		$(this).addClass('open_forced');
-		$('.block_ex span:first-child').addClass('yearAnim');
-		setTimeout(function(){$('.block_ex span:first-child').removeClass('yearAnim');},100);
-		setTimeout(function(){$('.block_ex span:first-child').addClass('yearfull')},500);
-	}
-    if($(this).hasClass('l')){
-        $('.links').addClass('open').addClass('open_forced');
-        setTimeout(function(){
-			$('.links').addClass('open_forced_anim');
-		 },1000); 
-		$(this).addClass('open_forced');
-    }
-	$(this).find('.close').addClass('visibleActive');
-	$('.block').addClass('normal');
-}	
-});
-/*$('.menus').hover(function(){
-	if($(this).hasClass('c')){
-        window.location.hash = '#contact';
-		$('.contact').addClass('open');
-		$('.block_ad').removeClass('resetscroll');
-		$('.block_ad').find('code').removeClass('scrolltop');
-		 $('.block_ad').find('code').addClass('scroll');
-	}
-	else if($(this).hasClass('s')){
-        window.location.hash = '#skills';
-		$('.skills').addClass('open');  
-	}
-	else if($(this).hasClass('a')){
-        window.location.hash = '#about';
-		$('.about').addClass('open');
-		$('.block_ex span:first-child').addClass('yearAnim');
-		setTimeout(function(){$('.block_ex span:first-child').removeClass('yearAnim');},100);
-		setTimeout(function(){$('.block_ex span:first-child').addClass('yearfull')},500);
-	}
-    else if($(this).hasClass('l')){
-        if($(this).hasClass('open_forced')){
-            
-        }else{
-            window.location.hash = '#links'; 
-        }
-    }
-},function(){
-    setTimeout(function(){
-        if((!$('.menus').hasClass('open_forced'))&&(!$('.block').not('.block_menu').hasClass('open'))){
-            window.location.hash = '#'; 
-        }
-    },500);    
-	if($(this).hasClass('c')){
-	   if($('.contact').hasClass('open_forced')){}else{$('.contact').removeClass('open');$('.block_ad').addClass('resetscroll');}
-	   $('.block_ad').find('code').removeClass('scrolltop');
-		 $('.block_ad').find('code').addClass('scroll');
-	   
-	}
-	else if($(this).hasClass('s')){
-	   if($('.skills').hasClass('open_forced')){}else{$('.skills').removeClass('open');}
-	}
-	else if($(this).hasClass('a')){
-	   if($('.about').hasClass('open_forced')){}else{$('.about').removeClass('open');}
-	   $('.block_ex span:first-child').addClass('yearAnim');
-	   setTimeout(function(){$('.block_ex span:first-child').removeClass('yearAnim');},100);
-	   setTimeout(function(){$('.block_ex span:first-child').removeClass('yearfull')},500);
-	}
-});*/
-
-
-$('.block_menu').hover(function(){
-	//$('.block').css('opacity','0.1');
-	$('.block.anim').css('opacity','0 !important');
-	
-	$('.click').addClass('click_visible');
-	$(this).css('opacity','1');
-},function(){
-  if($('.block_menu').find('.menus').hasClass('open_forced')){	
-	
- }	
- else{
-	//$('.block_menu').find('.menus:nth-child(2)').removeClass('a');
-	//$('.block_menu').find('.menus:nth-child(3)').removeClass('s');
-	//$('.block_menu').find('.menus:nth-child(4)').removeClass('l');
-	//$('.block_menu').find('.menus:nth-child(5)').removeClass('c');
-	//$(this).removeClass('open');
-	//$('.block').css('opacity','1');
-	$('.block.anim').css('opacity','0.2 !important');
- }
- $('.click').removeClass('click_visible');
-});
-
-
-$('.menus').hover(function(){
-$(this).find('span:last-child').stop().animate({'opacity':'1'},1000);
-},function(){
-$(this).find('span:last-child').stop().animate({'opacity':'0'},0);
-});
-
-    
-</script>
-   
- </body>
+</body>
+<script data-desc="requirejs runtime config" src="library/js/config/require-config.js"></script>
+<script src="library/js/vendor/require.js" data-main="mediators/app"></script>
 </html>
