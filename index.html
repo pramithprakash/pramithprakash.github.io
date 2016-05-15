@@ -1,66 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang=en>
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <title>pramith.com</title>
-  <link rel="shortcut icon" href="library/images/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="library/images/favicon.ico" type="image/x-icon">
-
-  <!-- Custom CSS -->
-  <link href="library/css/pramith.com/index.css" rel="stylesheet">
-
-  <!-- Custom Fonts -->
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
-
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
+<meta charset=utf-8>
+<meta http-equiv=X-UA-Compatible content="IE=edge">
+<meta name=viewport content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name=description content="">
+<meta name=author content="">
+<title>pramith.com</title>
+<link rel="shortcut icon" href="library/images/favicon.ico" type="image/x-icon">
+<link rel=icon href="library/images/favicon.ico" type="image/x-icon">
+<link href="library/css/pramith.com/index.css" rel=stylesheet>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel=stylesheet type='text/css'>
+<!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
 </head>
-
-<body class="pre-load" ng-controller="dataController">
-<div class="page-anim"></div>
-<span class="bg">&#60;&#47;&#62; pramithprakash</span>
-<div class="page" ng-class="{'links-active' : hash !== 'home' && hash !== 'contact' }" >
-  <section class="wrapper">
-    <div class="box logo" ng-class="{'contact' : hash === 'contact' }"><a href="http://pramith.com"><strong>&#60;&#47;&#62;</strong><span ng-bind-html="data.logoText | trust"></span></a></div>
-    <div class="box sh colored title" ng-class="{'contact' : hash === 'contact' }"><div class="center" ng-bind-html="data.title | trust"></div></div>
-    <div class="box sh m inview include" ng-view></div>
-    <div class="box sh colored exp"><div><strong ng-bind="data.years"></strong><span ng-bind="data.yearsText"></span></div></div>
-    <div class="box sh m colored menu">
-      <nav ng-class="{'hoz' : hash !== 'home' }">
-        <a href="#about">about</a>
-        <!-- <a href="#skills">skills</a>
-        <a href="#links">links</a> -->
-        <a href="#contact">contact</a>
-      </nav>
-    </div>
-  </section>
-  <footer ng-class="{'active' : hash === 'contact' }">    
-    <section class="wrapper">
-      <div class="counter-text"><strong ng-bind="miliseconds"></strong><span ng-bind-html="data.secondsText | trust"></span></div>
-      <ul class="social">
-        <li><a class="facebook" href="{{data.facebook}}" target="_blank"></a></li>
-        <li><a class="twitter" href="{{data.twitter}}" target="_blank"></a></li>
-        <li><a class="linkedin" href="{{data.linkedin}}" target="_blank"></a></li>
-        <li><a class="hangout" href="{{data.hangout}}" target="_blank"></a></li>
-      </ul>
-      <div class="reach-out">
-        <a href="mailto:pramithprakash@gmail.com">pramithprakash@gmail.com</a>
-      </div>
-    </section> 
-    <a href="#home" class="close"></a>
-  </footer>
-</div>  
+<body class=pre-load ng-controller=dataController>
+<div class=page-anim></div>
+<span class=bg>&#60;&#47;&#62; pramithprakash</span>
+<div class=page ng-class="{'links-active' : hash !== 'home' && hash !== 'contact' }">
+<section class=wrapper>
+<div class="box logo" ng-class="{'contact' : hash === 'contact' }"><a href="http://pramith.com"><strong>&#60;&#47;&#62;</strong><span ng-bind-html="data.logoText | trust"></span></a></div>
+<div class="box sh colored title" ng-class="{'contact' : hash === 'contact' }"><div class=center ng-bind-html="data.title | trust"></div></div>
+<div class="box sh m inview include" ng-view></div>
+<div class="box sh colored exp"><div><strong ng-bind=data.years></strong><span ng-bind=data.yearsText></span></div></div>
+<div class="box sh m colored menu">
+<nav ng-class="{'hoz' : hash !== 'home' }">
+<a href="#about">about</a>
+<a href="#contact">contact</a>
+</nav>
+</div>
+</section>
+<footer ng-class="{'active' : hash === 'contact' }">
+<section class=wrapper>
+<div class=counter-text><strong ng-bind=miliseconds></strong><span ng-bind-html="data.secondsText | trust"></span></div>
+<ul class=social>
+<li><a class=facebook href="{{data.facebook}}" target=_blank></a></li>
+<li><a class=twitter href="{{data.twitter}}" target=_blank></a></li>
+<li><a class=linkedin href="{{data.linkedin}}" target=_blank></a></li>
+<li><a class=hangout href="{{data.hangout}}" target=_blank></a></li>
+</ul>
+<div class=reach-out>
+<a href="mailto:pramithprakash@gmail.com">pramithprakash@gmail.com</a>
+</div>
+</section>
+<a href="#home" class=close></a>
+</footer>
+</div>
 </body>
 <script data-desc="requirejs runtime config" src="library/js/config/require-config.js"></script>
 <script src="library/js/vendor/require.js" data-main="mediators/app"></script>
