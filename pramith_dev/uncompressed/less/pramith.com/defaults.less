@@ -177,6 +177,9 @@ html {
     line-height: 72px;
     font-weight: 700;
     padding: 22px 10px;
+    strong:after{
+      content: '+';
+    }
     span{
       .fonts( 12 );
       .rotate( 90 );
@@ -341,4 +344,16 @@ footer{
   z-index: -1;
   font-weight: 700;
   .fonts( 40 );
+}
+.home {
+  h5,p{
+    &:after{
+      content: '_';
+      animation: 1s blink ease-out infinite; 
+    }
+  }
+}
+@keyframes blink {
+  0% {content: '';}
+  100% {content: '_';}
 }

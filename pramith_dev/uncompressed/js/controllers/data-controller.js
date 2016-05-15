@@ -64,6 +64,10 @@ define(
                     var counter
                         , counter1
                         , ct1
+                        , tc
+                        , yc
+                        , k = 0
+                        , y = 0
                         , t1 = new Date(2009, 10, 3, 0, 0, 0, 0)
                         , t2 = new Date()
                         , dif = t1.getTime() - t2.getTime()
@@ -120,8 +124,46 @@ define(
                     $http.get( url )
                         .success( function ( data, status, headers, config ) {
                             $scope.data = data;
+                            $scope.animTitle = '';
+                            $scope.animContent = '';
+                            tc = setInterval( tcf, 100 );
+                            yc = setInterval( ycf, 500 );
                         } );
 
+
+                    function ycf(){
+                            
+                        y++;
+                        $scope.years = y;
+                        scopeApply();
+                        if( y === $scope.data.years ){
+                            clearInterval( yc );
+                        }
+                    }
+
+                    function tcf(){
+                            
+                        $scope.animTitle = $scope.animTitle + $scope.data.homeTitle.charAt(k);
+                        scopeApply();
+                        if( k === $scope.data.homeTitle.length ){
+                            clearInterval( tc );
+                            k = 0;
+                            tc = setInterval( tcg, 100 );
+                            return;
+                        }
+                        k++;
+
+                    }
+                    function tcg(){
+                        
+                        $scope.animContent = $scope.animContent + $scope.data.homeText.charAt(k);
+                        scopeApply();
+                        if( k === $scope.data.homeText.length ){
+                            clearInterval( tc );
+                            return;
+                        }
+                        k++;
+                    }
                 };
 
                 init();

@@ -23,7 +23,7 @@
 <div class="box logo" ng-class="{'contact' : hash === 'contact' }"><a href="http://pramith.com"><strong>&#60;&#47;&#62;</strong><span ng-bind-html="data.logoText | trust"></span></a></div>
 <div class="box sh colored title" ng-class="{'contact' : hash === 'contact' }"><div class=center ng-bind-html="data.title | trust"></div></div>
 <div class="box sh m inview include" ng-view></div>
-<div class="box sh colored exp"><div><strong ng-bind=data.years></strong><span ng-bind=data.yearsText></span></div></div>
+<div class="box sh colored exp"><div><strong ng-bind="years"></strong><span ng-bind="data.yearsText"></span></div></div>
 <div class="box sh m colored menu">
 <nav ng-class="{'hoz' : hash !== 'home' }">
 <a href="#about">about</a>
