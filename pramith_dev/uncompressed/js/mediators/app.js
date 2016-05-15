@@ -25,12 +25,14 @@ require(
 
                 $( this.initUI.bind( this ) );
 
-                setTimeout(function(){
+                $(window).load(function(){
+                    setTimeout(function(){
 
-                    $('body').removeClass( 'pre-load' );
-                    window.location.hash = '#home';
+                        $('body').removeClass( 'pre-load' );
+                        window.location.hash = '#home';
 
-                },5000)
+                    },2000);
+                });
 
                 function isScrolledIntoView( elem ) {
 
