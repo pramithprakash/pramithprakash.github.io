@@ -93,7 +93,9 @@ require(
                            templateUrl: 'skills.html'
                         }).
                          otherwise({
-                           redirectTo: '/home' 
+                             redirectTo: function(obj, requestedPath) {
+                                  window.location.href = window.location.href.split("#")[0] + '404.html' ;
+                              }
                         });
                     }
                 ]);
