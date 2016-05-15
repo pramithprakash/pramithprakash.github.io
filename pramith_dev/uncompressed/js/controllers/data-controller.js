@@ -86,6 +86,13 @@ define(
                             hash = $.trim( '' + hash.substring( 1 ) );
                         }
                         $scope.hash = hash;
+
+                        if( hash === "" ){
+
+                            hash = "home";
+                            $scope.hash = hash;
+                            window.location.hash = '#home';
+                        }
                     }
 
                     function timerLoop() {
