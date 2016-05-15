@@ -25,12 +25,8 @@ require(
 
                 $( this.initUI.bind( this ) );
 
-                setTimeout(function(){
-
-                    $('body').removeClass( 'pre-load' );
-                    window.location.hash = '#home';
-
-                },1000);
+                $('body').removeClass( 'pre-load' );
+                window.location.hash = '#home';
 
                 function isScrolledIntoView( elem ) {
 
