@@ -57,7 +57,7 @@ define(
 
                     $scope.miliseconds = "164630000";
 
-                    $scope.hash = 'home';
+                    hashChangeHandler();
 
                     $window.onhashchange = hashChangeHandler;
 

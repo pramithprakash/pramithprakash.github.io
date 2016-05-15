@@ -26,7 +26,6 @@ require(
                 $( this.initUI.bind( this ) );
 
                 $('body').removeClass( 'pre-load' );
-                window.location.hash = '#home';
 
                 function isScrolledIntoView( elem ) {
 
