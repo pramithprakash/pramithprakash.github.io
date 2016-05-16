@@ -18,6 +18,6 @@ ExpiresByType application/javascript "access plus 1 year"
 </IfModule>
 
 # 1 Month for most static assets
-<filesMatch ".(css|jpg|jpeg|png|gif|js|ico)$">
+<filesMatch ".(css|jpg|jpeg|png|gif|js|ico|json|woff)$”>
 Header set Cache-Control "max-age=2592000, public"
 </filesMatch>
