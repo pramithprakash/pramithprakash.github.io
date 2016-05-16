@@ -360,9 +360,21 @@ footer{
   h5,p{
     &:after{
       content: '_';
-      animation: 1s blink ease-out infinite; 
+      .animation( 1s blink ease-out infinite ); 
     }
   }
+}
+@-webkit-keyframes blink {
+  0% {content: '';}
+  100% {content: '_';}
+}
+@-moz-keyframes blink {
+  0% {content: '';}
+  100% {content: '_';}
+}
+@-o-keyframes blink {
+  0% {content: '';}
+  100% {content: '_';}
 }
 @keyframes blink {
   0% {content: '';}

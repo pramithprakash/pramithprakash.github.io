@@ -87,10 +87,41 @@ footer .wrapper {
     .animation( 1s animr ease-out infinite ); 
   }
 }
+
+@-webkit-keyframes anim {
+  0% {left: 0;opacity: .1;}
+  60%{left: 100%;opacity: .4;}
+  100% {left: 0;opacity: .1;}
+}
+@-moz-keyframes anim {
+  0% {left: 0;opacity: .1;}
+  60%{left: 100%;opacity: .4;}
+  100% {left: 0;opacity: .1;}
+}
+@-o-keyframes anim {
+  0% {left: 0;opacity: .1;}
+  60%{left: 100%;opacity: .4;}
+  100% {left: 0;opacity: .1;}
+}
 @keyframes anim {
   0% {left: 0;opacity: .1;}
   60%{left: 100%;opacity: .4;}
   100% {left: 0;opacity: .1;}
+}
+@-webkit-keyframes animr {
+  0% {right: 0;opacity: .4;}
+  60%{right: 100%;opacity: .1;}
+  100% {right: 0;opacity: .4;}
+}
+@-moz-keyframes animr {
+  0% {right: 0;opacity: .4;}
+  60%{right: 100%;opacity: .1;}
+  100% {right: 0;opacity: .4;}
+}
+@-o-keyframes animr {
+  0% {right: 0;opacity: .4;}
+  60%{right: 100%;opacity: .1;}
+  100% {right: 0;opacity: .4;}
 }
 @keyframes animr {
   0% {right: 0;opacity: .4;}
