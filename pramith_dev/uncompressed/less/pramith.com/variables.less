@@ -71,7 +71,20 @@
     -o-transform: ~"rotate(@{deg}deg)";
     transform: ~"rotate(@{deg}deg)";
 }
-
+.animation(@arguments) {
+   -webkit-animation: @arguments;
+   -moz-animation: @arguments;
+   -ms-animation: @arguments;
+   -o-animation: @arguments;
+   animation: @arguments;
+}
+.animationDelay(@arguments) {
+   -webkit-animation-delay: @arguments;
+   -moz-animation-delay: @arguments;
+   -ms-animation-delay: @arguments;
+   -o-animation-delay: @arguments;
+   animation-delay: @arguments;
+}
 .clearfix() {
     &:after {
         content: " "; // 1
