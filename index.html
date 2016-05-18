@@ -21,7 +21,7 @@
 <div class=page ng-class="{'links-active' : hash !== 'home' && hash !== 'contact' }">
 <section class=wrapper>
 <div class="box logo" ng-class="{'contact' : hash === 'contact' }"><a href="http://pramith.com/#/home"><strong>&#60;&#47;&#62;</strong><span ng-bind-html="data.logoText | trust"></span></a></div>
-<div class="box sh colored title" ng-class="{'contact' : hash === 'contact' }"><div class=center ng-bind-html="data.title | trust"></div></div>
+<div class="box colored title" ng-class="{'contact' : hash === 'contact' }"><div class=center ng-bind-html="data.title | trust"></div></div>
 <div class="box sh m inview include" ng-view></div>
 <div class="box sh colored exp"><div><strong ng-bind="years"></strong><span ng-bind="data.yearsText"></span></div></div>
 <div class="box sh m inview include mobile">
