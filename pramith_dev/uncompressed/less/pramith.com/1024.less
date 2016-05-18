@@ -87,7 +87,16 @@ footer .wrapper {
     .animation( 1s animr ease-out infinite ); 
   }
 }
-
+.active {
+  .page-anim{
+    &:after{
+      .animation( 3s anim ease-out infinite ); 
+    }
+    &:before{
+      .animation( 1s animr ease-out infinite ); 
+    }
+  }
+}
 @-webkit-keyframes anim {
   0% {left: 0;opacity: .1;}
   60%{left: 100%;opacity: .4;}

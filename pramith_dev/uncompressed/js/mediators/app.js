@@ -23,6 +23,16 @@ require(
 
             init: function () {
 
+
+                $(window).on("blur", function(e) {
+
+                    $('body').removeClass('active')
+                });
+                $(window).on("focus", function(e) {
+
+                    $('body').addClass('active')
+                });
+
                 $( this.initUI.bind( this ) );
 
                 $('body').removeClass( 'pre-load' );
