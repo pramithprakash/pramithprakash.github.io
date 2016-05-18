@@ -334,9 +334,18 @@ footer{
 .pre-load .include{
   visibility: hidden;
 }
-.pre-load .bg{
-  opacity: .8;
-  z-index: 2;
+.pre-load {
+  .page{
+    z-index: -1;
+  }
+  .bg{
+    opacity: .8;
+    z-index: 2;
+  }
+}
+.page{
+  z-index: 1;
+  position: relative;
 }
 .bg{
   .center-center();
