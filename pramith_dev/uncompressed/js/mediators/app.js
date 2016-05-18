@@ -26,16 +26,17 @@ require(
 
                 $(window).on("blur", function(e) {
 
-                    $('body').removeClass('active')
+                    $('body').removeClass('active');
                 });
                 $(window).on("focus", function(e) {
 
-                    $('body').addClass('active')
+                    $('body').addClass('active');
                 });
 
                 $( this.initUI.bind( this ) );
 
                 $('body').removeClass( 'pre-load' );
+                $('body').addClass('active')
 
                 function isScrolledIntoView( elem ) {
 
