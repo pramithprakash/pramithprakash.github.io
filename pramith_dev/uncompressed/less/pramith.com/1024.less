@@ -4,6 +4,14 @@ body{
 .box {
   &.menu{
     right: 12%;
+    a:hover{
+      &:before{
+        content: '<';
+      }
+      &:after{
+        content: '/>';
+      }
+    }
   }
   h5{
     line-height: 50px;
