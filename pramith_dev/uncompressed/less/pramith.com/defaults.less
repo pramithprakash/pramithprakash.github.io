@@ -118,6 +118,50 @@ html {
   &.logo,&.title,&.include{
     left: 0;
   }
+  &.include{
+    > div{
+      &.skills{
+        h5{
+          display: inline;
+          margin: 2%;
+          position: relative;
+          strong{
+            display: inline-block;
+            &.s9{
+              .fonts( 50 );
+              line-height: 50px;
+            }
+            &.s8{
+              .fonts( 40 );
+              line-height: 40px;
+            }
+            &.s7{
+              .fonts( 35 );
+              line-height: 35px;
+            }
+            &.s6{
+              .fonts( 30 );
+            }
+            &.s5{
+              .fonts( 25 );
+            }
+            &.s4{
+              .fonts( 20 );
+            }
+            &.s3{
+              .fonts( 15 );
+            }
+            &.s2{
+              .fonts( 10 );
+            }
+            &.s1{
+              .fonts( 8 );
+            }
+          }
+        }
+      }
+    }
+  }
   &.menu,&.exp{
     right: 0;
   }

@@ -49,17 +49,36 @@
       position: absolute;
       bottom: 72px;
       &.skills{
-        h5{
-          display: inline;
-          margin: 2%;
-          position: relative;
-          strong{
-            display: inline-block;
-            .transition(all .2s ease-out);
-            &:hover{
-              color: @brandColor;
-              .scale( 1.3, 1.3 );
-            }
+        h5 strong{
+          &.s9{
+            .fonts( 90 );
+            line-height: 90px;
+          }
+          &.s8{
+            .fonts( 80 );
+            line-height: 80px;
+          }
+          &.s7{
+            .fonts( 70 );
+            line-height: 70px;
+          }
+          &.s6{
+            .fonts( 60 );
+          }
+          &.s5{
+            .fonts( 50 );
+          }
+          &.s4{
+            .fonts( 40 );
+          }
+          &.s3{
+            .fonts( 30 );
+          }
+          &.s2{
+            .fonts( 20 );
+          }
+          &.s1{
+            .fonts( 10 );
           }
         }
       }
