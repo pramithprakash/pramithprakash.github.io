@@ -190,6 +190,9 @@ html {
     a{
       opacity: 1; 
       color: @brandColor;
+      position: relative;
+      display: inline-block;
+      padding-right: 16px;
     }
     height: 30px;
     width: 100%;
@@ -200,13 +203,38 @@ html {
     .fonts( 12 );
     text-transform: uppercase;
     a:hover{
+      .scale( 1.3, 1.3 );
       span{
         color: #000;
+      }
+      strong{
+        .transition(all .2s ease-out);
+        position: static;;
+        span{
+          &:first-child{
+            left: 18px;
+          }
+        }
       }
     }
     strong{
       font-weight: 800;
       margin-right: 10px;
+      display: inline-block;
+      width: 19px;
+      vertical-align: top;
+      position: relative;
+      span{
+        &:first-child{
+          position: absolute;
+          left: 0;
+        }
+        &:last-child{
+          position: absolute;
+          right: 0;
+        }
+        color: @brandColor;
+      }
     }
     span{
       color: rgba(0,0,0,.5);
