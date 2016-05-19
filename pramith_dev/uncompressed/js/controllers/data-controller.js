@@ -57,6 +57,8 @@ define(
 
                     $scope.miliseconds = "164630000";
 
+                    $scope.blink = true;
+
                     hashChangeHandler();
 
                     $window.onhashchange = hashChangeHandler;
@@ -166,6 +168,8 @@ define(
                         $scope.animContent = $scope.animContent + $scope.data.homeText.charAt(k);
                         scopeApply();
                         if( k === $scope.data.homeText.length ){
+
+                            $scope.blink = false;
                             clearInterval( tc );
                             return;
                         }
