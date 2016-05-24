@@ -1,0 +1,86 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</head>
+<body>
+Okta Webpage Test
+<div class="result-not-logged-in" style="display:none;">User is not logged-in
+<fieldset>
+<div class="input-step field">
+<label for="email-widget">Email</label>
+<input type="email" name="customerEmail" id="email-widget" ng-model="eId" class="ng-pristine ng-valid ng-valid-email">
+</div>
+<div class="input-step field">
+<label for="password-widget">Password</label>
+<input type="password" name="password" id="password-widget" autocomplete="off" ng-model="pwd" class="ng-pristine ng-valid">
+</div>
+<div class="btn-container">
+<button type="submit" class="btn-xsmall cta sign-in" onclick="submit()" id="sign-in-widget">Sign In</button>
+</div>
+</fieldset>
+</div>
+<div class="result-logged-in" style="display:none">
+User is logged-in now.
+<div id="profile">
+
+</div>
+</div>
+<script>
+$.ajaxSetup({async:false});
+$.ajax({
+  url: '/mgm-okta/getauthuser.sjson',
+  type: 'GET',
+  xhrFields: { withCredentials: true },
+  accept: 'application/json'
+}).done(function(data) {
+	
+    if(data){
+		console.log("user is logged-in"+data);
+		$(".result-logged-in").css("display","block");
+		$("#profile").text("Welcome "+data);
+	} else {
+		$.ajaxSetup({async:false});
+		var baseUrl = 'https://mgmdmp.oktapreview.com';
+		$.ajax({
+		  url: baseUrl + '/api/v1/users/me',
+		  type: 'GET',
+		  xhrFields: { withCredentials: true },
+		  accept: 'application/json'
+		}).done(function(data) {
+			console.log( "success" );			
+			window.location = "https://mgmdmp.oktapreview.com/oauth2/v1/authorize?response_type=code&client_id=e2qIzj1qb4wj95gulntv&redirect_uri="+window.location.origin+"/mgm-okta/oauth&scope=openid%20profile&state="+window.location;
+				
+		})
+		.fail(function(xhr, textStatus, error) {
+		  var title, message;
+		  switch (xhr.status) {
+			case 403 :
+			  $(".result-not-logged-in").css("display","block");
+			  title = xhr.responseJSON.errorSummary;
+			  message = 'Please login to your Okta organization before running the test';
+			  break;
+			default :
+			  title = 'Invalid URL or Cross-Origin Request Blocked';
+			  message = 'You must explictly add this site (' + window.location.origin + ') to the list of allowed websites in your Okta Admin Dashboard';
+			  break;
+		  }
+		  alert(title + ': ' + message);
+		});
+		 
+	}
+
+})
+
+function submit() {
+    console.log("Submit clicked");
+	var uname = $('#email-widget').val();
+	var password = $('#password-widget').val();
+	$.ajaxSetup({async:false});
+	$.post( "/mgm-okta/submit", { "email": uname, "password": password })
+	.done(function( data ) {
+		window.location = "https://mgmdmp.oktapreview.com/login/sessionCookieRedirect?token="+data+"&redirectUrl="+window.location.href;
+	}); 
+}  
+</script>
+</body>
+</html>
