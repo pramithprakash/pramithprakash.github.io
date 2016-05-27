@@ -97,10 +97,14 @@ define(
                             $('body').addClass('active'); 
 
                         }
-                        if( !$('body').hasClass('active') ){
 
-                            $('body').addClass('active'); 
-                        }
+                        $('body').removeClass('active');
+
+                        setTimeout(function(){
+
+                            $('body').addClass("active");
+                        }, 1000);
+                        
                     }
 
                     function timerLoop() {
