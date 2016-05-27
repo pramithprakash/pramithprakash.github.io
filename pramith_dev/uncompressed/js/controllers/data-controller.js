@@ -96,9 +96,10 @@ define(
                             window.location.hash = '#home';
                             $('body').addClass('active'); 
 
-                        } else if( hash === "home" ){
+                        }
+                        if( !$('body').hasClass('active') ){
 
-                            $('body').removeClass('active').addClass('active'); 
+                            $('body').addClass('active'); 
                         }
                     }
 
