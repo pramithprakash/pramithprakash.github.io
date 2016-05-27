@@ -94,6 +94,11 @@ define(
                             hash = "home";
                             $scope.hash = hash;
                             window.location.hash = '#home';
+                            $('body').addClass('active'); 
+
+                        } else if( hash === "home" ){
+
+                            $('body').removeClass('active').addClass('active'); 
                         }
                     }
 
