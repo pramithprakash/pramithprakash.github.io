@@ -33,15 +33,15 @@ require(
                     $('body').addClass('active');
                 });
 
-                $('a').off().on('touchstart', function(e) {
-
-                    var el = $(this)
-                        , link = el.attr('href')
-                        , target = el.attr('target')
-                        ;
-
-                    window.open(link, target ? target : '_self' );
-                });
+                // $('a').off().on('touchstart', function(e) {
+                // 
+                //     var el = $(this)
+                //         , link = el.attr('href')
+                //         , target = el.attr('target')
+                //         ;
+                // 
+                //     window.open(link, target ? target : '_self' );
+                // });
 
                 $( this.initUI.bind( this ) );
 
