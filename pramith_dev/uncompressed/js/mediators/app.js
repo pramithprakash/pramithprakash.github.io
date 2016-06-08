@@ -33,7 +33,7 @@ require(
                     $('body').addClass('active');
                 });
 
-                $('a').on('click touchend', function(e) {
+                $('a').on('touchstart', function(e) {
 
                     e.preventDefault();
 
