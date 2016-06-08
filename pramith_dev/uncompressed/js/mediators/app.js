@@ -38,9 +38,11 @@ require(
                     e.preventDefault();
 
                     var el = $(this)
-                        , link = el.attr('href');
+                        , link = el.attr('href')
+                        , target = el.attr('target')
+                        ;
 
-                    window.location = link;
+                    window.open(link, target ? target : '_self' );
                 });
 
                 $( this.initUI.bind( this ) );
