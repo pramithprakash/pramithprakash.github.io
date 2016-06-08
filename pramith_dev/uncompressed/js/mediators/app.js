@@ -33,6 +33,12 @@ require(
                     $('body').addClass('active');
                 });
 
+                $('a').on('click touchend', function(e) {
+                    var el = $(this);
+                    var link = el.attr('href');
+                    window.location = link;
+                });
+
                 $( this.initUI.bind( this ) );
 
                 $('body').removeClass( 'pre-load' );
