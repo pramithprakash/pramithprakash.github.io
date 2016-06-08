@@ -23,38 +23,40 @@ require(
 
             init: function () {
 
-
                 $(window).on("blur", function(e) {
 
                     $('body').removeClass('active');
                 });
+
                 $(window).on("focus", function(e) {
 
                     $('body').addClass('active');
                 });
 
                 $('a').on('click touchend', function(e) {
-                    var el = $(this);
-                    var link = el.attr('href');
+
+                    e.preventDefault();
+
+                    var el = $(this)
+                        , link = el.attr('href');
+
                     window.location = link;
                 });
 
                 $( this.initUI.bind( this ) );
 
                 $('body').removeClass( 'pre-load' );
+
                 $('body').addClass('active')
 
                 function isScrolledIntoView( elem ) {
 
-                    var $elem = $( elem );
-                    var $window = $( window );
-
-                    var docViewTop = $window.scrollTop();
-                    var docViewBottom = docViewTop + $window.height();
-
-                    var elemTop = $elem.offset()
-                        .top;
-                    var elemBottom = elemTop + $elem.height();
+                    var $elem = $( elem )
+                        , $window = $( window )
+                        , docViewTop = $window.scrollTop()
+                        , docViewBottom = docViewTop + $window.height()
+                        , elemTop = $elem.offset().top
+                        , elemBottom = elemTop + $elem.height();
 
                     return ( elemTop <= docViewBottom );
                 }
