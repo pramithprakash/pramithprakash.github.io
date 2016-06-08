@@ -33,9 +33,7 @@ require(
                     $('body').addClass('active');
                 });
 
-                $('a').on('touchstart', function(e) {
-
-                    e.preventDefault();
+                $('a').off().on('touchstart', function(e) {
 
                     var el = $(this)
                         , link = el.attr('href')
