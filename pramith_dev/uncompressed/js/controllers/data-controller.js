@@ -20,7 +20,7 @@ define(
 
         .filter( 'trust', [
 
-            '$filter'
+            '$filter',
             '$sce',
 
             function(
