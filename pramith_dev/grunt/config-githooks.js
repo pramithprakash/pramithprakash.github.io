@@ -7,13 +7,7 @@ module.exports = function( grunt ) {
 
     grunt.config( 'githooks', {
         all: {
-            'pre-commit': 'jshint',
-            'post-commit': {
-                template: 'grunt/hooks/sync-proxy.hb'
-            },
-            'post-merge': {
-                template: 'grunt/hooks/sync-proxy.hb'
-            }
+            'pre-commit': 'jshint'
         },
     });
 
