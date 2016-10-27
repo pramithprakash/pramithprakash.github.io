@@ -12,12 +12,42 @@
     div{vertical-align: middle;text-align: center;position: relative;top: 50%;transform: translateY(-50%);margin: 0 auto;}
     a{display: inline-block;padding: 10px 20px;border: 1px solid #e86767;border-radius: 30px;color: #e86767;margin: 10px 0}
     a:hover{background: #e86767;color: #fff;cursor: pointer;}
-    .f1{font-size: 12px;}
-    .f2{font-size: 16px;}
-    .f3{font-size: 20px;}
-    .f4{font-size: 26px;}
-    .f5{font-size: 30px;}
-    .f6{font-size: 32px;}
+    .f1{font-size: 12px;color: #000;border-color: #000;}
+    .f2{font-size: 16px;color: #333;border-color: #333;}
+    .f3{font-size: 20px;color: #666;border-color: #666;}
+    .f4{font-size: 26px;color: #999;border-color: #999;}
+    .f5{font-size: 30px;color: #bbb;border-color: #bbb;}
+    .f6{font-size: 32px;color: #ddd;border-color: #ddd;}
+    .f1:hover{background: #000;}
+    .f2:hover{background: #333;}
+    .f3:hover{background: #666;}
+    .f4:hover{background: #999;}
+    .f5:hover{background: #bbb;}
+    .f6:hover{background: #ddd;}
+    a:hover {
+      animation: shake 2s cubic-bezier(.36,.07,.19,.97) both;
+      transform: translate3d(0, 0, 0);
+      backface-visibility: hidden;
+      perspective: 1000px;
+    }
+
+    @keyframes shake {
+      10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+      }
+      
+      20%, 80% {
+        transform: translate3d(2px, 0, 0);
+      }
+
+      30%, 50%, 70% {
+        transform: translate3d(-4px, 0, 0);
+      }
+
+      40%, 60% {
+        transform: translate3d(4px, 0, 0);
+      }
+    }
     @media (max-width: 900px) {div{position: static;transform: translateY(0%);}}
   </style>
   <script src="../library/js/vendor/jquery.js"></script>
