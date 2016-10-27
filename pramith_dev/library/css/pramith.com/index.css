@@ -1183,30 +1183,6 @@ nav {
       opacity: .4;
     }
   }
-  .pre-load .wrapper {
-    background: #ffffff;
-  }
-  .include {
-    background: #ffffff;
-  }
-  .wrapper {
-    background: #ff512f;
-  }
-  footer {
-    background: #ffffff;
-  }
-  footer .wrapper {
-    background: transparent;
-  }
-  .box.logo span {
-    color: #111111;
-  }
-  .box.logo strong,
-  .box.logo span span,
-  .box.title span {
-    color: #ffffff;
-    opacity: 1;
-  }
 }
 @media screen and (min-width: 768px) {
   .box.inview.include div.anim {
