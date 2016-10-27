@@ -10,27 +10,24 @@
     *{margin:0;padding:0;font-family: monospace;font-size: 10px;text-decoration: none;}
     html,body{min-height: 100%;height: 100%;}
     div{vertical-align: middle;text-align: center;position: relative;top: 50%;transform: translateY(-50%);margin: 0 auto;}
-    a{display: inline-block;padding: 10px 20px;border: 1px solid #e86767;border-radius: 30px;color: #e86767;margin: 10px 0}
-    a:hover{background: #e86767;color: #fff;cursor: pointer;}
-    .f1{font-size: 12px;color: #000;border-color: #000;}
-    .f2{font-size: 16px;color: #333;border-color: #333;}
-    .f3{font-size: 20px;color: #666;border-color: #666;}
-    .f4{font-size: 26px;color: #999;border-color: #999;}
-    .f5{font-size: 30px;color: #bbb;border-color: #bbb;}
-    .f6{font-size: 32px;color: #ddd;border-color: #ddd;}
-    .f1:hover{background: #000;}
-    .f2:hover{background: #333;}
-    .f3:hover{background: #666;}
-    .f4:hover{background: #999;}
-    .f5:hover{background: #bbb;}
-    .f6:hover{background: #ddd;}
+    a{display: inline-block;padding: 1px 20px;color: #fff;margin: 10px 0;cursor: pointer;border-bottom: 1px solid;border-left: 5px solid;border-radius: 6px;border-top: 1px solid #eee !important;border-right: 1px solid #eee !important;}
+    .f1{font-size: 12px;}
+    .f2{font-size: 16px;}
+    .f3{font-size: 20px;}
+    .f4{font-size: 26px;}
+    .f5{font-size: 30px;}
+    .f6{font-size: 32px;}
     a:hover {
       animation: shake 2s cubic-bezier(.36,.07,.19,.97) both;
       transform: translate3d(0, 0, 0);
       backface-visibility: hidden;
       perspective: 1000px;
     }
-
+    .p{border-color: #000000;color: #000000;}
+    .f{border-color: #071eec;color: #071eec;}
+    .s{border-color: #de2728;color: #de2728;}
+    .k{border-color: #039582;color: #039582;}
+    .i{border-color: #1d97db;color: #1d97db;}
     @keyframes shake {
       10%, 90% {
         transform: translate3d(-1px, 0, 0);
@@ -48,7 +45,7 @@
         transform: translate3d(4px, 0, 0);
       }
     }
-    @media (max-width: 900px) {div{position: static;transform: translateY(0%);}a{font-size: 15px !important;}}
+    @media (max-width: 900px) {div{position: static;transform: translateY(0%);}a{font-size: 15px !important;border-left: 0 solid;}}
   </style>
   <script src="../library/js/vendor/jquery.js"></script>
   <script>
@@ -62,43 +59,41 @@
   </script>
   <body>
     <div>
-      <a target="_blank" href="../">pramith.com</a><br/>
-      <a target="_blank" href="../pramith_dev">development</a>
-      <a target="_blank" href="../hello">hello</a>
-      <a target="_blank" href="../aura">aura</a>
-      <a target="_blank" href="../megatron">megatron</a>
-      <a target="_blank" href="../templates/simple-resposive-static">templates</a>
-      <a target="_blank" href="../tketz">tketz</a>
-      <a target="_blank" href="../v4">v4</a><br/>
-
-      <a target="_blank" href="http://www.motionkandy.com/">http://www.motionkandy.com/</a>
-      <a target="_blank" href="http://www.okimma.com/">http://www.okimma.com/</a>
-      <a target="_blank" href="http://www.facecombat.com.au/">http://www.facecombat.com.au/</a>
-      <a target="_blank" href="http://sodus.com.au/">http://sodus.com.au/</a>
-      <a target="_blank" href="https://www.tirerack.com/">https://www.tirerack.com/</a>
-      <a target="_blank" href="https://www.mgmgrand.com/">https://www.mgmgrand.com/</a>
-      <a target="_blank" href="http://www.oorjit.com/">http://www.oorjit.com/</a>
-      <a target="_blank" href="http://www.zeekin.com/">http://www.zeekin.com/</a>
-      <a target="_blank" href="http://www.ollco.com/">http://www.ollco.com/</a>
-      <a target="_blank" href="http://www.businessgreen.com/">http://www.businessgreen.com/</a>
-      <a target="_blank" href="http://www.centralbanking.com/">http://www.centralbanking.com/</a>
-      <a target="_blank" href="http://www.computing.co.uk/">http://www.computing.co.uk/</a>
-      <a target="_blank" href="http://www.channelweb.co.uk/">http://www.channelweb.co.uk/</a>
-
-<a target="_blank" href="http://www.megatronresearch.com/">http://www.megatronresearch.com/</a>
-<a target="_blank" href="http://tketz.com/">http://tketz.com/</a>
-
-      <a target="_blank" href="http://www.fxweek.com/">http://www.fxweek.com/</a>
-      <a target="_blank" href="http://www.theinquirer.net/">http://www.theinquirer.net/</a>
-      <a target="_blank" href="http://www.professionaladviser.com/">http://www.professionaladviser.com/</a>
-      <a target="_blank" href="http://www.risk.net/">http://www.risk.net/</a>
-      <a target="_blank" href="http://www.professionalpensions.com/">http://www.professionalpensions.com/</a>
-      <a target="_blank" href="http://www.waterstechnology.com/">http://www.waterstechnology.com/</a>
-      <a target="_blank" href="http://www.v3.co.uk/">http://www.v3.co.uk/</a>
-      <a target="_blank" href="http://www.unquote.com/">http://www.unquote.com/</a>
-      <a target="_blank" href="http://www.avcj.com/">http://www.avcj.com/</a>
-      <a target="_blank" href="https://www.mlife.com/">https://www.mlife.com/</a>
-
+      <a target="_blank" class="p" href="../">pramith.com</a><br/>
+      <a target="_blank" class="f" href="../tketz">tketz</a>
+      <a target="_blank" class="p" href="../v4">v4</a><br/>
+      <a target="_blank" class="i" href="http://www.motionkandy.com/">http://www.motionkandy.com/</a>
+      <a target="_blank" class="s" href="https://www.tirerack.com/">https://www.tirerack.com/</a>      
+      <a target="_blank" class="i" href="http://www.oorjit.com/">http://www.oorjit.com/</a>
+      <a target="_blank" class="f" href="../aura">aura</a>
+      <a target="_blank" class="i" href="http://www.ollco.com/">http://www.ollco.com/</a>
+      <a target="_blank" class="k" href="http://www.businessgreen.com/">http://www.businessgreen.com/</a>
+      <a target="_blank" class="i" href="http://www.facecombat.com.au/">http://www.facecombat.com.au/</a>
+      <a target="_blank" class="k" href="http://www.centralbanking.com/">http://www.centralbanking.com/</a>
+      <a target="_blank" class="k" href="http://www.computing.co.uk/">http://www.computing.co.uk/</a>
+      <a target="_blank" class="f" href="../templates/simple-resposive-static">templates</a>
+      <a target="_blank" class="k" href="http://www.channelweb.co.uk/">http://www.channelweb.co.uk/</a>
+      <a target="_blank" class="f" href="http://www.megatronresearch.com/">http://www.megatronresearch.com/</a>
+      <a target="_blank" class="k" href="http://www.fxweek.com/">http://www.fxweek.com/</a>
+      <a target="_blank" class="s" href="https://www.mlife.com/">https://www.mlife.com/</a>
+      <a target="_blank" class="k" href="http://www.theinquirer.net/">http://www.theinquirer.net/</a>
+      <a target="_blank" class="i" href="http://www.zeekin.com/">http://www.zeekin.com/</a>
+      <a target="_blank" class="f" href="http://tketz.com/">http://tketz.com/</a>
+      <a target="_blank" class="k" href="http://www.professionaladviser.com/">http://www.professionaladviser.com/</a>
+      <a target="_blank" class="k" href="http://www.risk.net/">http://www.risk.net/</a>
+      <a target="_blank" class="p" href="../hello">hello</a>
+      <a target="_blank" class="k" href="http://www.professionalpensions.com/">http://www.professionalpensions.com/</a>
+      <a target="_blank" class="i" href="http://sodus.com.au/">http://sodus.com.au/</a>
+      <a target="_blank" class="k" href="http://www.waterstechnology.com/">http://www.waterstechnology.com/</a>
+      <a target="_blank" class="k" href="http://www.investmentweek.co.uk/">http://www.investmentweek.co.uk/</a>
+      <a target="_blank" class="p" href="../pramith_dev">development</a>
+      <a target="_blank" class="k" href="http://www.insuranceage.co.uk/">http://www.insuranceage.co.uk/</a>
+      <a target="_blank" class="k" href="http://www.v3.co.uk/">http://www.v3.co.uk/</a>
+      <a target="_blank" class="f" href="../megatron">megatron</a>
+      <a target="_blank" class="k" href="http://www.unquote.com/">http://www.unquote.com/</a>
+      <a target="_blank" class="i" href="http://www.okimma.com/">http://www.okimma.com/</a>
+      <a target="_blank" class="k" href="http://www.avcj.com/">http://www.avcj.com/</a>
+      <a target="_blank" class="s" href="https://www.mgmgrand.com/">https://www.mgmgrand.com/</a>
     </div>
   </body>
 </html>
