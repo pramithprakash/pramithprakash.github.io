@@ -2,6 +2,9 @@ require(
     [
         'jquery',
         'controllers/data-controller',
+        'vendor/TweenLite.min',
+        'vendor/EasePack.min',
+        'modules/bg-anim',
         'vendor/angular-min',
         'vendor/angular-route-min',
         'vendor/angular-animate-min'
@@ -11,6 +14,9 @@ require(
 
         $,
         dataController,
+        TweenLite,
+        EasePack,
+        bgAnim,
         angular,
         angularRoute,
         angularAnimate
