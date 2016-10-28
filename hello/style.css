@@ -221,21 +221,47 @@ a{
     .section-title {
         font-size: 30px;
     }
-    .profile-list .title {
-        width: 80px;
-    }
     .profile-list .cont {
         margin-left: 0;
         margin-bottom: 15px;
     }
 }
-
-@media (max-width: 320px){
-    .section-about .row > div {
-        width: 100%;
+@media (max-width: 440px){
+    body{
+        background: #e86767;
+    }
+    .container{
+        padding-left: 0;
+        padding-right: 0;
     }
     .section {
-        padding-top: 15px;
+        padding-top: 0;
+    }
+    .section-about .profile-title {
+        font-size: 32px;
+    }
+    .section-about .profile-info {
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+    }
+}
+@media (max-width: 400px){
+    .section-about .profile-title {
+        font-size: 28px;
+    }
+}
+@media (max-width: 380px){
+    .profile-list .title {
+        width: 80px;
+    }
+    .section-about .profile-title {
+        font-size: 24px;
+    }
+    .section-about .profile-position {
+        font-size: 13px;
+    }
+    .section-about .row > div {
+        width: 100%;
     }
     .social li{
         margin: 0;
