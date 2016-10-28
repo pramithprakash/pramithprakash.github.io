@@ -221,10 +221,8 @@ a{
     .section-title {
         font-size: 30px;
     }
-    .profile-list .title, .profile-list .cont {
-        width: 100%;
-        float: none;
-        line-height: 1.2;
+    .profile-list .title {
+        width: 80px;
     }
     .profile-list .cont {
         margin-left: 0;
