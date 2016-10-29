@@ -23,7 +23,8 @@
     left: 40px;
     height: 30px;
     width: 400px;
-    z-index: 99;
+    z-index: 9999;
+    background: @white;
     padding: 8px 10px 0;
     position: fixed;
     margin: 0 0 0 -30px !important;
@@ -145,7 +146,6 @@
   }
 }
 .wrapper{
-  max-width: 768px;
   margin: 0 auto;
   position: relative;
   height: 100vh;
@@ -207,7 +207,6 @@ footer .wrapper{
 .links-active{
   .include{
     z-index: 99;
-    .transition(all 0 ease-out);
     width: calc( 100% - 260px );
     .close{
       display: block;

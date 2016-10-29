@@ -171,7 +171,6 @@ html {
   &.menu,&.exp{
     right: 0;
   }
-  .transition(all .8s ease-out);
   &.sh{
     box-shadow: 0 15px 100px rgba(0,0,0,.06);
   }
@@ -397,7 +396,6 @@ footer{
 }
 .bg{
   .center-center();
-  .transition(all .8s ease-out);
   position: fixed;
   width: 100%;
   text-align: center;
@@ -443,6 +441,9 @@ footer{
   100% {opacity: 1;content: '_'}
 }
 .links-active {
+  .include{
+    background: @white;
+  }
   .awards {
     display: none;
   }
