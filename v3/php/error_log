@@ -1,0 +1,11 @@
+[13-Feb-2013 16:59:32 UTC] PHP Parse error:  syntax error, unexpected $end in /home/xqitovgl/public_html/php/submit-form-ajax.php on line 112
+[13-Feb-2013 17:00:50 UTC] PHP Parse error:  syntax error, unexpected $end in /home/xqitovgl/public_html/php/submit-form-ajax.php on line 112
+[13-Feb-2013 17:04:29 UTC] PHP Parse error:  syntax error, unexpected $end in /home/xqitovgl/public_html/php/submit-form-ajax.php on line 111
+[13-Feb-2013 17:13:28 UTC] PHP Parse error:  syntax error, unexpected $end in /home/xqitovgl/public_html/php/submit-form-ajax.php on line 111
+[13-Feb-2013 17:14:02 UTC] PHP Parse error:  syntax error, unexpected $end in /home/xqitovgl/public_html/php/submit-form-ajax.php on line 111
+[13-Feb-2013 17:14:07 UTC] PHP Parse error:  syntax error, unexpected $end in /home/xqitovgl/public_html/php/submit-form-ajax.php on line 111
+[13-Feb-2013 17:48:42 UTC] PHP Parse error:  syntax error, unexpected T_EXIT in /home/xqitovgl/public_html/php/submit-form-ajax.php on line 106
+[04-Mar-2013 17:29:34 UTC] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/xqitovgl/public_html/php/submit-form-ajax.php:2) in /home/xqitovgl/public_html/php/submit-form-ajax.php on line 5
+[04-Mar-2013 17:30:03 UTC] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/xqitovgl/public_html/php/submit-form-ajax.php:2) in /home/xqitovgl/public_html/php/submit-form-ajax.php on line 5
+[04-Mar-2013 17:32:06 UTC] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/xqitovgl/public_html/php/submit-form-ajax.php:2) in /home/xqitovgl/public_html/php/submit-form-ajax.php on line 5
+[04-Mar-2013 17:32:51 UTC] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/xqitovgl/public_html/php/submit-form-ajax.php:2) in /home/xqitovgl/public_html/php/submit-form-ajax.php on line 5

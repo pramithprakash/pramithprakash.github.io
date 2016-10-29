@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+$('.parentul').each(function(){
+var temp = 0;
+var temp1 = 0;
+var p = 0;
+	$(this).find('.parentli').find('.check').each(function(){
+		if($(this).is(":checked")){
+		  if(temp==0){
+		    temp1 = 1;
+		    p = 1;
+		  }
+		}
+		else{
+		    temp = 1;
+		    p = 0;
+			$(this).parents('.parentul').find('.parentli').find('.checkall').removeAttr('checked');
+		}
+		 if(p==1){
+	  	    $(this).parents('.parentul').find('.parentli').find('.checkall').attr('checked','checked');
+		 }
+	});
+});
+});
+</script>
+<body>
+<ul class="parentul">
+ <li class="parentli">
+  <input type="checkbox" class="checkall" />
+  <ul>
+  <li><input type="checkbox" class="check"  /></li>
+  <li><input type="checkbox" class="check" checked="checked" /></li>
+  <li><input type="checkbox" class="check" checked="checked" /></li>
+  </ul>
+ </li>
+</ul>
+<ul class="parentul">
+ <li class="parentli">
+  <input type="checkbox" class="checkall" />
+  <ul>
+  <li><input type="checkbox" class="check" checked="checked" /></li>
+  <li><input type="checkbox" class="check" checked="checked" /></li>
+  <li><input type="checkbox" class="check" checked="checked" /></li>
+  </ul>
+ </li>
+</ul>
+<ul class="parentul">
+ <li class="parentli">
+  <input type="checkbox" class="checkall" />
+  <ul>
+  <li><input type="checkbox" class="check" checked="checked" /></li>
+  <li><input type="checkbox" class="check"  /></li>
+  <li><input type="checkbox" class="check" checked="checked" /></li>
+  </ul>
+ </li>
+</ul>
+</body>
+</html>
