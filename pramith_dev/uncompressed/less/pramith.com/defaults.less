@@ -202,7 +202,7 @@ html {
     height: 30px;
     width: 100%;
     z-index: 99;
-    padding: 8px 10px 0;
+    padding: 8px 30px 0;
     margin: 0 !important;
     line-height: 20px;
     .fonts( 12 );
@@ -215,6 +215,7 @@ html {
       color: rgba(0,0,0,.5);
       span{
         opacity: .4; 
+        display: none;
       }
     }
   }
@@ -255,7 +256,8 @@ html {
 }
 footer{
   box-shadow: 0 15px 100px rgba(0, 0, 0, 0.33);
-  z-index: 1;
+  z-index: 9999;
+  position: relative;
   background: @white;
   .transition(all .2s ease-out);
   &.inview{
@@ -449,7 +451,7 @@ footer{
   }
 }
 .awards{
-  position:fixed; 
+  position:absolute;
   right:0px; 
   z-index:99999;
   a{
@@ -457,7 +459,7 @@ footer{
     display:block;
   }
   &.cssa {
-    top:10%; 
+    top:50px; 
     a {
       width:60px;
       height:40px;
@@ -465,7 +467,7 @@ footer{
     }
   }
   &.csslight {
-    top:calc( 10% + 50px ); 
+    top:95px; 
     a {
       width:84px;
       height:29px;
