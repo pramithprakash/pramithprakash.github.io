@@ -39,6 +39,14 @@ require(
                     $('body').addClass('active');
                 });
 
+
+                $('a').on('click touchend', function(e) {
+                    e.preventDefault();
+                    var el = $(this);
+                    var link = el.attr('href');
+                    window.location = link;
+                });
+
                 // $('a').off().on('touchstart', function(e) {
                 // 
                 //     var el = $(this)
