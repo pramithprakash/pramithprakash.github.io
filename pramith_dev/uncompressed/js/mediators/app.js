@@ -40,7 +40,7 @@ require(
                 });
 
 
-                $('a').on('touchstart', function(e) {
+                $('.menu').find('a').on('touchstart', function(e) {
                     e.preventDefault();
                     var el = $(this);
                     var link = el.attr('href');
