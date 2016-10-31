@@ -6,8 +6,10 @@
   width: auto;
 }
 .links-active .box.include > div{
-  position: static;
-  padding-top: 100px;
+  &.about,&.skills {
+    position: static;
+    padding-top: 100px;
+  }
   &.about {
     h5{
       .fonts(25);

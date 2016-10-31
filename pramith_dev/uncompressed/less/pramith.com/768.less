@@ -48,9 +48,10 @@
     top: auto;
     height: 100%;
     bottom: 0;
+    width: calc( 100% - 260px );
     > div{
       position: absolute;
-      bottom: 72px;
+      bottom: 10px;
       &.skills{
         h5 strong{
           &.s9{
@@ -208,8 +209,12 @@ footer .wrapper{
 }
 .links-active{
   .box.logo{
-    top: 0;
-    span{
+    &:hover{
+      span span{
+        display: inline;
+      }
+    }
+    span span{
       display: none;
     }
   }
