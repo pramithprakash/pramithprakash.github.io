@@ -75,7 +75,7 @@ define(
                         , dif = t1.getTime() - t2.getTime()
                         ;
                     
-                    ct1 = parseInt(Math.abs(dif)/ 1000 - 1000);
+                    ct1 = parseInt(Math.abs(dif)/ 1000 - 20);
 
                     function hashChangeHandler() {
                         
