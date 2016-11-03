@@ -7,32 +7,40 @@
     <title>pramithprakash</title>
   </head>
   <style>
-    *{margin:0;padding:0;font-family: monospace;font-size: 10px;text-decoration: none;}
-    html,body{min-height: 100%;height: 100%;}
-    div{vertical-align: middle;text-align: center;position: relative;top: 50%;transform: translateY(-50%);margin: 0 auto;}
-    a{display: inline-block;padding: 1px 20px;color: #fff;margin: 10px 0;cursor: pointer;border: 1px solid;}
-    .f1{font-size: 12px;}
+   .sites *{margin:0;padding:0;font-family: monospace;font-size: 10px;text-decoration: none;}
+    div.sites{vertical-align: middle;position: relative;margin: 0 auto;}
+    .sites a{display: block;padding: 20px;color: #000;margin: 0;cursor: pointer;     border-bottom: 1px solid #F5F5F0;font-size: 20px;position: relative;
+      -webkit-transition: all 0.4s cubic-bezier(.63,.33,.3,.99);
+      transition: all 0.4s cubic-bezier(.63,.33,.3,.99);height: 10vh;
+    }
+    /*.f1{font-size: 12px;}
     .f2{font-size: 16px;}
     .f3{font-size: 20px;}
     .f4{font-size: 26px;}
     .f5{font-size: 30px;}
-    .f6{font-size: 32px;}
-    a:hover {
-      animation: shake 2s cubic-bezier(.36,.07,.19,.97) both;
+    .f6{font-size: 32px;}*/
+    .sites a:hover {
+      /*animation: shake 2s cubic-bezier(.36,.07,.19,.97) both;*/
       transform: translate3d(0, 0, 0);
       backface-visibility: hidden;
       perspective: 1000px;
+      box-shadow: inset -99vw 0px #ddd;
     }
-    .p{border-color: #000000;color: #000000;}
-    .f{border-color: #071eec;color: #071eec;}
-    .s{border-color: #de2728;color: #de2728;}
-    .k{border-color: #039582;color: #039582;}
-    .i{border-color: #1d97db;color: #1d97db;}
-    .p:hover{background: #000000;color: #fff;}
-    .f:hover{background: #071eec;color: #fff;}
-    .s:hover{background: #de2728;color: #fff;}
-    .k:hover{background: #039582;color: #fff;}
-    .i:hover{background: #1d97db;color: #fff;}
+    .p:after,
+    .f:after,
+    .s:after,
+    .k:after,
+    .i:after{font-size: 12px;position: absolute;right: 20px;bottom: 20px;}
+    .p:after{content: "PORTFOLIO";}
+    .f:after{content: "FREELANCE";}
+    .s:after{content: "SAPIENT";}
+    .k:after{content: "SRISTHI/KREATIO";}
+    .i:after{content: "ISPG";}
+    .p:hover{background: #000000;color: #000000;}
+    .f:hover{background: #071eec;color: #071eec;}
+    .s:hover{background: #de2728;color: #de2728;}
+    .k:hover{background: #039582;color: #039582;}
+    .i:hover{background: #1d97db;color: #1d97db;}
     @keyframes shake {
       10%, 90% {
         transform: translate3d(-1px, 0, 0);
@@ -52,21 +60,11 @@
     }
     @media (max-width: 1027px) {div{position: static;transform: translateY(0%);}a{font-size: 15px !important;background: transparent !important;color: #000 !important;}}
   </style>
-  <script src="../library/js/vendor/jquery.js"></script>
-  <script>
-    $(document).ready(function () {
-      var colors = ['f1', 'f2', 'f3', 'f4', 'f5', 'f6'];
-      $('a').each(function () {
-        var rand = ~~(Math.random() * colors.length)
-        $(this).addClass(colors[rand])
-      });
-    });
-  </script>
   <body>
-    <div>
-      <a target="_blank" class="p" href="../">pramith.com</a><br/>
+    <div class="sites">
+      <a target="_blank" class="p" href="../">pramith.com</a>
       <a target="_blank" class="f" href="../tketz">tketz</a>
-      <a target="_blank" class="p" href="../v4">v4</a><br/>
+      <a target="_blank" class="p" href="../v4">v4</a>
       <a target="_blank" class="i" href="http://www.motionkandy.com/">http://www.motionkandy.com/</a>
       <a target="_blank" class="s" href="https://www.tirerack.com/">https://www.tirerack.com/</a>      
       <a target="_blank" class="i" href="http://www.oorjit.com/">http://www.oorjit.com/</a>
@@ -77,7 +75,7 @@
       <a target="_blank" class="k" href="http://www.centralbanking.com/">http://www.centralbanking.com/</a>
       <a target="_blank" class="k" href="http://www.computing.co.uk/">http://www.computing.co.uk/</a>
       <a target="_blank" class="f" href="../templates/simple-resposive-static">templates</a>
-      <a target="_blank" class="p" href="../v2">v2</a><br/>
+      <a target="_blank" class="p" href="../v2">v2</a>
       <a target="_blank" class="k" href="http://www.channelweb.co.uk/">http://www.channelweb.co.uk/</a>
       <a target="_blank" class="f" href="http://www.megatronresearch.com/">http://www.megatronresearch.com/</a>
       <a target="_blank" class="k" href="http://www.fxweek.com/">http://www.fxweek.com/</a>
@@ -100,7 +98,7 @@
       <a target="_blank" class="k" href="http://www.unquote.com/">http://www.unquote.com/</a>
       <a target="_blank" class="i" href="http://www.okimma.com/">http://www.okimma.com/</a>
       <a target="_blank" class="k" href="http://www.avcj.com/">http://www.avcj.com/</a>
-      <a target="_blank" class="p" href="../v1">v1</a><br/>
+      <a target="_blank" class="p" href="../v1">v1</a>
       <a target="_blank" class="s" href="https://www.mgmgrand.com/">https://www.mgmgrand.com/</a>
     </div>
   </body>
