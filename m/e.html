@@ -7,11 +7,15 @@
     <title>pramithprakash</title>
   </head>
   <style>
-   .sites *{margin:0;padding:0;font-family: monospace;font-size: 10px;text-decoration: none;}
+   .sites {font-size: 10px;font-family: monospace;}
+   .sites *{margin:0;padding:0;text-decoration: none;}
     div.sites{vertical-align: middle;position: relative;margin: 0 auto;}
     .sites a{display: block;padding: 20px;color: #000;margin: 0;cursor: pointer;     border-bottom: 1px solid #F5F5F0;font-size: 20px;position: relative;
       -webkit-transition: all 0.4s cubic-bezier(.63,.33,.3,.99);
       transition: all 0.4s cubic-bezier(.63,.33,.3,.99);height: 10vh;
+    }
+    .sites a span{
+      background: #000;color: #fff;margin-right: 5px;padding: 5px;
     }
     /*.f1{font-size: 12px;}
     .f2{font-size: 16px;}
@@ -24,23 +28,33 @@
       transform: translate3d(0, 0, 0);
       backface-visibility: hidden;
       perspective: 1000px;
-      box-shadow: inset -99vw 0px #ddd;
+      box-shadow: inset -99vw 0px #fafafa;
     }
     .p:after,
     .f:after,
     .s:after,
     .k:after,
-    .i:after{font-size: 12px;position: absolute;right: 20px;bottom: 20px;}
-    .p:after{content: "PORTFOLIO";}
-    .f:after{content: "FREELANCE";}
-    .s:after{content: "SAPIENT";}
-    .k:after{content: "SRISTHI/KREATIO";}
-    .i:after{content: "ISPG";}
+    .i:after{font-size: 12px;position: absolute;right: 20px;bottom: 20px;color: #fff;padding: 5px;}
+    .p:before,
+    .f:before,
+    .s:before,
+    .k:before,
+    .i:before{font-size: 10px;position: absolute;left: 20px;bottom: 20px;content: "WEBSITE";}
+    .p:after{content: "PORTFOLIO";background: #000000;}
+    .f:after{content: "FREELANCE";background: #071eec;}
+    .s:after{content: "SAPIENT";background: #de2728;}
+    .k:after{content: "SRISTHI/KREATIO";background: #039582;}
+    .i:after{content: "ISPG";background: #1d97db;}
     .p:hover{background: #000000;color: #000000;}
     .f:hover{background: #071eec;color: #071eec;}
     .s:hover{background: #de2728;color: #de2728;}
     .k:hover{background: #039582;color: #039582;}
     .i:hover{background: #1d97db;color: #1d97db;}
+    .p:hover span{background: #000000;color: #ffffff;}
+    .f:hover span{background: #071eec;color: #ffffff;}
+    .s:hover span{background: #de2728;color: #ffffff;}
+    .k:hover span{background: #039582;color: #ffffff;}
+    .i:hover span{background: #1d97db;color: #ffffff;}
     @keyframes shake {
       10%, 90% {
         transform: translate3d(-1px, 0, 0);
@@ -65,65 +79,64 @@
       <a target="_blank" class="p" href="../">pramith.com</a>
       <a target="_blank" class="f" href="../tketz">tketz</a>
       <a target="_blank" class="p" href="../v4">v4</a>
-      <a target="_blank" class="i" >http://www.motionkandy.com/</a>
-      <a target="_blank" class="s" >https://www.tirerack.com/</a>      
-      <a target="_blank" class="i" >http://www.oorjit.com/</a>
+      <a target="_blank" class="i" ><span>http://</span>www.motionkandy.com/</a>
+      <a target="_blank" class="s" ><span>https://</span>www.tirerack.com/</a>      
+      <a target="_blank" class="i" ><span>http://</span>www.oorjit.com/</a>
       <a target="_blank" class="f" href="../aura">aura</a>
-      <a target="_blank" class="i" >http://www.ollco.com/</a>
-      <a target="_blank" class="k" >http://www.businessgreen.com/</a>
-      <a target="_blank" class="i" >http://www.facecombat.com.au/</a>
-      <a target="_blank" class="k" >http://www.centralbanking.com/</a>
-      <a target="_blank" class="k" >http://www.computing.co.uk/</a>
+      <a target="_blank" class="i" ><span>http://</span>www.ollco.com/</a>
+      <a target="_blank" class="k" ><span>http://</span>www.businessgreen.com/</a>
+      <a target="_blank" class="i" ><span>http://</span>www.facecombat.com.au/</a>
+      <a target="_blank" class="k" ><span>http://</span>www.centralbanking.com/</a>
+      <a target="_blank" class="k" ><span>http://</span>www.computing.co.uk/</a>
       <a target="_blank" class="f" href="../templates/simple-resposive-static">templates</a>
       <a target="_blank" class="p" href="../v2">v2</a>
-      <a target="_blank" class="k" >http://www.channelweb.co.uk/</a>
-      <a target="_blank" class="f" >http://www.megatronresearch.com/</a>
-      <a target="_blank" class="k" >http://www.fxweek.com/</a>
-      <a target="_blank" class="s" >https://www.mlife.com/</a>
-      <a target="_blank" class="k" >http://www.theinquirer.net/</a>
-      <a target="_blank" class="i" >http://www.zeekin.com/</a>
-      <a target="_blank" class="f" >http://tketz.com/</a>
-      <a target="_blank" class="k" >http://www.professionaladviser.com/</a>
-      <a target="_blank" class="k" >http://www.risk.net/</a>
+      <a target="_blank" class="k" ><span>http://</span>www.channelweb.co.uk/</a>
+      <a target="_blank" class="f" ><span>http://</span>www.megatronresearch.com/</a>
+      <a target="_blank" class="k" ><span>http://</span>www.fxweek.com/</a>
+      <a target="_blank" class="s" ><span>https://</span>www.mlife.com/</a>
+      <a target="_blank" class="k" ><span>http://</span>www.theinquirer.net/</a>
+      <a target="_blank" class="i" ><span>http://</span>www.zeekin.com/</a>
+      <a target="_blank" class="f" ><span>http://</span>tketz.com/</a>
+      <a target="_blank" class="k" ><span>http://</span>www.professionaladviser.com/</a>
+      <a target="_blank" class="k" ><span>http://</span>www.risk.net/</a>
       <a target="_blank" class="p" href="../hello">hello</a>
-      <a target="_blank" class="k" >http://www.professionalpensions.com/</a>
-      <a target="_blank" class="i" >http://sodus.com.au/</a>
+      <a target="_blank" class="k" ><span>http://</span>www.professionalpensions.com/</a>
+      <a target="_blank" class="i" ><span>http://</span>sodus.com.au/</a>
       <a target="_blank" class="p" href="../v3">v3</a><br/>
-      <a target="_blank" class="k" >http://www.waterstechnology.com/</a>
-      <a target="_blank" class="k" >http://www.investmentweek.co.uk/</a>
+      <a target="_blank" class="k" ><span>http://</span>www.waterstechnology.com/</a>
+      <a target="_blank" class="k" ><span>http://</span>www.investmentweek.co.uk/</a>
       <a target="_blank" class="p" href="../pramith_dev">development</a>
-      <a target="_blank" class="k" >http://www.insuranceage.co.uk/</a>
-      <a target="_blank" class="k" >http://www.v3.co.uk/</a>
+      <a target="_blank" class="k" ><span>http://</span>www.insuranceage.co.uk/</a>
+      <a target="_blank" class="k" ><span>http://</span>www.v3.co.uk/</a>
       <a target="_blank" class="f" href="../megatron">megatron</a>
-      <a target="_blank" class="k" >http://www.unquote.com/</a>
-      <a target="_blank" class="i" >http://www.okimma.com/</a>
-      <a target="_blank" class="k" >http://www.avcj.com/</a>
+      <a target="_blank" class="k" ><span>http://</span>www.unquote.com/</a>
+      <a target="_blank" class="i" ><span>http://</span>www.okimma.com/</a>
+      <a target="_blank" class="k" ><span>http://</span>www.avcj.com/</a>
       <a target="_blank" class="p" href="../v1">v1</a>
-      <a target="_blank" class="s" >https://www.mgmgrand.com/</a>
-
-      <a target="_blank" class="i" >https://www.minutecoupon.com/</a>
-      <a target="_blank" class="i" >http://www.yodileo.com/</a>
-      <a target="_blank" class="i" >http://www.aquaswisswatch.com/</a>
-      <a target="_blank" class="i" >http://www.dediawatch.com/</a>
-      <a target="_blank" class="i" >https://www.ayurfocus.com/</a>
-      <a target="_blank" class="i" >http://www.buffaloboss.com/</a>
-      <a target="_blank" class="i" >https://www.coupaw.com/</a>
-      <a target="_blank" class="i" >http://www.dealaday.co.nz/</a>
-      <a target="_blank" class="i" >http://www.kobonaty.com/</a>
-      <a target="_blank" class="i" >http://www.givebackmail.com/</a>
-      <a target="_blank" class="i" >http://www.estateace.com/</a>
-      <a target="_blank" class="i" >http://www.freebeedeals.com/</a>
-      <a target="_blank" class="i" >http://www.geowndevelopers.com/</a>
-      <a target="_blank" class="i" >http://groopling.com/</a>
-      <a target="_blank" class="i" >http://grubdeal.com/</a>
-      <a target="_blank" class="i" >http://www.ipernetwork.net/</a>
-      <a target="_blank" class="i" >http://www.karlaevents.com/</a>
-      <a target="_blank" class="i" >http://laughteryoga.org/</a>
-      <a target="_blank" class="i" >http://www.photoboxi.com/</a>
-      <a target="_blank" class="i" >https://rakbank.ae/</a>
-      <a target="_blank" class="i" >http://www.suzannewerson.com/</a>
-      <a target="_blank" class="i" >http://www.weisermanner.com/</a>
-      <a target="_blank" class="i" >http://picster.me/</a>
+      <a target="_blank" class="s" ><span>https://</span>www.mgmgrand.com/</a>
+      <a target="_blank" class="i" ><span>https://</span>www.minutecoupon.com/</a>
+      <a target="_blank" class="i" ><span>http://</span>www.yodileo.com/</a>
+      <a target="_blank" class="i" ><span>http://</span>www.aquaswisswatch.com/</a>
+      <a target="_blank" class="i" ><span>http://</span>www.dediawatch.com/</a>
+      <a target="_blank" class="i" ><span>https://</span>www.ayurfocus.com/</a>
+      <a target="_blank" class="i" ><span>http://</span>www.buffaloboss.com/</a>
+      <a target="_blank" class="i" ><span>https://</span>www.coupaw.com/</a>
+      <a target="_blank" class="i" ><span>http://</span>www.dealaday.co.nz/</a>
+      <a target="_blank" class="i" ><span>http://</span>www.kobonaty.com/</a>
+      <a target="_blank" class="i" ><span>http://</span>www.givebackmail.com/</a>
+      <a target="_blank" class="i" ><span>http://</span>www.estateace.com/</a>
+      <a target="_blank" class="i" ><span>http://</span>www.freebeedeals.com/</a>
+      <a target="_blank" class="i" ><span>http://</span>www.geowndevelopers.com/</a>
+      <a target="_blank" class="i" ><span>http://</span>groopling.com/</a>
+      <a target="_blank" class="i" ><span>http://</span>grubdeal.com/</a>
+      <a target="_blank" class="i" ><span>http://</span>www.ipernetwork.net/</a>
+      <a target="_blank" class="i" ><span>http://</span>www.karlaevents.com/</a>
+      <a target="_blank" class="i" ><span>http://</span>laughteryoga.org/</a>
+      <a target="_blank" class="i" ><span>http://</span>www.photoboxi.com/</a>
+      <a target="_blank" class="i" ><span>https://</span>rakbank.ae/</a>
+      <a target="_blank" class="i" ><span>http://</span>www.suzannewerson.com/</a>
+      <a target="_blank" class="i" ><span>http://</span>www.weisermanner.com/</a>
+      <a target="_blank" class="i" ><span>http://</span>picster.me/</a>
 
 
 
