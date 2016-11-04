@@ -491,12 +491,15 @@ footer{
     display: block;
     padding: 20px;
     color: #000;
-    margin: 0;cursor: pointer;
+    margin: 0;
     border-bottom: 1px solid #F5F5F0;
     font-size: 20px;
     position: relative;
     -webkit-transition: all 0.4s cubic-bezier(.63,.33,.3,.99);
     transition: all 0.4s cubic-bezier(.63,.33,.3,.99);height: 10vh;
+    &[href]{
+      cursor: pointer;
+    }
     span{
       background: @black;
       color: @white;
