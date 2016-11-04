@@ -116,8 +116,8 @@ require(
                         when('/about',{
                             templateUrl: 'about.html'
                         }).
-                         when('/links',{
-                            templateUrl: 'links.html'
+                         when('/https',{
+                            templateUrl: 'https.html'
                         }).
                         when('/contact',{
                            templateUrl: 'home.html'

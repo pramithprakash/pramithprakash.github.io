@@ -479,3 +479,61 @@ footer{
   z-index: 0;
   display: none;
 }
+.box.include>div.https {
+  vertical-align: middle;
+  position: relative;
+  margin: 0 auto;
+  height: 100%;
+  overflow: auto;
+  width: 100%;
+  padding-top: 150px;
+  a{
+    display: block;
+    padding: 20px;
+    color: #000;
+    margin: 0;cursor: pointer;
+    border-bottom: 1px solid #F5F5F0;
+    font-size: 20px;
+    position: relative;
+    -webkit-transition: all 0.4s cubic-bezier(.63,.33,.3,.99);
+    transition: all 0.4s cubic-bezier(.63,.33,.3,.99);height: 10vh;
+    span{
+      background: @black;
+      color: @white;
+      margin-right: 5px;
+      padding: 5px;
+    }
+    &:hover {
+      transform: translate3d(0, 0, 0);
+      backface-visibility: hidden;
+      perspective: 1000px;
+      box-shadow: inset -99vw 0px #fafafa;
+    }
+  }
+  .p:after,
+  .f:after,
+  .s:after,
+  .k:after,
+  .i:after{font-size: 12px;position: absolute;right: 20px;bottom: 20px;color: #fff;padding: 5px;}
+  .p:before,
+  .f:before,
+  .s:before,
+  .k:before,
+  .i:before{font-size: 10px;position: absolute;left: 20px;bottom: 20px;content: "WEBSITE";}
+  .p:after{content: "PORTFOLIO";background: #000000;}
+  .f:after{content: "FREELANCE";background: #071eec;}
+  .s:after{content: "SAPIENT";background: #de2728;}
+  .k:after{content: "SRISTHI/KREATIO";background: #039582;}
+  .i:after{content: "ISPG";background: #1d97db;}
+  .p:hover{background: #000000;color: #000000;}
+  .f:hover{background: #071eec;color: #071eec;}
+  .s:hover{background: #de2728;color: #de2728;}
+  .k:hover{background: #039582;color: #039582;}
+  .i:hover{background: #1d97db;color: #1d97db;}
+  .p:hover span{background: #000000;color: #ffffff;}
+  .f:hover span{background: #071eec;color: #ffffff;}
+  .s:hover span{background: #de2728;color: #ffffff;}
+  .k:hover span{background: #039582;color: #ffffff;}
+  .i:hover span{background: #1d97db;color: #ffffff;}
+}
+
