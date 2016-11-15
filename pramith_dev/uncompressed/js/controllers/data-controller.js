@@ -55,7 +55,7 @@ define(
 
                     var url = ( 'data/data.json' );
 
-                    $scope.miliseconds = "164630000";
+                    $scope.miliseconds = '164630000';
 
                     $scope.blink = true;
 
@@ -89,9 +89,9 @@ define(
                         }
                         $scope.hash = hash;
 
-                        if( hash === "" ){
+                        if( hash === '' ){
 
-                            hash = "home";
+                            hash = 'home';
                             $scope.hash = hash;
                             window.location.hash = '#home';
                             $('body').addClass('active'); 
@@ -102,7 +102,7 @@ define(
 
                         setTimeout(function(){
 
-                            $('body').addClass("active");
+                            $('body').addClass('active');
                         }, 1000);
                         
                     }
@@ -133,8 +133,8 @@ define(
                         scopeApply();
                         if (ct1 > parseInt(Math.abs(dif)/ 1000) ) {
                             
-                          counter = setInterval( timerLoop, 1000 );
-                          clearInterval( counter1 );		
+                            counter = setInterval( timerLoop, 1000 );
+                            clearInterval( counter1 );		
                         }	
                     }
 

@@ -29,12 +29,12 @@ require(
 
             init: function () {
 
-                $(window).on("blur", function(e) {
+                $(window).on('blur', function(e) {
 
                     $('body').removeClass('active');
                 });
 
-                $(window).on("focus", function(e) {
+                $(window).on('focus', function(e) {
 
                     $('body').addClass('active');
                 });
@@ -61,7 +61,7 @@ require(
 
                 $('body').removeClass( 'pre-load' );
 
-                $('body').addClass('active')
+                $('body').addClass('active');
 
                 function isScrolledIntoView( elem ) {
 
@@ -70,7 +70,7 @@ require(
                         , docViewTop = $window.scrollTop()
                         , docViewBottom = docViewTop + $window.height()
                         , elemTop = $elem.offset().top
-                        , elemBottom = elemTop + $elem.height();
+                        ;
 
                     return ( elemTop <= docViewBottom );
                 }
@@ -120,15 +120,15 @@ require(
                             templateUrl: 'https.html'
                         }).
                         when('/contact',{
-                           templateUrl: 'home.html'
+                            templateUrl: 'home.html'
                         }).
                         when('/skills',{
-                           templateUrl: 'skills.html'
+                            templateUrl: 'skills.html'
                         }).
-                         otherwise({
-                             redirectTo: function(obj, requestedPath) {
-                                  window.location.href = window.location.href.split("#")[0] + '404.html' ;
-                              }
+                        otherwise({
+                            redirectTo: function(obj, requestedPath) {
+                                window.location.href = window.location.href.split('#')[0] + '404.html' ;
+                            }
                         });
                     }
                 ]);

@@ -12,6 +12,7 @@ module.exports = function( grunt ) {
         all: [
             'uncompressed/**/*.js',
             '!uncompressed/**/config/*.js',
+            '!uncompressed/**/modules/bg-anim.js',
             '!uncompressed/**/vendor/**/*.js',
         ]
     });
