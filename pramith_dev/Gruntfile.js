@@ -34,5 +34,8 @@ module.exports = function ( grunt ) {
         'clean:css',
         'less:dev'
     ] );
+    grunt.registerTask( 'live', 'Build for integration handoff.', [
+        'copy:live'
+    ]);
 
 };
