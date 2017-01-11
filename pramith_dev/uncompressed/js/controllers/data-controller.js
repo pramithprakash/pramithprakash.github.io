@@ -56,7 +56,6 @@ define(
                     var url = ( 'data/data.json' );
 
                     $scope.miliseconds = '164630000';
-
                     $scope.blink = true;
 
                     hashChangeHandler();
@@ -73,6 +72,7 @@ define(
                         , t1 = new Date(2009, 10, 3, 0, 0, 0, 0)
                         , t2 = new Date()
                         , dif = t1.getTime() - t2.getTime()
+                        , exyear
                         ;
                     
                     ct1 = parseInt(Math.abs(dif)/ 1000 - 20);
@@ -104,7 +104,6 @@ define(
 
                             $('body').addClass('active');
                         }, 1000);
-                        
                     }
 
                     function timerLoop() {
@@ -117,7 +116,6 @@ define(
 
                         $scope.miliseconds = parseInt(Seconds_Between_Dates);
                         $scope.$apply();
-                        
                     }
 
                     function scopeApply() {
@@ -146,16 +144,18 @@ define(
                             $scope.animTitle = '';
                             $scope.animContent = '';
                             tc = setInterval( tcf, 100 );
-                            yc = setInterval( ycf, 500 );
+                            setTimeout(function(){
+                                exyear = Math.floor($scope.miliseconds / 31536000);
+                                yc = setInterval( ycf, 500 );
+                            },1000);
                         } );
-
 
                     function ycf(){
                             
                         y++;
                         $scope.years = y;
                         scopeApply();
-                        if( y === $scope.data.years ){
+                        if( y === exyear ){
                             clearInterval( yc );
                         }
                     }
