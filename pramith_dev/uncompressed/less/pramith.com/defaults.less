@@ -552,12 +552,17 @@ footer{
   a{
     cursor: pointer;
     padding: 5px 5px 3px;
-    background: #000000;
     color: #ffffff;
+    background: #ddd;
     float: left;
     margin: 0 1px;
-    &.active{
+    &.active,&:hover{
       opacity: 1;
+      &.p{background: #000000;}
+      &.f{background: #071eec;}
+      &.s{background: #de2728;}
+      &.k{background: #039582;}
+      &.i{background: #1d97db;}
     }
   }
 }
