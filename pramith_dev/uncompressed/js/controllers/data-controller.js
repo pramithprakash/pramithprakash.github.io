@@ -58,6 +58,8 @@ define(
                     $scope.miliseconds = '164630000';
                     $scope.blink = true;
 
+                    $scope.htmlFilter = 'a';
+
                     hashChangeHandler();
 
                     $window.onhashchange = hashChangeHandler;

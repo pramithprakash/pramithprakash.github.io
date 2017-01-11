@@ -486,7 +486,7 @@ footer{
   height: 100%;
   overflow: auto;
   width: 100%;
-  padding-top: 150px;
+  padding-top: 10px;
   a{
     display: block;
     padding: 20px;
@@ -544,4 +544,20 @@ footer{
   .k:hover span{background: #039582;color: #ffffff;}
   .i:hover span{background: #1d97db;color: #ffffff;}
 }
-
+.box.include>div.filter{
+  position: relative;
+  float: right;
+  .fonts( 10 );
+  text-transform: uppercase;
+  a{
+    cursor: pointer;
+    padding: 5px 5px 3px;
+    background: #000000;
+    color: #ffffff;
+    float: left;
+    margin: 0 1px;
+    &.active{
+      opacity: 1;
+    }
+  }
+}
