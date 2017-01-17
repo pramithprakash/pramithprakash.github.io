@@ -15,21 +15,8 @@ module.exports = function ( grunt ) {
             '**/css/',
             '**/index.css'
         ],
-        dev: [
-            '<%= buildPath.dev %>'
-        ],
-        distPre: [
-            '<%= buildPath.dist %>'
-        ],
-        distPost: [
-            '<%= buildPath.dist %>grunt',
-            '<%= buildPath.dist %>**/less',
-            '<%= buildPath.dist %>**/build.txt',
-            '<%= buildPath.dist %>**/common/css/config'
-        ],
-        svg: [
-            'library/less/mgmGrand/global/icons/delete/',
-            'library/images/mgmGrand/svg-min/'
+        live: [
+            'library/'
         ]
     } );
 
