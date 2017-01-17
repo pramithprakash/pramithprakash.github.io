@@ -57,6 +57,7 @@ define(
 
                     $scope.miliseconds = '164630000';
                     $scope.blink = true;
+                    $scope.coordinatesShow = false;
 
                     $scope.htmlFilter = 'a';
 
@@ -187,6 +188,20 @@ define(
                         }
                         k++;
                     }
+
+                    $('body').mousemove(function(e) {
+
+                        if( window.innerWidth < 1023 ){ 
+
+                            $scope.coordinatesShow = false;
+                            return false;
+                        }
+                        $scope.coordinatesShow = true;
+                        $scope.cooy = e.pageY - this.offsetTop;
+                        $scope.coox = e.pageX - this.offsetLeft;
+                        scopeApply();
+                    });
+
                 };
 
                 init();
