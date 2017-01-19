@@ -569,3 +569,59 @@ footer{
 .coordinates{
   display: none;
 }
+.work{
+  padding-top: 100px;
+  .work-view{
+    clear: both;
+    margin: 0 0 50px;
+    .clearfix();
+    .work-image{
+      float: left;
+      width: 50%;
+      .image{
+        width: 360px;
+        height: 225px;
+        background: #eee;
+        float: right;
+        box-shadow: 10px 10px 0 #eee;
+        img{
+          width: 360px;
+          height: 225px;
+          border: 5px solid #fff;
+        }
+      }
+      span{
+        display: block;
+        clear: both;
+        top: -30px;
+        position: relative;
+        .fonts( 14 );
+        transition: all 1s;
+        padding-left: 100px;
+      }
+    }
+    .work-info{
+      float: right;
+      width: 50%;
+      padding: 20px 40px;
+      h4{
+        margin-left: -80px;
+        margin-bottom: 10px;
+        transition: all 1s;
+        text-shadow: 1px 1px #fff;
+      }
+      .desc{
+        .fonts( 18 );
+        color: #666;
+      }
+    }
+    &:hover{
+      .work-image span{
+        top: 25px;
+      }
+      .work-info h4{
+        margin-left: 0;
+      }
+    }
+  }
+}

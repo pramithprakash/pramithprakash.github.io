@@ -109,6 +109,9 @@ require(
                          when('/https',{
                             templateUrl: 'https.html'
                         }).
+                        when('/work',{
+                           templateUrl: 'work.html'
+                        }).
                         when('/contact',{
                             templateUrl: 'home.html'
                         }).
