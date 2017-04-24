@@ -22,6 +22,7 @@ module.exports = function ( grunt ) {
        'clean:css',
        'less:dev',
        'cssmin:dist',
+       'requirejs:dist',
        'uglify:dist',
        'copy:live',
        'clean:live'
