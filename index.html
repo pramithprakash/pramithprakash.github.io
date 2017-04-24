@@ -42,7 +42,7 @@
 </nav>
 </div>
 </section>
-<footer ng-class="{'active' : hash === 'contact' }">
+<footer ng-class="{'active' : hash === 'contact' }" ng-if="hash !== 'work' && hash !== 'https'">
 <section class=wrapper>
 <div class=counter-text><strong ng-bind=miliseconds></strong><span ng-bind-html="data.secondsText | trust"></span></div>
 <ul class=social>
