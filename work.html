@@ -1,29 +1,15 @@
 <div class="work">
-  <section class="work-view">
+  <section class="work-view" ng-repeat="work in data.works">
     <div class="work-image">
       <div class="image">
         <img src="library/portfolio/p32.jpg" />
       </div>
-      <span>Creative Direction / Design / Development</span>
+      <div class="tags"><span ng-repeat="tag in work.tags" ng-bind="tag"></span></div>
     </div>
     <div class="work-info">
-      <h4>hello</h4>
+      <h4 ng-bind="work.name"></h4>
       <div class="desc">
-        <p>My name is Pramith Prakash from India. Mostly focused on designs & interactions, I’m looking for opportunities in UI/UX Design and Frontend Development.</p>
-      </div>
-    </div>
-  </section>
-  <section class="work-view">
-    <div class="work-image">
-      <div class="image">
-        <img src="library/portfolio/p36.jpg" />
-      </div>
-      <span>UI Development</span>
-    </div>
-    <div class="work-info">
-      <h4>tketz</h4>
-      <div class="desc">
-        <p>Online recharge – make instant mobile recharge, bill payment, data card, dth recharge, utility bill payment, World’s Largest Online Bus Tickets Platform. Use coupon code, get discounts and book your bus ticket.</p>
+        <p ng-bind="work.description"></p>
       </div>
     </div>
   </section>

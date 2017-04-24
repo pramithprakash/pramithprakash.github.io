@@ -11,5 +11,17 @@
   "facebook":"http://www.facebook.com/pramithprakash",
   "twitter":"http://twitter.com/pramithprakash",
   "linkedin":"https://www.linkedin.com/in/pramith-prakash",
-  "hangout":"https://profiles.google.com/pramithprakash"
+  "hangout":"https://profiles.google.com/pramithprakash",
+  "works":[
+      {
+          "name": "hello",
+          "tags": ["Creative Direction","Design","Development"],
+          "description": "My name is Pramith Prakash from India. Mostly focused on designs & interactions, I’m looking for opportunities in UI/UX Design and Frontend Development."
+      },
+      {
+          "name": "tketz",
+          "tags": ["UI Development"],
+          "description": "Online recharge – make instant mobile recharge, bill payment, data card, dth recharge, utility bill payment, World’s Largest Online Bus Tickets Platform. Use coupon code, get discounts and book your bus ticket."
+      }
+  ]
 }

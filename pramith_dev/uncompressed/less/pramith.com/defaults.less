@@ -590,7 +590,7 @@ footer{
           border: 5px solid #fff;
         }
       }
-      span{
+      .tags{
         display: block;
         clear: both;
         top: -30px;
@@ -598,6 +598,14 @@ footer{
         .fonts( 14 );
         transition: all 1s;
         padding-left: 100px;
+        span{
+            &:after{
+                content: ' / ';
+            }
+            &:last-child:after{
+                content: '';
+            }
+        }
       }
     }
     .work-info{
@@ -616,7 +624,7 @@ footer{
       }
     }
     &:hover{
-      .work-image span{
+      .work-image .tags{
         top: 25px;
       }
       .work-info h4{
