@@ -11,9 +11,11 @@ module.exports = function ( grunt ) {
         options: {
             force: true
         },
-        css: [
+        dev: [
             '**/css/',
-            '**/index.css'
+            '**/index.css',
+            '../library/css/*',
+            '../library/js/*'
         ],
         live: [
             'library/'

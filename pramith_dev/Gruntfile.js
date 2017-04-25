@@ -19,7 +19,7 @@ module.exports = function ( grunt ) {
     grunt.loadTasks( 'grunt' );
 
     grunt.registerTask( 'build', 'Build for integration handoff.', [
-       'clean:css',
+       'clean:dev',
        'less:live',
        'cssmin:live',
        'requirejs:live',
