@@ -2,7 +2,7 @@
   <section class="work-view" ng-repeat="work in data.works">
     <div class="work-image">
       <div class="image">
-        <img src="library/portfolio/p32.jpg" />
+        <img ng-src="library/portfolio/{{work.image}}.jpg" />
       </div>
       <div class="tags"><span ng-repeat="tag in work.tags" ng-bind="tag"></span></div>
     </div>

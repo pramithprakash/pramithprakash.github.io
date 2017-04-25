@@ -15,13 +15,45 @@
   "works":[
       {
           "name": "hello",
+          "image": "hello",
           "tags": ["Creative Direction","Design","Development"],
           "description": "My name is Pramith Prakash from India. Mostly focused on designs & interactions, I’m looking for opportunities in UI/UX Design and Frontend Development."
       },
       {
           "name": "tketz",
-          "tags": ["UI Development"],
+          "image": "tketz",
+          "tags": ["UI Development","Responsive"],
           "description": "Online recharge – make instant mobile recharge, bill payment, data card, dth recharge, utility bill payment, World’s Largest Online Bus Tickets Platform. Use coupon code, get discounts and book your bus ticket."
+      },
+      {
+          "name": "motionkandy.com",
+          "image": "motionkandy",
+          "tags": ["UI Development","Animation"],
+          "description": "Corporate video production services to get best ROI: Get corporate ads, social media videos, online ads, presentation videos, promotional videos, YouTube ads, and more!"
+      },
+      {
+          "name": "mgmgrand.com",
+          "image": "mgmgrand",
+          "tags": ["UI Development","Responsive","AngularJS"],
+          "description": "Stay at MGM Grand Las Vegas Hotel & Casino and enjoy the best entertainment in Las Vegas! Book direct for our best rates."
+      },
+      {
+          "name": "oorjit.com",
+          "image": "oorjit",
+          "tags": ["UI Development","Responsive"],
+          "description": "Best in Customer &amp; Merchant Engagement | Multi Vendor ecommerce Platform - A next-gen ecommerce platform to enhance your customer experience. Best in class engagement solutions that lets your customers connect seamlessly across multiple channels."
+      },
+      {
+          "name": "picster.me",
+          "image": "picster",
+          "tags": ["UI Development","Animation"],
+          "description": "Picster is a photo album app that allows the user to create beautiful, professional looking photo albums to share through social media or email a link to family and friends."
+      },
+      {
+          "name": "okimma.com",
+          "image": "okimma",
+          "tags": ["Mobile","UI Development","Editor"],
+          "description": "Online mobile website creator. Free mobile websites for Android, iOS, Blackberry, Windows platforms. Free templates for mobile websites with CMS tool. Get web analytics, map and click-to-call utilities"
       }
   ]
 }
