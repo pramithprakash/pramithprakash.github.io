@@ -60,6 +60,8 @@ define(
                     $scope.coordinatesShow = false;
 
                     $scope.htmlFilter = 'a';
+                    
+                    checkDeviceWidth();
 
                     hashChangeHandler();
 
@@ -79,8 +81,24 @@ define(
                         ;
                     
                     ct1 = parseInt(Math.abs(dif)/ 1000 - 20);
+                    
+                    function checkDeviceWidth(){
+                        var isMobile = window.matchMedia("only screen and (max-width: 760px)");
+                        
+                        if ( isMobile.matches && ( window.location.hash === '#/work' || window.location.hash === '#/https' )) {
+                            
+                            window.location.hash = '#404';
+                            return false;
+                            
+                        } else if( window.location.hash === '#/404' ){
+                            
+                            window.location.hash = '#home';
+                        }
+                    }
 
                     function hashChangeHandler() {
+                        
+                        checkDeviceWidth();
                         
                         var hash = window.location.hash;
 
