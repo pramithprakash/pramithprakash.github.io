@@ -20,15 +20,11 @@ module.exports = function ( grunt ) {
 
     grunt.registerTask( 'build', 'Build for integration handoff.', [
        'clean:css',
-       'less:dev',
-       'cssmin:dist',
-       'requirejs:dist',
-       'uglify:dist',
+       'less:live',
+       'cssmin:live',
+       'requirejs:live',
+       'uglify:live',
        'copy:live',
        'clean:live'
-    ] );
-    grunt.registerTask( 'lessDev', 'Build to compile Less files during development.', [
-        'clean:css',
-        'less:dev'
     ]);
 };

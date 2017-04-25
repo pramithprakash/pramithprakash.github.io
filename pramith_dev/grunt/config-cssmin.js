@@ -13,7 +13,7 @@ module.exports = function ( grunt ) {
 
     grunt.config( 'cssmin', {
 
-        dist: {
+        live: {
 
             files: [ {
                 expand: true,

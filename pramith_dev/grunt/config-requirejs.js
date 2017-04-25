@@ -106,17 +106,9 @@ module.exports = function ( grunt ) {
 
     grunt.config( 'requirejs', {
 
-        dist: {
+        live: {
             options: _.assign( _.clone( common, true ), {
                 dir: 'library/js',
-                skipDirOptimize: false
-            } )
-        },
-        dev: {
-            options: _.assign( _.clone( common, true ), {
-                dir: [ 'library/js/', ],
-                optimize: 'none',
-                optimizeCss: 'none',
                 skipDirOptimize: false
             } )
         }

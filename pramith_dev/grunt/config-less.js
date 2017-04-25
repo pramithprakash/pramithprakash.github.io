@@ -6,7 +6,7 @@
 module.exports = function( grunt ) {
 
     grunt.config( 'less', {
-        dev: {
+        live: {
             options: {
                 sourceMap: true,
                 strictMath: true,

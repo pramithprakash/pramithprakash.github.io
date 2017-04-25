@@ -32,16 +32,8 @@ module.exports = function( grunt ) {
         options: {
             report: 'min'
         },
-        dist: {
+        live: {
             files: distFiles
-        },
-        dev: {
-          files: [{
-              expand: true,
-              cwd: 'js',
-              src: '/**/*.js',
-              dest: 'js'
-          }]
         }
     });
 
