@@ -111,7 +111,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".calculator {\n    width: 200px;\n    -webkit-transform: translate(-50%, -70%);\n            transform: translate(-50%, -70%);\n    position: absolute;\n    left: 50%;\n    top: 50%;\n    background: #ddd;\n    border-radius: 6px 6px 0 0;\n}\n.display {\n    border-radius: 6px 6px 0 0;\n    padding: 0 5px;\n    background: #333;\n    margin-bottom: 0;\n}\n.operation {\n    font-size: 18px;\n    height: 24px;\n    color: #777;\n    line-height: 28px;\n    overflow: hidden;\n}\n.operation span {\n    float: left;\n}\n.result {\n    height: 55px;\n    color: #fff;\n    font-size: 48px;\n    text-align: left;\n}\n.calculator button {\n    width: calc(25% - 1px );\n    background: #eee;\n    color: #333;\n    border: 0;\n    margin: 0 1px 1px 0;\n    height: 44px;\n    line-height: 19px;\n    font-size: 20px;\n    outline: none;\n}\n.calculator button.equals {\n    width: calc(50% - 1px );\n}\n.calculator button.operation {\n    background: #F69505;\n    color: #fff;\n}\n", ""]);
+exports.push([module.i, ".calculator {\n    width: 100%;\n    min-width: 320px;\n    max-width: 480px;\n    background: #ddd;\n}\n.display {\n    padding: 0 5px;\n    background: #333;\n    margin-bottom: 0;\n    height: 40vh;\n    text-align: right;\n    word-break: break-all;\n    display: table;\n    width: calc( 100% - 10px );\n}\n.operation {\n    font-size: 18px;\n    color: #777;\n    overflow: hidden;\n    float: right;\n    margin: 10px;\n}\n.operation span {\n    float: left;\n}\n.result {\n    clear: both;\n    color: #fff;\n    font-size: 48px;\n    display: table-row;\n}\n.result span {\n    display: table-cell;\n    font-size: 100%;\n}\n.calculator button {\n    width: calc(25% - 1px );\n    background: #eee;\n    color: #333;\n    border: 0;\n    margin: 0 1px 1px 0;\n    height: 15vh;\n    line-height: 19px;\n    font-size: 20px;\n    outline: none;\n}\n.calculator button.equals {\n    width: calc(50% - 1px );\n}\n.calculator button.operation {\n    background: #F69505;\n    color: #fff;\n}\n", ""]);
 
 // exports
 
@@ -124,7 +124,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/calculator.html":
 /***/ (function(module, exports) {
 
-module.exports = "<form [formGroup]=\"group\">\n    <div class=\"calculator\">\n       <div class=\"display\">\n          <div class=\"operation\">\n             <span>{{operation.input1}}</span>\n             <span>{{operation.sign}}</span>\n             <span>{{operation.input2}}</span>\n          </div>\n          <div class=\"result\">\n             <span>{{operation.result}}</span>\n          </div>\n       </div>\n       <button\n       [ngClass]=\"operator.class\"\n       (click)=\"assignOperation(operator)\" *ngFor=\"let operator of operators\" [value]=\"operator.id\">{{operator.sign}}</button>\n    </div>\n<form>\n"
+module.exports = "<form [formGroup]=\"group\">\n    <div class=\"calculator\">\n       <div class=\"display\">\n          <div class=\"operation\">\n             <span>{{operation.input1}}</span>\n             <span>{{operation.sign}}</span>\n             <span>{{operation.input2}}</span>\n          </div>\n          <div class=\"result\">\n             <span [ngStyle]=\"{'font-size':operation.fontSize}\">{{operation.result}}</span>\n          </div>\n       </div>\n       <button\n       [ngClass]=\"operator.class\"\n       (click)=\"assignOperation(operator)\" *ngFor=\"let operator of operators\" [value]=\"operator.id\">{{operator.sign}}</button>\n    </div>\n<form>\n"
 
 /***/ }),
 
@@ -202,6 +202,38 @@ var CalculatorComponent = (function () {
         else if (operation.operationId === 5) {
             this.operation.done = true;
             this.runOperation(this.operation);
+        }
+        if (this.operation.result && this.operation.result.length > 20) {
+            this.operation.done = true;
+            this.operation.input1 = '';
+            this.operation.input2 = '';
+            this.operation.sign = '';
+            this.operation.result = 'ERROR';
+            this.operation.fontSize = '180%';
+        }
+        else if (this.operation.result && this.operation.result.length >= 10) {
+            this.operation.fontSize = '100%';
+        }
+        else if (this.operation.result && this.operation.result.length === 9) {
+            this.operation.fontSize = '110%';
+        }
+        else if (this.operation.result && this.operation.result.length === 8) {
+            this.operation.fontSize = '120%';
+        }
+        else if (this.operation.result && this.operation.result.length === 7) {
+            this.operation.fontSize = '130%';
+        }
+        else if (this.operation.result && this.operation.result.length === 6) {
+            this.operation.fontSize = '150%';
+        }
+        else if (this.operation.result && this.operation.result.length === 5) {
+            this.operation.fontSize = '180%';
+        }
+        else if (this.operation.result && this.operation.result.length === 4) {
+            this.operation.fontSize = '220%';
+        }
+        else if (this.operation.result && this.operation.result.length <= 3) {
+            this.operation.fontSize = '300%';
         }
     };
     CalculatorComponent.prototype.createFormControls = function () {
