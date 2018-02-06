@@ -164,6 +164,42 @@ var CalculatorComponent = (function () {
     };
     CalculatorComponent.prototype.runOperation = function (operation) {
         operation.result = this.operationService.runOperation(operation);
+        this.fontStyling();
+    };
+    CalculatorComponent.prototype.fontStyling = function () {
+        var result = this.operation.result ? this.operation.result.toString() : false;
+        if (result.length > 20) {
+            this.operation.done = true;
+            this.operation.input1 = '';
+            this.operation.input2 = '';
+            this.operation.sign = '';
+            this.operation.result = 'ERROR';
+            this.operation.fontSize = '180%';
+        }
+        else if (result.length >= 10) {
+            this.operation.fontSize = '100%';
+        }
+        else if (result.length === 9) {
+            this.operation.fontSize = '110%';
+        }
+        else if (result.length === 8) {
+            this.operation.fontSize = '120%';
+        }
+        else if (result.length === 7) {
+            this.operation.fontSize = '130%';
+        }
+        else if (result.length === 6) {
+            this.operation.fontSize = '150%';
+        }
+        else if (result.length === 5) {
+            this.operation.fontSize = '180%';
+        }
+        else if (result.length === 4) {
+            this.operation.fontSize = '220%';
+        }
+        else if (result.length <= 3) {
+            this.operation.fontSize = '300%';
+        }
     };
     CalculatorComponent.prototype.assignOperation = function (operation) {
         if (this.operation.done && operation.operationId === 5) {
@@ -203,38 +239,7 @@ var CalculatorComponent = (function () {
             this.operation.done = true;
             this.runOperation(this.operation);
         }
-        if (this.operation.result && this.operation.result.length > 20) {
-            this.operation.done = true;
-            this.operation.input1 = '';
-            this.operation.input2 = '';
-            this.operation.sign = '';
-            this.operation.result = 'ERROR';
-            this.operation.fontSize = '180%';
-        }
-        else if (this.operation.result && this.operation.result.length >= 10) {
-            this.operation.fontSize = '100%';
-        }
-        else if (this.operation.result && this.operation.result.length === 9) {
-            this.operation.fontSize = '110%';
-        }
-        else if (this.operation.result && this.operation.result.length === 8) {
-            this.operation.fontSize = '120%';
-        }
-        else if (this.operation.result && this.operation.result.length === 7) {
-            this.operation.fontSize = '130%';
-        }
-        else if (this.operation.result && this.operation.result.length === 6) {
-            this.operation.fontSize = '150%';
-        }
-        else if (this.operation.result && this.operation.result.length === 5) {
-            this.operation.fontSize = '180%';
-        }
-        else if (this.operation.result && this.operation.result.length === 4) {
-            this.operation.fontSize = '220%';
-        }
-        else if (this.operation.result && this.operation.result.length <= 3) {
-            this.operation.fontSize = '300%';
-        }
+        this.fontStyling();
     };
     CalculatorComponent.prototype.createFormControls = function () {
         this.operation.input1 = '';
