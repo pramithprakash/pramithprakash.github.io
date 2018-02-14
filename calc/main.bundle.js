@@ -227,6 +227,12 @@ var CalculatorComponent = (function () {
             this.operation.result = this.operation.input1;
         }
         else if (operation.operationId && operation.operationId < 5) {
+            if (this.operation.input1 && this.operation.input2) {
+                this.runOperation(this.operation);
+                this.operation.input1 = this.operation.result;
+                this.operation.sign = operation.sign;
+                this.operation.input2 = '';
+            }
             this.operation.operationId = operation.operationId;
             this.operation.sign = operation.sign;
             this.operation.result = undefined;
