@@ -68,6 +68,7 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_calculator__ = __webpack_require__("../../../../../src/app/components/calculator.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__services_operationService__ = __webpack_require__("../../../../../src/app/services/operationService.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__services_fontStylingService__ = __webpack_require__("../../../../../src/app/services/fontStylingService.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -85,6 +86,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var AppModule = (function () {
     function AppModule() {
     }
@@ -92,7 +94,7 @@ var AppModule = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* NgModule */])({
             imports: [__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */], __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* HttpModule */], __WEBPACK_IMPORTED_MODULE_3__angular_forms__["b" /* FormsModule */], __WEBPACK_IMPORTED_MODULE_3__angular_forms__["c" /* ReactiveFormsModule */]],
             declarations: [__WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */], __WEBPACK_IMPORTED_MODULE_5__components_calculator__["a" /* CalculatorComponent */]],
-            providers: [__WEBPACK_IMPORTED_MODULE_6__services_operationService__["a" /* OperationService */]],
+            providers: [__WEBPACK_IMPORTED_MODULE_6__services_operationService__["a" /* OperationService */], __WEBPACK_IMPORTED_MODULE_7__services_fontStylingService__["a" /* FontStylingService */]],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */]]
         }), 
         __metadata('design:paramtypes', [])
@@ -138,6 +140,7 @@ module.exports = "<form [formGroup]=\"group\">\n    <div class=\"calculator\">\n
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__operation__ = __webpack_require__("../../../../../src/app/components/operation.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__operators__ = __webpack_require__("../../../../../src/app/components/operators.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_operationService__ = __webpack_require__("../../../../../src/app/services/operationService.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_fontStylingService__ = __webpack_require__("../../../../../src/app/services/fontStylingService.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -152,10 +155,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var CalculatorComponent = (function () {
-    function CalculatorComponent(formBuilder, operationService) {
+    function CalculatorComponent(formBuilder, operationService, fontStylingService) {
         this.formBuilder = formBuilder;
         this.operationService = operationService;
+        this.fontStylingService = fontStylingService;
         this.operators = __WEBPACK_IMPORTED_MODULE_3__operators__["a" /* Operators */].operatorList;
     }
     CalculatorComponent.prototype.ngOnInit = function () {
@@ -164,42 +169,7 @@ var CalculatorComponent = (function () {
     };
     CalculatorComponent.prototype.runOperation = function (operation) {
         operation.result = this.operationService.runOperation(operation);
-        this.fontStyling();
-    };
-    CalculatorComponent.prototype.fontStyling = function () {
-        var result = this.operation.result ? this.operation.result.toString() : false;
-        if (result.length > 20) {
-            this.operation.done = true;
-            this.operation.input1 = '';
-            this.operation.input2 = '';
-            this.operation.sign = '';
-            this.operation.result = 'ERROR';
-            this.operation.fontSize = '180%';
-        }
-        else if (result.length >= 10) {
-            this.operation.fontSize = '100%';
-        }
-        else if (result.length === 9) {
-            this.operation.fontSize = '110%';
-        }
-        else if (result.length === 8) {
-            this.operation.fontSize = '120%';
-        }
-        else if (result.length === 7) {
-            this.operation.fontSize = '130%';
-        }
-        else if (result.length === 6) {
-            this.operation.fontSize = '150%';
-        }
-        else if (result.length === 5) {
-            this.operation.fontSize = '180%';
-        }
-        else if (result.length === 4) {
-            this.operation.fontSize = '220%';
-        }
-        else if (result.length <= 3) {
-            this.operation.fontSize = '300%';
-        }
+        this.fontStylingService.fontStyling(this.operation);
     };
     CalculatorComponent.prototype.assignOperation = function (operation) {
         if (this.operation.done && operation.operationId === 5) {
@@ -245,7 +215,7 @@ var CalculatorComponent = (function () {
             this.operation.done = true;
             this.runOperation(this.operation);
         }
-        this.fontStyling();
+        this.fontStylingService.fontStyling(this.operation);
     };
     CalculatorComponent.prototype.createFormControls = function () {
         this.operation.input1 = '';
@@ -260,10 +230,10 @@ var CalculatorComponent = (function () {
             template: __webpack_require__("../../../../../src/app/components/calculator.html"),
             styles: [__webpack_require__("../../../../../src/app/components/calculator.css")]
         }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormBuilder */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormBuilder */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4__services_operationService__["a" /* OperationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__services_operationService__["a" /* OperationService */]) === 'function' && _b) || Object])
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormBuilder */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormBuilder */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4__services_operationService__["a" /* OperationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__services_operationService__["a" /* OperationService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_5__services_fontStylingService__["a" /* FontStylingService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__services_fontStylingService__["a" /* FontStylingService */]) === 'function' && _c) || Object])
     ], CalculatorComponent);
     return CalculatorComponent;
-    var _a, _b;
+    var _a, _b, _c;
 }());
 //# sourceMappingURL=/Volumes/Macintosh HD 2/pramith/working/ng2/Calculator-ng2/src/calculator.js.map
 
@@ -330,6 +300,76 @@ var Operators = (function () {
     return Operators;
 }());
 //# sourceMappingURL=/Volumes/Macintosh HD 2/pramith/working/ng2/Calculator-ng2/src/operators.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/services/fontStylingService.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FontStylingService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/index.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+/**
+ * The OperationService is responsible for handling all calculations.
+ * It uses the Operation object to find what the requested operation is and then using the inputs,
+ * performs the calculation. The calculated result is returned.
+ */
+var FontStylingService = (function () {
+    function FontStylingService() {
+    }
+    FontStylingService.prototype.fontStyling = function (operation) {
+        var result = operation.result ? operation.result.toString() : false;
+        if (result.length > 20) {
+            operation.done = true;
+            operation.input1 = '';
+            operation.input2 = '';
+            operation.sign = '';
+            operation.result = 'ERROR';
+            operation.fontSize = '180%';
+        }
+        else if (result.length >= 10) {
+            operation.fontSize = '100%';
+        }
+        else if (result.length === 9) {
+            operation.fontSize = '110%';
+        }
+        else if (result.length === 8) {
+            operation.fontSize = '120%';
+        }
+        else if (result.length === 7) {
+            operation.fontSize = '130%';
+        }
+        else if (result.length === 6) {
+            operation.fontSize = '150%';
+        }
+        else if (result.length === 5) {
+            operation.fontSize = '180%';
+        }
+        else if (result.length === 4) {
+            operation.fontSize = '220%';
+        }
+        else if (result.length <= 3) {
+            operation.fontSize = '300%';
+        }
+        return operation.fontSize;
+    };
+    FontStylingService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["H" /* Injectable */])(), 
+        __metadata('design:paramtypes', [])
+    ], FontStylingService);
+    return FontStylingService;
+}());
+//# sourceMappingURL=/Volumes/Macintosh HD 2/pramith/working/ng2/Calculator-ng2/src/fontStylingService.js.map
 
 /***/ }),
 
