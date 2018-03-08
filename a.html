@@ -1,0 +1,18 @@
+<html>
+<script
+  src="https://code.jquery.com/jquery-2.2.4.js"
+  integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+  crossorigin="anonymous"></script>
+<script type="text/javascript">
+$(window).load(function(){
+    $('.click').click(function(){
+        var target = $(this).data('target');
+        window.open('https://en-us.dark.stream10.qa.heliosinfiniti.net/vehicles/crossovers/qx70/build-price.pdf',target);
+    });
+});
+</script>
+<a href="https://en-us.dark.stream10.qa.heliosinfiniti.net/vehicles/crossovers/qx70/build-price.pdf" target="_self" >User Click - self window</a><br>
+<a href="https://en-us.dark.stream10.qa.heliosinfiniti.net/vehicles/crossovers/qx70/build-price.pdf" target="_blank" >User Click - NEW window</a><br>
+<a class="click" data-target="_self" >JS triggered - self window</a><br>
+<a class="click" data-target="_blank" >JS triggered - NEW window</a><br>
+</html>
