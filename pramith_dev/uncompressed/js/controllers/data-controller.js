@@ -60,7 +60,7 @@ define(
                     $scope.coordinatesShow = false;
 
                     $scope.htmlFilter = 'a';
-                    
+
                     checkDeviceWidth();
 
                     hashChangeHandler();
@@ -79,27 +79,27 @@ define(
                         , dif = t1.getTime() - t2.getTime()
                         , exyear
                         ;
-                    
+
                     ct1 = parseInt(Math.abs(dif)/ 1000 - 20);
-                    
+
                     function checkDeviceWidth(){
                         var isMobile = window.matchMedia("only screen and (max-width: 760px)");
-                        
+
                         if ( isMobile.matches && ( window.location.hash === '#/work' || window.location.hash === '#/https' )) {
-                            
+
                             window.location.hash = '#404';
                             return false;
-                            
+
                         } else if( window.location.hash === '#/404' ){
-                            
+
                             window.location.hash = '#home';
                         }
                     }
 
                     function hashChangeHandler() {
-                        
+
                         checkDeviceWidth();
-                        
+
                         var hash = window.location.hash;
 
                         hash = $.trim( '' + hash.substring(1) );
@@ -115,7 +115,7 @@ define(
                             hash = 'home';
                             $scope.hash = hash;
                             window.location.hash = '#home';
-                            $('body').addClass('active'); 
+                            $('body').addClass('active');
 
                         }
 
@@ -128,7 +128,7 @@ define(
                     }
 
                     function timerLoop() {
-                        
+
                         t2 = new Date();
                         dif = t1.getTime() - t2.getTime();
 
@@ -147,14 +147,14 @@ define(
                     function counterLoop() {
 
                         ct1 = ct1 + 1 ;
-                        
+
                         $scope.miliseconds = parseInt(ct1);
                         scopeApply();
                         if (ct1 > parseInt(Math.abs(dif)/ 1000) ) {
-                            
+
                             counter = setInterval( timerLoop, 1000 );
-                            clearInterval( counter1 );		
-                        }	
+                            clearInterval( counter1 );
+                        }
                     }
 
                     counter1 = setInterval( counterLoop, 1 );
@@ -172,7 +172,7 @@ define(
                         } );
 
                     function ycf(){
-                            
+
                         y++;
                         $scope.years = y;
                         scopeApply();
@@ -182,7 +182,7 @@ define(
                     }
 
                     function tcf(){
-                            
+
                         $scope.animTitle = $scope.animTitle + $scope.data.homeTitle.charAt(k);
                         scopeApply();
                         if( k === $scope.data.homeTitle.length ){
@@ -195,7 +195,7 @@ define(
 
                     }
                     function tcg(){
-                        
+
                         $scope.animContent = $scope.animContent + $scope.data.homeText.charAt(k);
                         scopeApply();
                         if( k === $scope.data.homeText.length ){
@@ -209,7 +209,7 @@ define(
 
                     $('body').mousemove(function(e) {
 
-                        if( window.innerWidth < 1023 ){ 
+                        if( window.innerWidth < 1023 ){
 
                             $scope.coordinatesShow = false;
                             return false;
