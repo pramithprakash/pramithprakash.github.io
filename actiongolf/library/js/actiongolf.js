@@ -1,0 +1,1 @@
+require(["jquery"],function(i){"use strict";({init:function(){}}).init()});
