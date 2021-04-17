@@ -6,6 +6,7 @@
         <link rel="icon" type="image/png" href="images/fav.png">
         <link rel="apple-touch-icon" href="images/fav.png">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         <link rel="stylesheet" href="library/css/actiongolf.css" />
     </head>
     <body>
@@ -14,7 +15,7 @@
                 <section>
                     <nav>
                         <a class="logo" title="Action Golf">Action Golf</a>
-                        <!-- <a class="download-app" title="Download App">Download App</a> -->
+                        <a class="download-app hide" title="Download App">Download App</a>
                     </nav>
                     <div class="header-banner">
                         <div class="header-banner-content">
@@ -148,13 +149,13 @@
             <footer>
                 <section>
                     <div class="footer-right">
-                        <h4>Be the early bird, by signing up with us!</h4>
-                        <div class="subscribe-box">
+                        <h4 class="hide">Be the early bird, by signing up with us!</h4>
+                        <div class="subscribe-box hide">
                             <input type="text" class="subscribe-box-text" placeholder="Your email address.." />
                             <button title="Notify Me" class="subscribe-box-button">Notify Me</button>
                             <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
                         </div>
-                        <div class="subscribe-error"></div>
+                        <div class="subscribe-error hide"></div>
                     </div>
                     <div class="footer-left">
                         <span class="logo">Action Golf</span>
@@ -165,7 +166,7 @@
                             <li><a class="instagram" title="Instagram" href="https://www.instagram.com/actiongolfers/
                                 " target="_blank"><span>instagram</span></a></li>
                             <li><a class="twitter" title="Twitter" href="https://twitter.com/action_golfers" target="_blank"><span>twitter</span></a></li>
-                            <li><a class="youtube" title="Youtube" target="_blank"><span>youtube</span></a></li>
+                            <li><a class="youtube" title="Youtube" href="https://www.youtube.com/channel/UCOJRzam4OGFvEYxtKW27JbA" target="_blank"><span>youtube</span></a></li>
                         </ul>
                     </div>
                 </section>
