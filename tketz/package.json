@@ -5,9 +5,9 @@
     "name": "tketz",
     "url": "http://tketz.com/"
   },
-  "homepage": "http://sapientnitro.com/",
+  "homepage": "http://tketz.com/",
   "dependencies": {
-    "grunt": "~0.4.2",
+    "grunt": ">=1.3.
     "grunt-cli": "^0.1.13",
     "grunt-contrib-jshint": "~0.8.0",
     "grunt-contrib-clean": "~0.5.0",
@@ -18,7 +18,6 @@
     "grunt-contrib-watch": "~0.5.3",
     "grunt-contrib-uglify": "^0.4.0",
     "grunt-githooks": "~0.3.1",
-    "lodash": "~2.4.1",
     "jshint": "~2.5.0",
     "ngmin": "^0.5.0",
     "grunt-grunticon": "~1.0.0",
