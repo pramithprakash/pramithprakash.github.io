@@ -1,5 +1,3 @@
-import "./styles.css";
-import $ from "jquery";
 
 var buttonClickCount = 0;
 
