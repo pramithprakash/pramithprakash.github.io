@@ -1,0 +1,12 @@
+body {
+  font-family: sans-serif;
+}
+
+.btn {
+  background: red;
+  padding: 12px;
+}
+
+.hello {
+  color: red;
+}
