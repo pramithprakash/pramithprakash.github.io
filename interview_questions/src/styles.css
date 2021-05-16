@@ -2,11 +2,60 @@ body {
   font-family: sans-serif;
 }
 
-.btn {
-  background: red;
-  padding: 12px;
+legend,
+li,
+ol,
+p,
+pre,
+td,
+textarea,
+th,
+ul {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
 }
-
-.hello {
-  color: red;
+a,
+a:active,
+a:hover,
+a:visited {
+    outline: 0;
+    text-decoration: none;
+}
+a:focus,
+button:focus {
+    outline: 1px solid;
+}
+a:focus:hover,
+a:focus:active,
+button:focus:hover,
+button:focus:active {
+    outline: 0;
+}
+.clear {
+    clear: both;
+}
+.hide {
+    display: none !important;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+pre {
+    color: #fff;
+    font-family: "Courier New", monospace;
+    text-align: left;
+    word-spacing: normal;
+    white-space: pre;
+    overflow-wrap: normal;
+    line-height: 1.4;
+    background: #343434;
+    border: 0px;
+    padding: 15px;
+    margin: 16px 0px;
+    overflow: auto;
+    border-radius: 8px;
 }
