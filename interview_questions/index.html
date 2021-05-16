@@ -7,44 +7,66 @@
         <link rel="stylesheet" href="src/styles.css" />
     </head>
   <body>
-    <div>
-      <i>
-        - Write the complied CSS from the below Sass/Less expression
+    <div class="container">
+    <section class="css">
+        <h2 class="question">
+            <i>Q1</i>
+            <span>Write the complied CSS from the below Sass/Less expression</span>
+        </h2>
         <pre>
-        /* 
-        .btn-container {
-          .btn {
-            color:white;
-          }
+.btn-container {
+    .btn {
+        color:white;
+    }
 
-          &.active {
-            .btn {
-              color: blue;
-            }
-          }
-        } 
-      */
-      </pre>
-      </i>
+    &.active {
+        .btn {
+            color: blue;
+        }
+    }
+
+    &,
+    &:active {
+        .btn {
+            color: grey;
+        }
+    }
+} 
+    </pre>
+    <div class="answer">
+        <h5>Answer</h5>
+        <pre>
+.btn-container .btn {
+    color: white;
+}
+
+.btn-container.active .btn {
+    color: blue;
+}
+
+.btn-container .btn, .btn-container:active .btn {
+    color: grey;
+}
+        </pre>
     </div>
-    <br />
-    <hr />
-    <br />
-    <div>
-      <i>
-        - Using Jquery on click of "btn" add a class "active" to its parent "btn-container" <br/>
-      </i>
+    </section>
+    
+    
+    <section>
+        <h2 class="question">
+            <i>Q2</i>
+            <span>Using Jquery on click of "btn" add a class "active" to its parent "btn-container"</span>
+        </h2>
       <br />
-      <br />
-      <div class="btn-container"></div>
-      <div class="btn-container">
-        <a class="btn">Button</a>
-      </div>
-    </div>
-    <br />
-    <hr />
-    <br />
-    <div>
+      <pre>
+&#x3C;div class=&#x22;btn-container&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;btn-container&#x22;&#x3E;
+    &#x3C;a class=&#x22;btn&#x22;&#x3E;Button&#x3C;/a&#x3E;
+&#x3C;/div&#x3E;
+    </pre>
+    </section>
+    
+    <section>
       <i>
         - Add a border of 1px to below class "hello" <br />
         - Convert this Rectangle to a Circle 0f 100px, <br />
@@ -56,19 +78,17 @@
       <br />
       <br />
       <span class="hello" id="hello_world">Hello World</span>
-    </div>
-    <br />
-    <hr />
-    <br />
-    <div>
+    </section>
+    
+    
+    <section>
       <i> </i>
       <div>Counter <span id="button_click_counter"></span></div>
       <button id="increase_button">Add</button>
-    </div>
-    <br />
-    <hr />
-    <br />
-    <div>
+    </section>
+    
+    
+    <section>
       <i>
         Array = ['a','b','c'] <br />
         - we have reshuffle the array items every 2 seconds on click of the button "start" </br>
@@ -80,16 +100,11 @@
       <div id="array"></div>
       <button id="startArray">Start</button>
       <button id="stopArray">Stop</button>
-    </div>
-    <br />
-    <hr />
-    <br />
-    <div>
+    </section>
+    
+    <section>
         Solve the issue
-    </div>
-    <br />
-    <hr />
-    <br />
+
     <i>
         - Submit the form without JS <br/>
         - Submit the form with Jquery Ajax <br/>
@@ -105,8 +120,8 @@
       <input type="text" value="Prakash" /><br /><br />
       <button>Submit</button>
     </form> 
-    <br />
-    <hr />
-    <br />
+    </section>
+    
+    </div>
   </body>
 </html>

@@ -54,8 +54,55 @@ pre {
     line-height: 1.4;
     background: #343434;
     border: 0px;
-    padding: 15px;
+    padding: 15px 15px 0;
     margin: 16px 0px;
     overflow: auto;
-    border-radius: 8px;
+    border-radius: 10px 0 0 10px;
+    font-size: 12px;
+}
+.container {
+    width: calc(100% - 30px);
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 50px;
+}
+section {
+    margin: 0 0 50px;
+}
+h2 {
+    font-size: 18px;
+}
+h2 i {
+    font-size: 10px;
+    background: #09c3fb;
+    color: #fff;
+    padding: 7px 0 0;
+    border-radius: 50%;
+    width: 28px;
+    display: inline-block;
+    height: 28px;
+    text-align: center;
+    vertical-align: middle;
+}
+h2 span {
+    border-bottom: 3px solid #09c3fb;
+}
+.css h2 i {
+    background: #04e05e;
+}
+.css h2 span {
+    border-color: #04e05e;
+}
+.css .answer pre {
+    border-color: #04e05e;
+}
+.answer pre {
+    background: #eee;
+    color: #000;
+    margin-top: 5px;
+    border-left: 5px solid #09c3fb;
+    margin-left: 50px;
+    border-radius: 0 10px 10px 0;
 }
