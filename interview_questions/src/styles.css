@@ -59,6 +59,10 @@ pre {
     overflow: auto;
     border-radius: 10px 0 0 10px;
     font-size: 12px;
+    font-style: italic;
+}
+pre code {
+    font-style: normal;
 }
 .container {
     width: calc(100% - 30px);
@@ -72,7 +76,8 @@ section {
     margin: 0 0 50px;
 }
 h2 {
-    font-size: 18px;
+    font-size: 14px;
+    font-weight: normal;
 }
 h2 i {
     font-size: 10px;
@@ -87,6 +92,8 @@ h2 i {
     vertical-align: middle;
 }
 h2 span {
+    font-size: 18px;
+    font-weight: bold;
     border-bottom: 3px solid #09c3fb;
 }
 .css h2 i {

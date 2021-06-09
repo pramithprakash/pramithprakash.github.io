@@ -14,7 +14,7 @@
             <span>Write the complied CSS from the below Sass/Less expression</span>
         </h2>
         <pre>
-.btn-container {
+<code>.btn-container {
     .btn {
         color:white;
     }
@@ -31,12 +31,12 @@
             color: grey;
         }
     }
-} 
+}</code>
     </pre>
     <div class="answer">
-        <h5>Answer</h5>
+        <h5>Answer :</h5>
         <pre>
-.btn-container .btn {
+<code>.btn-container .btn {
     color: white;
 }
 
@@ -46,41 +46,87 @@
 
 .btn-container .btn, .btn-container:active .btn {
     color: grey;
-}
+}</code>
         </pre>
     </div>
     </section>
     
-    
     <section>
         <h2 class="question">
             <i>Q2</i>
-            <span>Using Jquery on click of "btn" add a class "active" to its parent "btn-container"</span>
+            <span>Using Jquery, on click of "btn" add an class "active" to its parent "btn-container" div</span>
         </h2>
       <br />
       <pre>
-&#x3C;div class=&#x22;btn-container&#x22;&#x3E;&#x3C;/div&#x3E;
+<code>&#x3C;div class=&#x22;btn-container&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;btn-container&#x22;&#x3E;
     &#x3C;a class=&#x22;btn&#x22;&#x3E;Button&#x3C;/a&#x3E;
-&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;</code>
     </pre>
+    <div class="answer">
+        <h5>Answer :</h5>
+        <pre>
+<code>$('.btn').on('click', function(){
+    $(this).parent('.btn-container').addClass('active');
+});</code>
+        </pre>
+    </div>
     </section>
-    
-    <section>
-      <i>
-        - Add a border of 1px to below class "hello" <br />
-        - Convert this Rectangle to a Circle 0f 100px, <br />
-        - Center align the text horizontally & vertically <br />
-        - Ceter align the Circle horizontally & vertically <br />
-        - Add another circle outside of this circle without making any html
-        changes
-      </i>
-      <br />
-      <br />
-      <span class="hello" id="hello_world">Hello World</span>
+
+    <section class="css">
+        <h2 class="question">
+            <i>Q3</i>
+            <span>Write css to -</span>           
+        </h2>
+      <pre>
+- Add a border of 1px to below class "hello" 
+- Convert this Rectangle to a Circle 0f 100px, 
+- Center align the text horizontally & vertically 
+- Ceter align the Circle horizontally & vertically 
+- Add another circle outside of this circle without making any html changes
+<code>
+    &#x3C;span class=&#x22;hello&#x22; id=&#x22;hello_world&#x22;&#x3E;Hello World&#x3C;/span&#x3E;</code>
+    </pre>
+    <div class="answer">
+        <h5>Answer :</h5>
+        <pre>
+<code>.hello {
+    color: red;
+    width: 100px;
+    height: 100px;
+    border: 1px solid red;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hello {
+    color: red;
+    width: 100px;
+    height: 100px;
+    border: 1px solid red;
+    border-radius: 50px;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.hello {
+    color: red;
+    width: 100px;
+    height: 100px;
+    border: 1px solid red;
+    border-radius: 50px;
+    display: block;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 40px;
+}</code>
+        </pre>
+    </div>
     </section>
-    
-    
+
     <section>
       <i> </i>
       <div>Counter <span id="button_click_counter"></span></div>
