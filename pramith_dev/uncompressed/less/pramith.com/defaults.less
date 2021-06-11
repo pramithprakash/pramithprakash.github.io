@@ -176,7 +176,7 @@ html {
     margin: 0 15px 15px;
   }
   a{
-    color: rgba(0,0,0,.5);
+    color: @black;
     text-decoration: none;
     &:hover{
       opacity: 1;
@@ -207,7 +207,7 @@ html {
       margin-right: 10px;
     }
     span{
-      color: rgba(0,0,0,.5);
+      color:@black;
       span{
         display: none;
       }
@@ -457,7 +457,7 @@ footer{
   a{
     display: block;
     padding: 20px;
-    color: #000;
+    color: #000000;
     opacity: 0.8;
     margin: 0;
     border-bottom: 1px solid #dededc;
@@ -605,4 +605,23 @@ footer{
       }
     }
   }
+}
+
+body.night {
+    background: @black;
+
+    footer,
+    .links-active .include{ 
+          background: @black;
+    }
+
+    .pre-load {
+        color: @black;
+        background: @white;
+    }
+
+    .box.logo span,
+    .box a {
+        color: @white;
+    }
 }
