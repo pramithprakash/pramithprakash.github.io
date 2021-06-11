@@ -1,6 +1,9 @@
 .mobile{
   display: none !important;
 }
+.page {
+    min-height: 100vh;
+}
 .box {
   h5{
     line-height: 30px;
@@ -154,7 +157,7 @@
 .wrapper{
   margin: 0 auto;
   position: relative;
-  height: 100vh;
+  height: calc(100vh - 165px);
 }
 footer .wrapper{
   height: 100%;
@@ -168,6 +171,7 @@ footer {
   .transition-delay(1.5s);
    margin-top: 0 !important;
    opacity: 1 !important;
+   min-height: 165px;
   &.active{
     .transition(height .2s ease-out);
     .transition-delay(0);
