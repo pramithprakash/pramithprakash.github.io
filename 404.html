@@ -25,9 +25,12 @@
 <div class="box sh m inview include inview notfound"><div><h6>404</h6>That's a error! <p><a href="http://pramith.com">home</a> / <a href="http://pramith.com/#/about">about</a> / <a href="http://pramith.com/#/skills">skills</a> / <a href="http://pramith.com/#/contact">contact</a>
 </p></div></div>
 </section>
-<div class="cssa awards"><a href="http://www.cssawds.com/nominee/pramith-prakash/" target="_blank">Featured on CSS Awards</a></div>
-<div class="csslight awards"><a href="http://www.csslight.com/website/16630/pramithprakash" target=_blank>Featured on CSS Light</a></div>
-</div>
 <script src="http://pramith.com/library/js/vendor/Modernizr.js"></script>
+<script>
+    var now = new Date();
+    if (now.getHours() >= 18) {
+        document.body.classList.add("night");
+    }
+</script>
 </body>
 </html>
