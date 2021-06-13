@@ -23,7 +23,7 @@
 </div>
 <span class=bg>&#60;&#47;&#62; pramithprakash</span>
 <div class=page ng-class="{'links-active' : hash !== 'home' && hash !== 'contact' }">
-<section class=wrapper>
+<section class=wrapper ng-class="{'full' : hash === 'work' || hash === 'https'}">
 <div class="box logo" ng-class="{'contact' : hash === 'contact' }"><a href="#home"><strong>&#60;&#47;&#62;</strong><span ng-bind-html="data.logoText | trust"></span></a></div>
 <div class="box colored title" ng-class="{'contact' : hash === 'contact' }"><div class=center ng-bind-html="data.title | trust"></div></div>
 <div class="box sh m inview include" ng-view></div>
