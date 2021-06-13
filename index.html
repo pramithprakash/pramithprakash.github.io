@@ -67,7 +67,7 @@ var globalExcludes=["jquery","vendor/angular-min","vendor/angular-route-min","ve
 <script src="library/js/vendor/require.js" data-main="mediators/app"></script>
 <script>
     var now = new Date();
-    if (now.getHours() >= 18) {
+    if (now.getHours() >= 18 || now.getHours() <= 6) {
         document.body.classList.add("night");
     }
 </script>
