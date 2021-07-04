@@ -617,6 +617,17 @@ footer{
   }
 }
 
+.logo {
+    .logo-text {
+        opacity: 0;
+    }
+
+    &:hover .logo-text {
+        opacity: 1;
+    }
+}
+
+
 body.night {
     background: @black;
     color: @white;
@@ -638,5 +649,13 @@ body.night {
 
     footer .social li a{
         filter: invert(1);
+    }
+
+    .logo {
+        path,
+        polygon,
+        text {
+            fill: @white;
+        }
     }
 }
