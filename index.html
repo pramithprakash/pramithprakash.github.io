@@ -24,7 +24,32 @@
 <span class=bg>&#60;&#47;&#62; pramithprakash</span>
 <div class=page ng-class="{'links-active' : hash !== 'home' && hash !== 'contact' }">
 <section class=wrapper ng-class="{'full' : hash === 'work' || hash === 'https'}">
-<div class="box logo" ng-class="{'contact' : hash === 'contact' }"><a href="#home"><strong>&#60;&#47;&#62;</strong><span ng-bind-html="data.logoText | trust"></span></a></div>
+<div class="box logo" ng-class="{'contact' : hash === 'contact' }"><a href="#home">
+    <svg width="200" height="20" viewBox="0 0 200 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <g fill="#313131" fill-rule="nonzero">
+            <g transform="translate(2, 2)">
+              <g style="
+position: relative;
+">
+                <path d="M15,-2 L15,9 L2,9 L2,15 L-2,15 L-2,-2 L15,-2 Z M11,2 L2,2 L2,5 L11,5 L11,2 Z"></path>
+                <polygon points="27.002188 5 27.002188 9 19 9 22 5" x="50"></polygon><text id="Praitb_" data-name="Praitb " class="cls" x="30" y="17"><tspan>pramith prakash</tspan></text>
+
+              </g>
+            </g>
+          </g>
+        </g>
+      </svg>
+      <style>
+          .cls {
+              opacity: 0;
+          }
+          .logo .cls {
+              opacity: 1;
+          }
+      </style>
+    <!-- <strong>&#60;&#47;&#62;</strong><span ng-bind-html="data.logoText | trust"></span> -->
+</a></div>
 <div class="box colored title" ng-class="{'contact' : hash === 'contact' }"><div class=center ng-bind-html="data.title | trust"></div></div>
 <div class="box sh m inview include" ng-view></div>
 <div class="box sh m inview include mobile">
