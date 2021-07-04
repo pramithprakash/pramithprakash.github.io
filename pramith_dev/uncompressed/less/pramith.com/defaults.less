@@ -467,7 +467,7 @@ footer{
   a{
     display: block;
     padding: 20px;
-    color: #000000;
+    color: @black;
     opacity: 0.8;
     margin: 0;
     border-bottom: 1px solid #dededc;
@@ -499,27 +499,27 @@ footer{
   .f:after,
   .s:after,
   .k:after,
-  .i:after{font-size: 12px;position: absolute;right: 20px;bottom: 20px;color: #fff;padding: 5px;opacity: 0.3;}
+  .i:after{font-size: 12px;position: absolute;right: 20px;bottom: 20px;color: @white;padding: 5px;opacity: 0.3;}
   .p:before,
   .f:before,
   .s:before,
   .k:before,
   .i:before{font-size: 10px;position: absolute;left: 20px;bottom: 20px;content: "WEBSITE";opacity: 0.4;}
-  .p:after{content: "PORTFOLIO";color: #000000;border: 1px solid #000000;}
+  .p:after{content: "PORTFOLIO";color: @black;border: 1px solid @black;}
   .f:after{content: "FREELANCE";color: #071eec;border: 1px solid #071eec;}
   .s:after{content: "SAPIENT";color: #de2728;border: 1px solid #de2728;}
   .k:after{content: "SRISTHI/KREATIO";color: #039582;border: 1px solid #039582;}
   .i:after{content: "ISPG";color: #1d97db;border: 1px solid #1d97db;}
-  .p:hover{color: #000000;}
+  .p:hover{color: @black;}
   .f:hover{color: #071eec;}
   .s:hover{color: #de2728;}
   .k:hover{color: #039582;}
   .i:hover{color: #1d97db;}
-  .p:hover span{background: #000000;color: #ffffff;}
-  .f:hover span{background: #071eec;color: #ffffff;}
-  .s:hover span{background: #de2728;color: #ffffff;}
-  .k:hover span{background: #039582;color: #ffffff;}
-  .i:hover span{background: #1d97db;color: #ffffff;}
+  .p:hover span{background: @black;color: @white;}
+  .f:hover span{background: #071eec;color: @white;}
+  .s:hover span{background: #de2728;color: @white;}
+  .k:hover span{background: #039582;color: @white;}
+  .i:hover span{background: #1d97db;color: @white;}
 }
 .box.include>div.filter{
   position: relative;
@@ -529,13 +529,13 @@ footer{
   a{
     cursor: pointer;
     padding: 5px 5px 3px;
-    color: #ffffff;
+    color: @white;
     background: #ddd;
     float: left;
     margin: 0 1px;
     &.active,&:hover{
       opacity: 1;
-      &.p{background: #000000;}
+      &.p{background: @black;}
       &.f{background: #071eec;}
       &.s{background: #de2728;}
       &.k{background: #039582;}
@@ -570,7 +570,7 @@ footer{
         img{
           width: 360px;
           height: 225px;
-          border: 5px solid #fff;
+          border: 5px solid @white;
         }
       }
       .tags{
@@ -599,7 +599,7 @@ footer{
         margin-left: -80px;
         margin-bottom: 10px;
         transition: all 1s;
-        text-shadow: 1px 1px #fff;
+        text-shadow: 1px 1px @white;
       }
       .desc{
         .fonts( 18 );

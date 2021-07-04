@@ -264,8 +264,11 @@ body.night {
             }
         }
     }
-    .box.menu nav a:after {
-        background: @darkBrandColor;
+    .box.menu nav a{
+        &:after {
+            background: @darkBrandColor;
+        }
+
         &:hover{
             color: @darkBrandColor;
         }
