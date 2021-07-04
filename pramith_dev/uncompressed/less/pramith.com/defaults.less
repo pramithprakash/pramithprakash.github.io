@@ -642,20 +642,37 @@ body.night {
         background: @white;
     }
 
-    .box.logo span,
-    .box a {
-        color: @white;
-    }
-
     footer .social li a{
         filter: invert(1);
     }
 
-    .logo {
-        path,
-        polygon,
-        text {
-            fill: @white;
+    .reach-out a,
+    .notfound a {
+        color: @darkBrandColor;
+    }
+
+    .box{
+        a {
+            color: @white;
+        }
+
+        &.logo {
+            span {
+                color: @white;
+            }
+            path,
+            polygon,
+            text {
+                fill: @white;
+            }
+
+            a {
+                color: @darkBrandColor;
+            }
+        }
+
+        &.title span {
+            color: @darkBrandColor;
         }
     }
 }

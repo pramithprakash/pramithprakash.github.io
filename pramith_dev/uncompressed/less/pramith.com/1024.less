@@ -255,4 +255,19 @@ body.night {
     .box.menu{
         background: @black;
     }
+
+    .box.include {
+        .skills,
+        &.skills {
+            strong:hover{
+                color: @darkBrandColor;
+            }
+        }
+    }
+    .box.menu nav a:after {
+        background: @darkBrandColor;
+        &:hover{
+            color: @darkBrandColor;
+        }
+    }
 }
