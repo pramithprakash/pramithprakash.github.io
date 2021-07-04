@@ -235,6 +235,15 @@ footer .wrapper {
   100% {right: 0;opacity: .4;}
 }
 
+.hover-container .hover-circle::after, .hover-container .hover-circle::before {
+    animation: beat .25s infinite alternate;
+}
+
+@keyframes beat{
+	to { transform: scale(1.4); }
+}
+
+
 body.night {
     .box.logo a:hover span,
     .coordinates{
