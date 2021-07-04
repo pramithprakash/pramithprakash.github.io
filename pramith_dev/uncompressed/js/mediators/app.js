@@ -84,22 +84,24 @@ require(
                     });
                 });
 
-                $('.hover-container').addClass('active');
+                if (typeof document.body.ontouchstart == "undefined") {
+                    $('.hover-container').addClass('active');
 
-                $('a').mouseover(function() {
-                    $('.hover-container').addClass('hover');
-                });
-
-                $('a').mouseleave(function() {
-                    $('.hover-container').removeClass('hover');
-                });
-
-                $('body').mousemove(function(e) {
-                    $('.hover-container').css({
-                        top: e.clientY,
-                        left: e.clientX
-                    })
-                });
+                    $('a').mouseover(function() {
+                        $('.hover-container').addClass('hover');
+                    });
+    
+                    $('a').mouseleave(function() {
+                        $('.hover-container').removeClass('hover');
+                    });
+    
+                    $('body').mousemove(function(e) {
+                        $('.hover-container').css({
+                            top: e.clientY,
+                            left: e.clientX
+                        })
+                    });
+                }
             },
 
             initUI: function () {
