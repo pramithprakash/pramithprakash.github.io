@@ -121,12 +121,29 @@ html {
   &.logo,&.title,&.include{
     left: 0;
   }
-  &.include{
+  .menu {
       display: none;
+  }
+  &.include{
+    div.home {
+        .exp {
+            margin: 0;
+            padding: 68px 0 0;
+        }
 
-      &.mobile {
-          display: block;
-      }
+        section {
+            padding-bottom: 50px;
+
+            &:last-child {
+                padding-bottom: 0;
+            }
+
+            h2 {
+                display: none;
+            }
+        }
+    }
+
     > div{
       .skills,
       &.skills{
