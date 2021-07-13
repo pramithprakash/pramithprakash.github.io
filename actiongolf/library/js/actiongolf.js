@@ -5633,8 +5633,7 @@ var i = {
                 contentType: "application/json",
                 beforeSend: function(i) {
                     i.setRequestHeader("Authorization", "Basic " + s),
-                    i.setRequestHeader("Access-Control-Request-Headers", "Access-Control-Allow-Origin"),
-                    i.setRequestHeader("Access-Control-Request-Origin", "*")
+                    i.setRequestHeader("Access-Control-Allow-Origin", "*")
                 },
                 data: i,
                 success: function() {
