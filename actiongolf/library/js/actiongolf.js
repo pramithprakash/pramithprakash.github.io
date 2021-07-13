@@ -5632,7 +5632,7 @@ var i = {
                 url: "https://beta.actiongolfers.com/subscription/",
                 contentType: "application/json",
                 beforeSend: function(i) {
-                    i.setRequestHeader("Authorization", "Basic " + s),
+                    
                     i.setRequestHeader("Access-Control-Allow-Origin", "*")
                 },
                 data: i,
