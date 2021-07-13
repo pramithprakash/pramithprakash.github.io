@@ -5630,10 +5630,11 @@ var i = {
             $.ajax({
                 type: "POST",
                 url: "https://beta.actiongolfers.com/subscription/",
-                contentType: "application/json",
+                contentType: "text/plain",
                 beforeSend: function(i) {
                     
                     i.setRequestHeader("Access-Control-Allow-Origin", "*")
+
                 },
                 data: i,
                 success: function() {
