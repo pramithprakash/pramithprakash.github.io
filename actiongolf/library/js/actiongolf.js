@@ -5626,7 +5626,7 @@ var i = {
             };
             $(".subscribe-box-button").addClass("active"),
             $(".subscribe-box-button").css("visibility", "hidden"),
-            $(".lds-ellipsis").show(),
+            $(".lds-ellipsis").show();
             $.ajax({
                 type: "POST",
                 url: "https://beta.actiongolfers.com/subscription/subscribe",
@@ -5635,7 +5635,8 @@ var i = {
                     i.setRequestHeader ("Authorization", "Basic " + s),
                     i.setRequestHeader ("Access-Control-Allow-Origin", "*")
                 },
-                data: i,
+                dataType: "json",
+                data: JSON.stringify(i),
                 success: function() {
                     this.toggleModal(!0)
                 }

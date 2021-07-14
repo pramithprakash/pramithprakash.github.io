@@ -5637,7 +5637,8 @@ var i = {
                     i.setRequestHeader ("Access-Control-Allow-Methods", "DELETE, POST, GET, OPTIONS"),
                     i.setRequestHeader ("Access-Control-Allow-Headers", "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With")
                 },
-                data: i,
+                dataType: "json",
+                data: JSON.stringify(i),
                 success: function() {
                     this.toggleModal(!0)
                 }
