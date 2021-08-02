@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en" class="slim-header">
     <head>
-        <title>Action Golfers | Schedule a Demo</title>
+        <title>Action Golfers | Contact Us</title>
         <meta charset="utf-8" />
         <link rel="icon" type="image/png" href="images/fav.png">
         <link rel="apple-touch-icon" href="images/fav.png">
@@ -20,11 +20,10 @@
             </header>
             <section>
                 <div class="form-container">
-                    <h2 class="page-header">Schedule a Demo</h2>
+                    <h2 class="page-header">Contact Us</h2>
                     <div class="col-12">
                         <div class="col-6 contact-container">
                             <!-- <p><strong>Phone:</strong> <a href="tel:(049)33XXXXX9">(049) 33X-XXXX9</a></p> -->
-                            <p><strong>Sales:</strong> <a href="mailto:sales@actiongolfers.com">sales@actiongolfers.com</a></p>
                             <p><strong>Support:</strong> <a href="mailto:support@actiongolfers.com">support@actiongolfers.com</a></p>
 
                             <div class="screen-message success-message hide">
@@ -35,7 +34,7 @@
                             </div>
                         </div>
                         <div class="col-6 input-container">
-                            <form id="ajaxForm">
+                            <form id="ajaxForm" data-type="contact">
                                 <div class="col-12">
                                     <div class="col-6">
                                         <div class="styled-input">
@@ -93,24 +92,17 @@
                                 </div>
                                 <div class="col-12">
                                     <div class="col-6">
-                                        <div class="styled-input">
-                                            <input type="text" name="orgName" required 
-                                                data-required="Organization Name is required."
-                                                data-invalid="Please enter a valid Organization Name."
-                                            />
-                                            <label>Organization Name <sup>*</sup></label> 
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
                                         <div class="styled-input select-box">
-                                            <select name="orgType">
-                                                <option value="Nonprofit/charity">Nonprofit/charity</option>
-                                                <option value="Golf facility">Golf facility</option>
-                                                <option value="Business">Business</option>
-                                                <option value="Interested sponsor">Interested sponsor</option>
+                                            <select name="problemType">
+                                                <option value="Profile">Profile</option>
+                                                <option value="Golf Course">Golf Course</option>
+                                                <option value="Payments">Payments</option>
+                                                <option value="Tournament">Tournament</option>
+                                                <option value="Score">Score</option>
+                                                <option value="Handicap">Handicap</option>
                                                 <option value="Other">Other</option>
                                             </select>
-                                            <label>Organization Type <sup>*</sup></label> 
+                                            <label>Problem Type <sup>*</sup></label> 
                                         </div>
                                     </div>
                                 </div>
