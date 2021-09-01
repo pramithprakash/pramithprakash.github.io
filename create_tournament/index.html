@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en" class="slim-header">
     <head>
-        <title>Action Golfers | Terms of Use</title>
+        <title>ActionGolfers | Terms of Use</title>
         <meta charset="utf-8" />
         <link rel="icon" type="image/png" href="images/fav.png">
         <link rel="apple-touch-icon" href="images/fav.png">
@@ -13,7 +13,7 @@
             <header>
                 <section>
                     <nav>
-                        <a class="logo" href="./" title="Action Golfers">Action Golfers</a>
+                        <a class="logo" href="./" title="ActionGolfers">ActionGolfers</a>
                     </nav>
                 </section>
             </header>
@@ -37,8 +37,7 @@
                                     <div class="form-field">
                                         <label>Start Date <sup>*</sup></label>
                                         <div class="styled-input select-box">
-                                            <select name="startDate">
-                                            </select>
+                                            <input id="startdatepicker" type="text" />
                                         </div>
                                     </div>
                                 </div>
@@ -46,8 +45,7 @@
                                     <div class="form-field">
                                         <label>End Date <sup>*</sup></label>
                                         <div class="styled-input select-box">
-                                            <select name="endDate">
-                                            </select>
+                                            <input id="enddatepicker" type="text" />
                                         </div>
                                     </div>
                                 </div>
@@ -61,7 +59,7 @@
                                 </div>
                             </div>
                             <div class="form-field">
-                                <span class="label">Number of Holes</span>
+                                <span class="label bold">Number of Holes</span>
                                 <div class="col-12">
                                     <div class="col-4">
                                         <div class="styled-input radio-button">
@@ -92,7 +90,7 @@
                                 </div>
                             </div>
                             <div class="form-field">
-                                <span class="label">Scoring</span>
+                                <span class="label bold">Scoring</span>
                                 <div class="col-12">
                                     <div class="col-6">
                                         <div class="styled-input radio-button">
@@ -109,7 +107,7 @@
                                 </div>
                             </div>
                             <div class="form-field">
-                                <span class="label">Entry Fee</span>
+                                <span class="label bold">Entry Fee</span>
                                 <div class="col-12">
                                     <div class="col-4">
                                         <div class="styled-input radio-button">
@@ -137,10 +135,42 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="form-field">
+                                <span class="label bold">Payouts</span>
+                                <div class="col-12 payouts">
+                                    <label id="p1">1st Position</label>
+                                    <div>
+                                        <div class="styled-input">
+                                            <input id="p1" type="number" name="" maxlength="3" />
+                                        </div>
+                                        <span>%</span>
+                                    </div>
+                                </div>
+                                <div class="col-12 payouts">
+                                    <label id="p2">2nd Position</label>
+                                    <div>
+                                        <div class="styled-input">
+                                            <input id="p2" type="number" name="" maxlength="3" />
+                                        </div>
+                                        <span>%</span>
+                                    </div>
+                                </div>
+                                <div class="col-12 payouts">
+                                    <label id="p3">3rd Position</label>
+                                    <div>
+                                        <div class="styled-input">
+                                            <input id="p3" type="number" name="" maxlength="3" />
+                                        </div>
+                                        <span>%</span>
+                                    </div>
+                                </div>
+                            </div>
+
                             <div class="form-field checkbox-field disabled">
                                 <div class="col-12">
                                     <div class="col-6">
-                                        <label>Leaderboard Watch</label>
+                                        <label class="bold">Leaderboard Watch</label>
                                     </div>
                                     <div class="col-6">
                                         <div class="slider-checkbox">
@@ -153,7 +183,7 @@
                             <div class="form-field checkbox-field">
                                 <div class="col-12">
                                     <div class="col-6">
-                                        <label>Flight</label>
+                                        <label class="bold">Flight</label>
                                     </div>
                                     <div class="col-6">
                                         <div class="slider-checkbox">
@@ -163,10 +193,38 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="form-field">
+                                <div class="col-12 min-max-hps">
+                                    <div class="col-4">
+                                        <label for="min-hps">Minimum:</label>
+                                        <div class="styled-input">
+                                            <input id="min-hps" type="number" name="minHcp" maxlength="2" />
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        -
+                                    </div>
+                                    <div class="col-4">
+                                        <label for="max-hps">Maximum:</label>
+                                        <div class="styled-input">
+                                            <input id="max-hps" type="number" name="maxHcp" maxlength="2" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-                            <!-- <div class="button-wrapper">
+                            <div class="form-field">
+                                <div class="col-12 max-participants">
+                                    <label for="max-participants">Maximum number of participants:</label>
+                                    <div class="styled-input">
+                                        <input id="max-participants" type="number" name="maxPct" maxlength="2" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="button-wrapper">
                                 <button class="demo-submit-btn">Confirm</button>
-                            </div> -->
+                            </div>
                         </form>
                     </div>
                 </div>
