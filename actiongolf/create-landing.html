@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html lang="en" class="slim-header">
+    <head>
+        <title>Create Landing page</title>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/png" href="images/fav.png">
+        <link rel="apple-touch-icon" href="images/fav.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="library/css/actiongolf.css" />
+    </head>
+    <body>
+        <main>
+            <header>
+                <section>
+                    <nav>
+                        <a class="logo" href="./" title="ActionGolfers">ActionGolfers</a>
+                    </nav>
+                </section>
+            </header>
+            <section>
+                <div class="create-form-container">
+                    <h2 class="page-header">Create Landing page</h2>
+                    <div class="full-width input-container">
+                        <div class="col-12">
+                            <div class="col-6">
+                                <div class="form-field">
+                                    <label>Page Title <sup>*</sup></label>
+                                    <div class="styled-input">
+                                        <input type="text" name="pageTitle" required
+                                            data-required="Page Title is required."
+                                            data-invalid="Please enter a valid Page Title."
+                                        />
+                                        <span class="error-message required">Page Title is required.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-field">
+                                    <label>Images  <sup>*</sup></label>
+                                    <div class="styled-input">
+                                        <input type="file" name="landingimages" id="fileToUpload" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-field">
+                            <label>Page Content <sup>*</sup></label>
+                            <div class="styled-input" id="div_editor1"></div>
+                        </div>
+
+                        <div class="button-wrapper">
+                            <button class="secondary-btn">Preview</button>
+                            <button class="primary-btn">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <script type="text/x-handlebars-template" data-template="landingTemplate">
+                <div class="content-container">
+                    <div class="landing-tournaments">
+                        <div class="title-head">
+                            <img src="{{images}}" />
+                            <div class="content">
+                                <h5>{{heading}}</h5>
+                                <div class="subdetails">
+                                    <p>{{date}}</p>
+                                    <a href="" target="_blank">{{headSpan}}</a>
+                                </div>
+                                <a href="./" class="learn-more">{{learnMore}}</a>
+                            </div>
+                        </div>
+                        <div class="details">
+                            {{{content}}}
+                        </div>
+                        <div>
+                            <h3>Download the ActionGolfers app to enroll in the tournament here!</h3>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <img src="images/qr-android.jpg" />
+                                    </td>
+                                    <td>
+                                        <img src="images/qr-ios.jpg" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Android
+                                    </td>
+                                    <td>
+                                        iOS
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </script>
+
+            <section>
+                <div class="landing-content"></div>
+            </section>
+
+            <footer>
+                <section>
+                    <div class="footer-right">
+            
+                    </div>
+                    <div class="footer-left">
+                        <span class="logo">ActionGolfers</span>
+                        <h5>Tournament Golf On-Demand</h5>
+                        <p>© Copyright 2021 ActionGolfers LLC <br/>All Rights Reserved.</p>
+                        <div class="footer-links">
+                            <ul class="social-links">
+                                <li><a class="facebook" title="Facebook" href="https://www.facebook.com/ActionGolfers/" target="_blank"><span>facebook</span></a></li>
+                                <li><a class="instagram" title="Instagram" href="https://www.instagram.com/actiongolfers/
+                                    " target="_blank"><span>instagram</span></a></li>
+                                <li><a class="twitter" title="Twitter" href="https://twitter.com/action_golfers" target="_blank"><span>twitter</span></a></li>
+                                <li><a class="youtube" title="Youtube" href="https://www.youtube.com/channel/UCOJRzam4OGFvEYxtKW27JbA" target="_blank"><span>youtube</span></a></li>
+                            </ul>
+                            <ul class="page-links">
+                                <li><a href="terms-of-use.html" title="Terms of Use">Terms of Use</a></li>
+                                <li><a href="privacy-policy.html" title="Privacy Policy">Privacy Policy</a></li>
+                                <li><a href="contact-us.html" title="Contact Us">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </footer>        </main>
+        <script type="text/javascript" src="library/js/create-landing.js"></script>
+    </body>
+</html>
