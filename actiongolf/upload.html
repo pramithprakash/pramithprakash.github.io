@@ -52,7 +52,7 @@
                         $('.status').html('Success');
                     }.bind(this),
                     error:  function(xhr, status, error) {
-                        $('.status').html('Failed - check console for details');
+                        $('.status').html('AJAX Failed - check console for details');
                     }.bind(this)
                 });
 
@@ -64,12 +64,10 @@
                     // other configuration there
                 })
                 .then(function (response) {
-                    alert('yeah!');
-                    console.log(response);
+                    $('.status').append('Success');
                 })
                 .catch(function (error) {
-                    alert('oops');
-                    console.log(error);
+                    $('.status').append('</br> AXIO - Failed - check console for details');
                 })
                 ;
             </script>
