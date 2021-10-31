@@ -13,7 +13,10 @@
             <header>
                 <section>
                     <nav>
-                        <a class="logo" href="./" title="ActionGolfers">ActionGolfers</a>
+                        <a class="subscribe" title="Subscribe">Subscribe</a>
+                        <a class="subscribeauth" title="Subscribe with Authorization">Subscribe with Authorization</a>
+                        <a class="verify" title="Verify">Verify</a>
+                        <a class="upload" title="upload">Upload</a>
                     </nav>
                 </section>
             </header>
@@ -32,45 +35,139 @@
             <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.23.0/axios.min.js"></script>
             <script>
                 var requestData,
-                    auth = btoa("agdev:password"),
+                    auth = btoa("realm:ActionGolf"),
                     ajaxUrl= 'https://api.actiongolfers.com/media/upload';
 
                 requestData = {
                     "image": $('#fileToUpload').val()
                 };
 
-                $.ajax({
-                    type: "POST",
-                    url: ajaxUrl,
-                    contentType: "application/json",
-                    dataType: "json",
-                    data: JSON.stringify(requestData),
-                    beforeSend: function (xhr, status) {
-                        xhr.setRequestHeader ("Authorization", "Basic " + auth);
-                    },
-                    success: function(status) {
-                        $('.status').html('Success');
-                    }.bind(this),
-                    error:  function(xhr, status, error) {
-                        $('.status').html('AJAX Failed - check console for details');
-                    }.bind(this)
+                // $.ajax({
+                //     type: "POST",
+                //     url: ajaxUrl,
+                //     contentType: "application/json",
+                //     dataType: "jsonp",
+
+                //     beforeSend: function (xhr, status) {
+                //         xhr.setRequestHeader ("Authorization", "Basic " + auth);
+                //     },
+                //     success: function(status) {
+                //         $('.status').html('Success');
+                //     }.bind(this),
+                //     error:  function(xhr, status, error) {
+                //         $('.status').html('AJAX Failed - check console for details');
+                //     }.bind(this)
+                // });
+
+                // axios.post(ajaxUrl, JSON.stringify(requestData), {
+                //     headers: {
+                //     'Content-Type': 'application/json',
+                //     "Authorization": "Basic " + auth
+                //     }
+                //     // other configuration there
+                // })
+                // .then(function (response) {
+                //     $('.status').append('Success');
+                // })
+                // .catch(function (error) {
+                //     $('.status').append('</br> AXIO - Failed - check console for details');
+                // })
+                // ;
+
+
+                $('.subscribeauth').on('click', function(){
+                    var requestData = {};
+                    $.ajax({
+                        type: "POST",
+                        url: 'https://beta.actiongolfers.com/subscription/subscribe',
+                        contentType: "application/json",
+                        dataType: "json",
+                        data: JSON.stringify(requestData),
+                        crossDomain: true,
+                        beforeSend: function(xhr) {
+                            xhr.setRequestHeader('Access-Control-Allow-Origin', '*'),
+                            xhr.setRequestHeader ("Authorization", "Basic " + auth)
+                        },
+                        success: function() {
+                            alert('success');
+                        }.bind(this),
+                        error:  function() {
+                            alert('error');
+                        }.bind(this)
+                    });
                 });
 
-                axios.post(ajaxUrl, JSON.stringify(requestData), {
-                    headers: {
-                    'Content-Type': 'application/json',
-                    "Authorization": "Basic " + auth
-                    }
-                    // other configuration there
-                })
-                .then(function (response) {
-                    $('.status').append('Success');
-                })
-                .catch(function (error) {
-                    $('.status').append('</br> AXIO - Failed - check console for details');
-                })
-                ;
+                $('.subscribe').on('click', function(){
+                    var requestData = {};
+                    $.ajax({
+                        type: "POST",
+                        url: 'https://beta.actiongolfers.com/subscription/subscribe',
+                        contentType: "application/json",
+                        dataType: "json",
+                        data: JSON.stringify(requestData),
+                        crossDomain: true,
+                        beforeSend: function(xhr) {
+                            xhr.setRequestHeader('Access-Control-Allow-Origin', '*')
+                        },
+                        success: function() {
+                            alert('success');
+                        }.bind(this),
+                        error:  function() {
+                            alert('error');
+                        }.bind(this)
+                    });
+                });
+
+                $('.verify').on('click', function(){
+                    var requestData = {};
+                    $.ajax({
+                        type: "POST",
+                        url: 'https://beta.actiongolfers.com/auth/verifyRequest',
+                        contentType: "application/json",
+                        dataType: "json",
+                        data: JSON.stringify(requestData),
+                        crossDomain: true,
+                        beforeSend: function(xhr) {
+                            xhr.setRequestHeader('Access-Control-Allow-Origin', '*'),
+                            xhr.setRequestHeader ("Authorization", "Basic " + auth)
+                        },
+                        success: function() {
+                            alert('success');
+                        }.bind(this),
+                        error:  function() {
+                            alert('error');
+                        }.bind(this)
+                    });
+                });
+
+                $('.upload').on('click', function(){
+                    var requestData = {};
+                    $.ajax({
+                        type: "POST",
+                        url: 'https://beta.actiongolfers.com/media/upload',
+                        contentType: "application/json",
+                        dataType: "json",
+                        data: JSON.stringify(requestData),
+                        crossDomain: true,
+                        beforeSend: function(xhr) {
+                            xhr.setRequestHeader('Access-Control-Allow-Origin', '*'),
+                            xhr.setRequestHeader ("Authorization", "Basic " + auth)
+                        },
+                        success: function() {
+                            alert('success');
+                        }.bind(this),
+                        error:  function() {
+                            alert('error');
+                        }.bind(this)
+                    });
+                });
             </script>
+
+            <style>
+                a {
+                    cursor: pointer;
+                }
+            </style>
         </main>
     </body>
 </html>
