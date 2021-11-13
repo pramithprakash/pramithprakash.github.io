@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("p").click(function(){
+      var settings = {
+        "url": "https://dev75077.service-now.com/api/now/table/sys_user?&sysparm_fields=name%2Csys_id&email=survey.user@email.com",
+        "method": "GET",
+        "timeout": 0,
+        "headers": {
+          "Authorization": "Basic YWRtaW46bVJwM3VlOUxXRHJG",
+          "Content-Type": "application/json"
+        },
+        "data": JSON.stringify({"sys_id":"b8f6e24a87233c10bf10a60d3fbb3595","work_notes":"test work notes"}),
+      };
+
+      $.ajax(settings).done(function (response) {
+        console.log(response);
+      });
+  });
+});
+</script>
+</head>
+<body>
+
+<p>If you click on me, I will disappear.</p>
+<p>Click me away!</p>
+<p>Click me too!</p>
+
+</body>
+</html>
+
