@@ -144,24 +144,45 @@
                 });
 
                 $('.upload').on('click', function(){
-                    var requestData = {};
-                    $.ajax({
-                        type: "POST",
-                        url: 'https://beta.actiongolfers.com/media/upload',
-                        contentType: "application/json",
-                        dataType: "json",
-                        data: JSON.stringify(requestData),
-                        beforeSend: function(xhr) {
-                            xhr.setRequestHeader('Access-Control-Allow-Origin', "https://pramith.com/actiongolf"),
-                            xhr.setRequestHeader ("Authorization", "Basic " + auth)
-                        },
-                        success: function() {
-                            alert('success');
-                        }.bind(this),
-                        error:  function() {
-                            alert('error');
-                        }.bind(this)
-                    });
+                    // var requestData = {};
+                    // $.ajax({
+                    //     type: "POST",
+                    //     url: 'https://beta.actiongolfers.com/media/upload',
+                    //     contentType: "application/json",
+                    //     dataType: "json",
+                    //     data: JSON.stringify(requestData),
+                    //     beforeSend: function(xhr) {
+                    //         xhr.setRequestHeader('Access-Control-Allow-Origin', "https://pramith.com/actiongolf"),
+                    //         xhr.setRequestHeader ("Authorization", "Basic " + auth)
+                    //     },
+                    //     success: function() {
+                    //         alert('success');
+                    //     }.bind(this),
+                    //     error:  function() {
+                    //         alert('error');
+                    //     }.bind(this)
+                    // });
+
+                    var request = {
+      "callingCode": "+1",
+      "phoneNumber": "2065656486",
+      "deviceId": "some-device-id"
+    }
+      var settings = {
+        "url": "https://beta.actiongolfers.com/auth/verifyRequest",
+        "method": "POST",
+        "data": JSON.stringify(request),
+        "timeout": 0,
+        "headers": {
+          "Authorization": "Basic YWdkZXY6cGFzc3dvcmQ=",
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "https://pramith.com/actiongolf"
+        },
+      };
+
+      $.ajax(settings).done(function (response) {
+        console.log(response);
+      });
                 });
             </script>
 
