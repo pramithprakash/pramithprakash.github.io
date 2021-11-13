@@ -16,7 +16,7 @@ $(document).ready(function(){
             beforeSend: function(xhr) {
                 xhr.setRequestHeader ("Authorization", "Basic YWRtaW46bVJwM3VlOUxXRHJG")
             },
-            success: function() {
+            success: function(response) {
                 $('.status').html('Success');
                 $('.response').html(JSON.stringify(response));
             }.bind(this),
@@ -26,27 +26,6 @@ $(document).ready(function(){
             }.bind(this)
         });
     });
-//  $("button").click(function(){
-//       var settings = {
-//         "url": ,
-//         "method": "GET",
-//         "timeout": 0,
-//         "headers": {
-//           "Authorization": "Basic YWRtaW46bVJwM3VlOUxXRHJG",
-//           "Content-Type": "application/json"
-//         },
-//         "data": JSON.stringify({"sys_id":"b8f6e24a87233c10bf10a60d3fbb3595","work_notes":"test work notes"}),
-//       };
-
-//       $.ajax(settings).done(function (response) {
-//         $('.status').html('Success');
-//         $('.response').html(JSON.stringify(response));
-//       }).fail(function (response) {
-//         $('.status').html('ERROR');
-//         $('.response').html('CORS error');
-//       });
-//   });
-
 });
 </script>
 </head>
