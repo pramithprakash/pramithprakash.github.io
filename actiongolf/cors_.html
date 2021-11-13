@@ -35,7 +35,7 @@
             <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.23.0/axios.min.js"></script>
             <script>
                 var requestData,
-                    auth = 'YWdkZXY6cGFzc3dvcmQ',
+                    auth = btoa("realm:ActionGolf"),
                     ajaxUrl= 'https://api.actiongolfers.com/media/upload';
 
                 requestData = {
@@ -83,8 +83,9 @@
                         contentType: "application/json",
                         dataType: "json",
                         data: JSON.stringify(requestData),
+                        crossDomain: true,
                         beforeSend: function(xhr) {
-                            xhr.setRequestHeader('Access-Control-Allow-Origin', "https://pramith.com/actiongolf"),
+                            xhr.setRequestHeader('Access-Control-Allow-Origin', '*'),
                             xhr.setRequestHeader ("Authorization", "Basic " + auth)
                         },
                         success: function() {
@@ -106,8 +107,7 @@
                         data: JSON.stringify(requestData),
                         crossDomain: true,
                         beforeSend: function(xhr) {
-                            xhr.setRequestHeader('Access-Control-Allow-Origin', "https://pramith.com/actiongolf"),
-                            xhr.setRequestHeader ("Authorization", "Basic " + auth)
+                            xhr.setRequestHeader('Access-Control-Allow-Origin', '*')
                         },
                         success: function() {
                             alert('success');
@@ -118,10 +118,6 @@
                     });
                 });
 
-
-
-
-
                 $('.verify').on('click', function(){
                     var requestData = {};
                     $.ajax({
@@ -130,8 +126,9 @@
                         contentType: "application/json",
                         dataType: "json",
                         data: JSON.stringify(requestData),
+                        crossDomain: true,
                         beforeSend: function(xhr) {
-                            xhr.setRequestHeader('Access-Control-Allow-Origin', "https://pramith.com/actiongolf"),
+                            xhr.setRequestHeader('Access-Control-Allow-Origin', '*'),
                             xhr.setRequestHeader ("Authorization", "Basic " + auth)
                         },
                         success: function() {
@@ -151,8 +148,9 @@
                         contentType: "application/json",
                         dataType: "json",
                         data: JSON.stringify(requestData),
+                        crossDomain: true,
                         beforeSend: function(xhr) {
-                            xhr.setRequestHeader('Access-Control-Allow-Origin', "https://pramith.com/actiongolf"),
+                            xhr.setRequestHeader('Access-Control-Allow-Origin', '*'),
                             xhr.setRequestHeader ("Authorization", "Basic " + auth)
                         },
                         success: function() {
