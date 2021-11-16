@@ -17,7 +17,7 @@
                     </nav>
                 </section>
             </header>
-            <section>
+            <section id="create-landing-edit">
                 <div class="create-form-container">
                     <h2 class="page-header">Create Landing page</h2>
                     <div class="full-width input-container">
@@ -35,10 +35,55 @@
                                 </div>
                             </div>
                             <div class="col-6">
+                                <i>Placeholders - <br> <code>[[STARTDATE]] [[ENDDATE]]</code></i>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="col-6">
                                 <div class="form-field">
-                                    <label>Images  <sup>*</sup></label>
+                                    <label>Banner Title <sup>*</sup> </label>
                                     <div class="styled-input">
-                                        <input type="file" name="landingimages" id="fileToUpload" />
+                                        <input type="text" name="bannerTitle" required
+                                            data-required="Banner Title is required."
+                                            data-invalid="Please enter a valid Banner Title."
+                                        />
+                                        <span class="error-message required">Banner Title is required.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-field">
+                                    <label>Banner Background Image <sup></sup></label>
+                                    <div class="styled-input">
+                                        <input type="file" accept="image/*" name="bg_landingimages" id="fileToUpload" />
+                                    </div>
+
+                                    <img id="thumbnil" style="width:20%; margin-top:10px;display:none"  src="" alt="image"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="col-4">
+                                <div class="form-field">
+                                    <label>Logo image 1 <sup>*</sup></label>
+                                    <div class="styled-input">
+                                        <input type="file" name="logo_image1" id="fileToUpload1" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-field">
+                                    <label>Logo image 2</label>
+                                    <div class="styled-input">
+                                        <input type="file" name="logo_image2" id="fileToUpload2" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-field">
+                                    <label>Logo image 3</label>
+                                    <div class="styled-input">
+                                        <input type="file" name="logo_image3" id="fileToUpload3" />
                                     </div>
                                 </div>
                             </div>
@@ -47,10 +92,8 @@
                             <label>Page Content <sup>*</sup></label>
                             <div class="styled-input" id="div_editor1"></div>
                         </div>
-
                         <div class="button-wrapper">
                             <button class="secondary-btn">Preview</button>
-                            <button class="primary-btn">Save</button>
                         </div>
                     </div>
                 </div>
@@ -64,7 +107,7 @@
                             <div class="content">
                                 <h5>{{heading}}</h5>
                                 <div class="subdetails">
-                                    <p>{{date}}</p>
+                                    <p>{{startDate}} - {{endDate}}</p>
                                     <a href="" target="_blank">{{headSpan}}</a>
                                 </div>
                                 <a href="./" class="learn-more">{{learnMore}}</a>
@@ -73,7 +116,7 @@
                         <div class="details">
                             {{{content}}}
                         </div>
-                        <div>
+                        <div class="landing-download">
                             <h3>Download the ActionGolfers app to enroll in the tournament here!</h3>
                             <table>
                                 <tr>
@@ -98,8 +141,11 @@
                 </div>
             </script>
 
-            <section>
+            <section id="create-landing-preview" style="display: none;">
                 <div class="landing-content"></div>
+                <div class="button-wrapper">
+                    <button class="primary-btn">Publish</button>
+                </div>
             </section>
 
             <footer>
