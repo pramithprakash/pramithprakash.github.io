@@ -37,14 +37,29 @@
                                 </div>
                                 <div class="form-field otp">
                                     <label>Verification Code <sup>*</sup></label>
-                                    <div class="styled-input">
-                                        <input type="text" name="verificationCode" required
-                                            maxlength="4"
-                                            data-required="Verification Code is required."
-                                            data-invalid="Please enter a valid Verification Code"
-                                        />
-                                        <span class="error-message required">Verification Code is required.</span>
+                                    <div class="verification-code">
+                                        <div class="styled-input">
+                                            <input type="text" class="verificationCode1" required
+                                                maxlength="1"
+                                            />
+                                        </div>
+                                        <div class="styled-input">
+                                            <input type="text" class="verificationCode2" required
+                                                maxlength="1"
+                                            />
+                                        </div>
+                                        <div class="styled-input">
+                                            <input type="text" class="verificationCode3" required
+                                                maxlength="1"
+                                            />
+                                        </div>
+                                        <div class="styled-input">
+                                            <input type="text" class="verificationCode4" required
+                                                maxlength="1"
+                                            />
+                                        </div>
                                     </div>
+                                    <div class="otp-error-message">Verification Code is required.</div>
                                 </div>
                             </div>
                             <div class="col-6">
