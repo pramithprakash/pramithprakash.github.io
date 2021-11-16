@@ -25,7 +25,9 @@
                             <div class="col-6">
                                 <div class="form-field login">
                                     <label>Phone number <sup>*</sup></label>
-                                    <div class="styled-input">
+                                    <div class="styled-input login-phone">
+                                        <input type="text" name="callingCode" placeholder="+1"
+                                        />
                                         <input type="text" name="phoneNumber" required
                                             data-required="Phone number is required."
                                             data-invalid="Please enter a valid Phone number"
@@ -37,6 +39,7 @@
                                     <label>Verification Code <sup>*</sup></label>
                                     <div class="styled-input">
                                         <input type="text" name="verificationCode" required
+                                            maxlength="4"
                                             data-required="Verification Code is required."
                                             data-invalid="Please enter a valid Verification Code"
                                         />
