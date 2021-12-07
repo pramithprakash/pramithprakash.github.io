@@ -18,7 +18,7 @@
                 </section>
             </header>
             <section id="create-landing-edit">
-                <div class="admin-container create-form-container">
+                <div class="admin-container create-form-container create-landing-form">
                     <h2 class="page-header">Create Landing page</h2>
                     <div class="full-width input-container">
                         <div class="col-12">
@@ -41,6 +41,19 @@
                         <div class="col-12">
                             <div class="col-6">
                                 <div class="form-field">
+                                    <label>Friendly Name <sup>*</sup> </label>
+                                    <div class="styled-input">
+                                        <input type="text" name="friendlyName" required
+                                            data-required="Friendly Name is required."
+                                            data-invalid="Please enter a valid Friendly Name."
+                                        />
+                                        <span class="error-message required">Friendly Name is required.</span>
+                                    </div>
+                                    <div class="helptext">For User friendly Page URL- (This value will be appended with Tournament Start Date)</div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-field">
                                     <label>Banner Background Image <sup></sup></label>
                                     <div class="styled-input">
                                         <input type="file" accept="image/*" name="bg_landingimages" id="fileToUpload" />
@@ -55,7 +68,7 @@
                                 <div class="form-field">
                                     <label>Logo image 1 <sup>*</sup></label>
                                     <div class="styled-input">
-                                        <input type="file" name="logo_image1" id="fileToUpload1" />
+                                        <input type="file" data-index="0" name="logo_image1" id="fileToUpload1" />
                                     </div>
                                 </div>
                             </div>
@@ -63,7 +76,7 @@
                                 <div class="form-field">
                                     <label>Logo image 2</label>
                                     <div class="styled-input">
-                                        <input type="file" name="logo_image2" id="fileToUpload2" />
+                                        <input type="file" data-index="1" name="logo_image2" id="fileToUpload2" />
                                     </div>
                                 </div>
                             </div>
@@ -71,7 +84,7 @@
                                 <div class="form-field">
                                     <label>Logo image 3</label>
                                     <div class="styled-input">
-                                        <input type="file" name="logo_image3" id="fileToUpload3" />
+                                        <input type="file" data-index="2" name="logo_image3" id="fileToUpload3" />
                                     </div>
                                 </div>
                             </div>
@@ -91,7 +104,13 @@
                 <div class="content-container">
                     <div class="landing-tournaments">
                         <div class="title-head">
-                            <img src="{{images}}" />
+                            <div class="logo-images">
+                            {{#if logoImages}}
+                                {{#each logoImages}}
+                                    <img class="logoimages" src="{{image}}" />
+                                {{/each}}
+                            {{/if}}
+                            </div>
                             <div class="content">
                                 <h5>{{webPageTitle}}</h5>
                                 <div class="subdetails">

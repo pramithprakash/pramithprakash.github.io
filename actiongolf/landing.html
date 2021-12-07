@@ -24,7 +24,13 @@
                     <div class="content-container">
                         <div class="landing-tournaments">
                             <div class="title-head">
-                                <img src="{{images}}" />
+                                <div class="logo-images">
+                                {{#if logoImages}}
+                                    {{#each logoImages}}
+                                        <img class="logoimages" src="{{image}}" />
+                                    {{/each}}
+                                {{/if}}
+                                </div>
                                 <div class="content">
                                     <h5>{{webPageTitle}}</h5>
                                     <div class="subdetails">
