@@ -27,11 +27,11 @@
                     <div class="list-tournaments">
                         <div class="tournament-item loading">
                             <div class="tournament-id"># Tournament Id</div>
-                            <div class="item">Friendly Name</div>
-                            <div class="item">City</div>
-                            <div class="item">Creator Name</div>
-                            <div class="item">Golf Course Name</div>
-                            <div class="item">Tee Name</div>
+                            <div class="item">Friendly Name</div><br />
+                            <div class="item">City</div><br />
+                            <div class="item">Creator Name</div><br />
+                            <div class="item">Golf Course Name</div><br />
+                            <div class="item">Tee Name</div><br />
 
                             <div class="tournament-item-btm">
                                 <div>Start Date</div>
@@ -82,18 +82,23 @@
                         {{/if}}
                         {{#if tournamentInfo.friendlyName}}
                         <div class="item">{{tournamentInfo.friendlyName}}<span>Friendly Name</span></div>
+                        <br />
                         {{/if}}
                         {{#if tournamentInfo.city}}
                         <div class="item">{{tournamentInfo.city}}<span>City</span></div>
+                        <br />
                         {{/if}}
                         {{#if tournamentInfo.creatorFirstName}}
                         <div class="item">{{tournamentInfo.creatorFirstName}} {{tournamentInfo.creatorLastName}}<span>Creator Name</span></div>
+                        <br />
                         {{/if}}
                         {{#if tournamentInfo.golfCourseName}}
                         <div class="item">{{tournamentInfo.golfCourseName}}<span>Golf Course Name</span></div>
+                        <br />
                         {{/if}}
                         {{#if tournamentInfo.teeName}}
                         <div class="item">{{tournamentInfo.teeName}}<span>Tee Name</span></div>
+                        <br />
                         {{/if}}
 
                         <div class="tournament-item-btm">
