@@ -17,6 +17,11 @@
                     </nav>
                 </section>
             </header>
+            <input type="text" class="keydown" />
+            <input type="text" class="keyup" />
+            <input type="text" class="keypress" />
+            <input type="text" class="change" />
+
             <section id="create-landing-edit">
                 <div class="admin-container create-form-container create-landing-form">
                     <h2 class="page-header">Create Landing page</h2>
@@ -161,7 +166,7 @@
             <footer>
                 <section>
                     <div class="footer-right">
-            
+
                     </div>
                     <div class="footer-left">
                         <span class="logo">ActionGolfers</span>
@@ -185,5 +190,20 @@
                 </section>
             </footer>        </main>
         <script type="text/javascript" src="library/js/create-landing.js"></script>
+
+        <script >
+            $('.keydown').on('keydown', function(){
+                alert('keydown');
+            });
+            $('.keyup').on('keyup', function(){
+                alert('keyup');
+            });
+            $('.keypress').on('keypress', function(){
+                alert('keypress');
+            });
+            $('.change').on('change', function(){
+                alert('change');
+            });
+        </script>
     </body>
 </html>
