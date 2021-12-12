@@ -17,19 +17,21 @@
                     </nav>
                 </section>
             </header>
-            <input type="text" class="keydown" />
-            <input type="text" class="keyup" />
-            <input type="text" class="keypress" />
-            <input type="text" class="change" />
-
             <section id="create-landing-edit">
                 <div class="admin-container create-form-container create-landing-form">
-                    <h2 class="page-header">Create Landing page</h2>
+                    <h2 class="page-header">Create Landing page
+                        <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+                    </h2>
+                    <div class="tournament-details-head"></div>
+                    <div id="previous-data-load-error" class="screen-message error-message hide">
+                        Error loading the details of already saved data. All previously saved data will be overridden if submitting this form.
+                    </div>
+
                     <div class="full-width input-container">
                         <div class="col-12">
                             <div class="col-6">
                                 <div class="form-field">
-                                    <label>Banner Title <sup>*</sup> </label>
+                                    <label>Banner Title <sup></sup> </label>
                                     <div class="styled-input">
                                         <input type="text" name="webPageTitle" required
                                             data-required="Banner Title is required."
@@ -41,15 +43,15 @@
                             </div>
                             <div class="col-6">
                                 Placeholders - <br>
-                                <code>[[STARTDATE]] [[ENDDATE]]</code> Oct 01
+                                <code>[[STARTDATE]] [[ENDDATE]]</code> Jan 01
                                 <br>
-                                <code>[[STARTDATEYEAR]] [[ENDDATEYEAR]]</code> Oct 01, 2021
+                                <code>[[STARTDATEYEAR]] [[ENDDATEYEAR]]</code> Jan 01, 2022
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="col-6">
                                 <div class="form-field">
-                                    <label>Friendly Name <sup>*</sup> </label>
+                                    <label>Friendly Name <sup></sup> </label>
                                     <div class="styled-input">
                                         <input type="text" name="friendlyName" required
                                             data-required="Friendly Name is required."
@@ -74,7 +76,7 @@
                         <div class="col-12">
                             <div class="col-4">
                                 <div class="form-field">
-                                    <label>Logo image 1 <sup>*</sup></label>
+                                    <label>Logo image 1 <sup></sup></label>
                                     <div class="styled-input">
                                         <input type="file" data-index="0" enctype="multipart/form-data" name="logo_image1" id="fileToUpload1" />
                                     </div>
@@ -98,7 +100,7 @@
                             </div>
                         </div>
                         <div class="form-field">
-                            <label>Page Content <sup>*</sup></label>
+                            <label>Page Content <sup></sup></label>
                             <div class="styled-input" id="div_webPageBlob"></div>
                         </div>
                         <div class="button-wrapper">
@@ -157,16 +159,27 @@
             </script>
 
             <section id="create-landing-preview" style="display: none;">
-                <div class="landing-content"></div>
-                <div class="button-wrapper">
-                    <button id="publish-btn" class="primary-btn">Publish</button>
+                <div class="landing-content">
+                    <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
                 </div>
+                <div class="button-wrapper">
+                    <div id="publish-error" class="screen-message error-message hide">
+                        Something went wrong. We are working on getting this fixed as soon as we can. Please try later.
+                    </div>
+
+                    <div id="publish-success" class="screen-message success-message hide">
+                        Page published successfully
+                    </div>
+                    <button id="publish-btn" class="primary-btn">Publish</button>
+                    <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+                </div>
+
             </section>
 
             <footer>
                 <section>
                     <div class="footer-right">
-
+            
                     </div>
                     <div class="footer-left">
                         <span class="logo">ActionGolfers</span>
@@ -190,20 +203,5 @@
                 </section>
             </footer>        </main>
         <script type="text/javascript" src="library/js/create-landing.js"></script>
-
-        <script >
-            $('.keydown').on('keydown', function(){
-                alert('keydown');
-            });
-            $('.keyup').on('keyup', function(){
-                alert('keyup');
-            });
-            $('.keypress').on('keypress', function(){
-                alert('keypress');
-            });
-            $('.change').on('change', function(){
-                alert('change');
-            });
-        </script>
     </body>
 </html>

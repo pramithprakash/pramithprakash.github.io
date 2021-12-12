@@ -75,7 +75,9 @@
                 {{#each ownerTournaments}}
                     <div class="tournament-item">
                         {{#if tournamentInfo.tournamentId}}
-                        <a class="create-website" data-tournament-id="{{tournamentInfo.tournamentId}}" data-friendly-name="{{tournamentInfo.friendlyName}}"></a>
+                        <a class="create-website" data-tournament-id="{{tournamentInfo.tournamentId}}" data-friendly-name="{{tournamentInfo.friendlyName}}"
+                        data-start-date="{{tournamentInfo.startDate}}"
+                        data-end-date="{{tournamentInfo.endDate}}"></a>
                         <div class="tournament-id"># {{tournamentInfo.tournamentId}}</div>
                         {{/if}}
                         {{#if tournamentInfo.friendlyName}}
