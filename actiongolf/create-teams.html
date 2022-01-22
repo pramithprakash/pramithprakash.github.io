@@ -50,16 +50,21 @@
             <script type="text/x-handlebars-template" data-template="listTeamsTemplate">
             {{#if teams}}
                 {{#each teams}}
-                    <div class="teams-item" id={{id}}>
+                    <div class="teams-item {{#if invalidError}}error{{/if}} {{#if duplicateError}}error{{/if}}" id={{id}}>
                         <h3>{{teamName}}</h3>
                         {{#each players}}
                         <div class="player {{#if isLead}}lead{{/if}}">
                             <div class="name">{{name}}</div>
-                            <div class="phone {{phone}} {{#if isLead}}lead{{/if}}">{{phone}}</div>
+                            <div class="phone {{phone}} {{#if isLead}}lead{{/if}} {{#if invalidError}}error{{/if}} {{#if duplicateError}}error{{/if}}">{{phone}}</div>
+                            {{#if invalidError}}
+                            <span class="invalid">Invalid Phone number</span>
+                            {{/if}}
                         </div>
                         {{/each}}
                         <div class="button-wrapper">
-                            <button class="primary-btn create-team">Create Team</button>
+                            <button class="primary-btn create-team {{#if invalidError}}error{{/if}} {{#if duplicateError}}error{{/if}}">
+                            {{#if duplicateError}}Duplicate Phone number {{else}} {{#if invalidError}}Invalid Phone number {{else}}Create Team {{/if}} {{/if}}
+                            </button>
                             <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
                         </div>
                     </div>
