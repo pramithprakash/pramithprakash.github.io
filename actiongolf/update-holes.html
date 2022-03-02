@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en" class="slim-header">
     <head>
-        <title>Create Teams</title>
+        <title>Update Starting hole</title>
         <meta charset="utf-8" />
         <link rel="icon" type="image/png" href="images/fav.png">
         <link rel="apple-touch-icon" href="images/fav.png">
@@ -17,32 +17,18 @@
                     </nav>
                 </section>
             </header>
-            <section id="create-landing-edit">
-                <div class="admin-container create-form-container create-landing-form">
+            <section>
+                <div class="admin-container">
                     <h2 class="page-header loading">
-                        <span class="admin-title">Create Teams page</span>
+                        <span class="admin-title">
+                            Update Starting hole
+                            <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+                        </span>
                         <a class="page-header-link" href="./active-tournaments.html">Active Tournaments</a>
                     </h2>
 
-                    <div class="full-width input-container">
-                        <div class="col-12">
-                            <div class="col-4">
-                                <div class="form-field">
-                                    <label>Please select a CSV file <sup>*</sup></label>
-                                    <div class="styled-input">
-                                        <input type="file" id="csvfile" />
-                                        <span class="error-message">Please upload a valid CSV file!</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="button-wrapper">
-                                    <button class="primary-btn get-teams" id="get-teams">Get Teams</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="list-teams-wrapper">
+                    <div class="full-width">
+                        <div class="list-teams-details">
 
                         </div>
                     </div>
@@ -50,50 +36,45 @@
             </section>
 
             <script type="text/x-handlebars-template" data-template="listTeamsTemplate">
-            <h5>{{tournamentDetails.tournamentId}} {{#if tournamentDetails.tournamentDesc}}| {{tournamentDetails.tournamentDesc}}{{/if}}</h5>
-            <div class="button-wrapper">
-                <button class="primary-btn create-all-teams" id="create-all-teams">Create All Teams</button>
-            </div>
-            <div class="list-teams">
-            {{#if teams}}
-                {{#each teams}}
-                    <div class="teams-item {{#if invalidError}}error{{/if}} {{#if duplicateError}}error{{/if}} {{#if teamSizeError}}error{{/if}}" id={{id}}>
+            <h5>{{tournamentDetails.tournamentId}}</h5>
+
+            {{#if tournamentTeams}}
+                {{#each tournamentTeams}}
+                 <div class="list-teams">
+                     <div class="team-image">
+                        <img src="{{teamImageUrl}}" />
+                     </div>
+
+                    <div class="teams-item" data-team-id="{{tournamentTeamId}}">
                         <h3>{{teamName}}</h3>
-                        {{#each players}}
-                        <div class="player {{#if isLead}}lead{{/if}}">
-                            <div class="name">{{name}}</div>
-                            <div class="phone {{phone}} {{#if isLead}}lead{{/if}} {{#if invalidError}}error{{/if}} {{#if duplicateError}}error{{/if}}">{{phone}}</div>
-                        </div>
-                        {{/each}}
-                        <div class="button-wrapper">
-                            {{#if teamSizeError}}
-                                <div class="error">
-                                    Team Size should be {{teamSize}}
+                        <div class="start-hole">Starting Hole
+                            <div class="display-starting-hole">
+                                <span class="update-hole-trigger">{{startingHole}}</span>
+                                <div class="update-starting-hole">
+                                    <select data-starting-hole="{{startingHole}}">
+                                        {{#each holesToPlay}}
+                                        <option value="{{value}}"  {{#if selected}} selected {{/if}}>
+                                            {{value}}
+                                        </option>
+                                        {{/each}}
+                                    </select>
                                 </div>
-                            {{/if}}
-                            {{#if duplicateError}}
-                            <div class="error">
-                                Duplicate Phone number
+                                <div class="error-message">Error updating the starting hole</div>
                             </div>
-                            {{/if}}
-                            {{#if invalidError}}
-                            <div class="error">
-                                Invalid Phone number
+                        </div>
+                        <div class="player-list">
+                        {{#each tournamentTeamMembers}}
+                            <div class="player {{#if isLead}}lead{{/if}}" data-team-member-id="{{tournamentTeamMemberId}}">
+                                <div class="photo">
+                                    <img src="{{imageUrl}}" />
+                                </div>
+                                <div class="name">{{firstName}} {{lastName}}</div>
                             </div>
-                            {{/if}}
-                            {{#unless teamSizeError}}
-                            {{#unless duplicateError}}
-                            {{#unless invalidError}}
-                                <button class="primary-btn create-team">
-                                    Create Team
-                                </button>
-                            {{/unless}}
-                            {{/unless}}
-                            {{/unless}}
-                            <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+                        {{/each}}
                         </div>
                     </div>
-                    {{/each}}
+                </div>
+                {{/each}}
             {{else}}
                 No teams found..
             {{/if}}
