@@ -20,14 +20,12 @@
             <section>
                 <div class="admin-container form-container">
                     <h2 class="page-header">Participate</h2>
+                    <div class="screen-message error-message hide">
+                        Something went wrong. We are working on getting this fixed as soon as we can. Please try later.
+                    </div>
                     <div class="col-12">
                         <div class="">
-                            <div class="screen-message success-message hide">
-                                Thank you! A member of our staff will contact you within the next 24 hours.
-                            </div>
-                            <div class="screen-message error-message hide">
-                                Something went wrong. We are working on getting this fixed as soon as we can. Please try later.
-                            </div>
+            
                         </div>
                         <div id="participate-cnt">
                             <div id="participateUserDetails" class="hide participate-user-details">
@@ -35,13 +33,6 @@
                                     <div class="usection"><strong>Name:</strong>  <span data-firstName></span> <span data-lastName></span></div>
                                     <div class="usection"><strong>Email:</strong>  <span data-email></span></div>
                                     <div class="usection"><strong>Phone Number:</strong>  <span data-phoneNumber></span></div>
-            
-                                    <div class="screen-message success-message hide">
-                                        Thank you! A member of our staff will contact you within the next 24 hours.
-                                    </div>
-                                    <div class="screen-message error-message hide">
-                                        Something went wrong. We are working on getting this fixed as soon as we can. Please try later.
-                                    </div>
                                 </div>
                             </div>
                             <form id="ajaxParticipateForm" class="input-container participate-update-form hide"  data-type="participate">
@@ -247,6 +238,7 @@
                         </div>
                         <div class="button-wrapper">
                             <button id="create-team-form-submit" class="primary-btn">Create Team</button>
+                            <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
                         </div>
                     </div>
             
