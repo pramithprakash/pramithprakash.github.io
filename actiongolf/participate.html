@@ -84,22 +84,105 @@
                                 </div>
             
                                 <div class="button-wrapper">
-                                    <button id="participate-form-submit" class="primary-btn">Complete registration</button>
+                                    <button id="participate-complete-registration" class="primary-btn">Complete registration</button>
                                     <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
                                 </div>
                             </form>
             
-                            <div id="payNow" class="hide pay-now">
-                                <h3>Please complete the registration by making the payment</h3>
-                                <div class="pay-now-button">
-                                    <form name="PrePage" method = "post" action = "https://Simplecheckout.authorize.net/payment/CatalogPayment.aspx"> <input type = "hidden" name = "LinkId" value ="dbeeeb42-1ae5-44e6-a4b6-99c121a42843" /> <input type = "submit" value = "Register and Pay!" /> </form>
+                            <div id="payNow" class="input-container pay-now hide">
+                                <h3>Please make payment to participate the tournament</h3>
+                                <div class="pay-now-block">
+                                    <!-- payment form -->
+                                    <h5>Pay securely using your Credit Card</h5>
             
-                                    <!-- (c) 2005, 2023. Authorize.Net is a registered trademark of CyberSource Corporation --> <div class="AuthorizeNetSeal"> <script type="text/javascript" language="javascript">var ANS_customer_id="9fdb2c7a-8a75-4222-90c4-dbcbb2f71635";</script> <script type="text/javascript" language="javascript" src="//verify.authorize.net:443/anetseal/seal.js" ></script> </div>
+                                    <form id="paymentForm">
+                                        <div class="col-12">
+                                            <div class="styled-input">
+                                                <input type="text" name="amount" required
+                                                    class="number-only"
+                                                    maxlength="4"
+                                                    data-required="Amount is required."
+                                                    data-invalid="Please enter a valid Amount."
+                                                />
+                                                <label>Amount <sup>*</sup></label>
+                                                <span class="error-message required">Amount is required.</span>
+                                            </div>
+                                        </div>
+            
+                                        <div class="col-12">
+                                            <div class="styled-input">
+                                                <input type="text"
+                                                    name="cardNumber" id="cardNumber"
+                                                    required
+                                                    class="number-only"
+                                                    maxlength="16"
+                                                    data-required="Card Number is required."
+                                                    data-invalid="Please enter a valid Card Number."
+                                                />
+                                                <label>Card Number <sup>*</sup></label>
+                                                <span class="error-message required">Card Number is required.</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 card-exp-cvv">
+                                            <div class="card-fields">
+                                                <div class="styled-input">
+                                                    <input type="text"
+                                                        name="expMonth" id="expMonth"
+                                                        required
+                                                        class="number-only exp"
+                                                        maxlength="2"
+                                                        data-required="expiry is required."
+                                                        data-invalid="Please enter a valid expiry date (MM)."
+                                                    />
+                                                    <label>MM <sup>*</sup></label>
+                                                </div>
+                                            </div>
+                                            <div class="card-fields">
+                                                <div class="styled-input">
+                                                    <input type="text"
+                                                        name="expYear" id="expYear"
+                                                        required
+                                                        class="number-only exp"
+                                                        maxlength="4"
+                                                        data-required="expiry is required."
+                                                        data-invalid="Please enter a valid expiry date (YYYY)."
+                                                    />
+                                                    <label>YYYY <sup>*</sup></label>
+                                                </div>
+                                            </div>
+                                            <div class="card-fields">
+                                                <div class="styled-input cvv">
+                                                    <input type="text"
+                                                        name="cardCode" id="cardCode"
+                                                        required
+                                                        class="number-only"
+                                                        maxlength="3"
+                                                        data-required="CVV is required."
+                                                        data-invalid="Please enter a valid CVV."
+                                                    />
+                                                    <label>CVV <sup>*</sup></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <input type="hidden" name="dataValue" id="dataValue" />
+                                        <input type="hidden" name="dataDescriptor" id="dataDescriptor" />
+                                        <div class="button-wrapper">
+                                            <button id="participate-pay-button" class="primary-btn disabled-btn" disabled>Pay</button>
+                                            <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
+            
+                            <div id="participateNow" class="hide participate-now">
+                                <h3>Click below button to particpate the tournament</h3>
+                                <button id="participate-buttom" class="primary-btn">Participate now</button>
+                            </div>
+            
                             <div id="createTeam" class="hide">
                                 <div class="list-participate-wrapper"></div>
                             </div>
+            
                             <div id="yourTeam" class="hide">
                                 team details
                             </div>
@@ -186,6 +269,10 @@
                 </section>
             </footer>
         </main>
+        <script type="text/javascript"
+            src="https://jstest.authorize.net/v1/Accept.js"
+            charset="utf-8">
+        </script>
         <script  src="library/js/participate.js"></script>
     </body>
 </html>
