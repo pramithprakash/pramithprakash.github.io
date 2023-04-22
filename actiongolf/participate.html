@@ -79,7 +79,10 @@
                                         </div>
                                     </div>
                                     <div class="col-6">
-            
+                                        <!-- (c) 2005, 2023. Authorize.Net is a registered trademark of CyberSource Corporation -->
+                                        <div class="AuthorizeNetSeal">
+                                            <script type="text/javascript" language="javascript">var ANS_customer_id="9fdb2c7a-8a75-4222-90c4-dbcbb2f71635";</script> <script type="text/javascript" language="javascript" src="//verify.authorize.net:443/anetseal/seal.js" ></script>
+                                        </div>
                                     </div>
                                 </div>
             
@@ -97,71 +100,74 @@
             
                                     <form id="paymentForm">
                                         <div class="col-12">
-                                            <div class="styled-input">
-                                                <input type="text" name="amount" required
-                                                    class="number-only"
-                                                    maxlength="4"
-                                                    data-required="Amount is required."
-                                                    data-invalid="Please enter a valid Amount."
-                                                />
-                                                <label>Amount <sup>*</sup></label>
-                                                <span class="error-message required">Amount is required.</span>
-                                            </div>
-                                        </div>
-            
-                                        <div class="col-12">
-                                            <div class="styled-input">
-                                                <input type="text"
-                                                    name="cardNumber" id="cardNumber"
-                                                    required
-                                                    class="number-only"
-                                                    maxlength="16"
-                                                    data-required="Card Number is required."
-                                                    data-invalid="Please enter a valid Card Number."
-                                                />
-                                                <label>Card Number <sup>*</sup></label>
-                                                <span class="error-message required">Card Number is required.</span>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 card-exp-cvv">
-                                            <div class="card-fields">
+                                            <div class="col-6">
                                                 <div class="styled-input">
-                                                    <input type="text"
-                                                        name="expMonth" id="expMonth"
-                                                        required
-                                                        class="number-only exp"
-                                                        maxlength="2"
-                                                        data-required="expiry is required."
-                                                        data-invalid="Please enter a valid expiry date (MM)."
-                                                    />
-                                                    <label>MM <sup>*</sup></label>
-                                                </div>
-                                            </div>
-                                            <div class="card-fields">
-                                                <div class="styled-input">
-                                                    <input type="text"
-                                                        name="expYear" id="expYear"
-                                                        required
-                                                        class="number-only exp"
+                                                    <input type="text" name="amount" required
+                                                        class="number-only"
                                                         maxlength="4"
-                                                        data-required="expiry is required."
-                                                        data-invalid="Please enter a valid expiry date (YYYY)."
+                                                        data-required="Amount is required."
+                                                        data-invalid="Please enter a valid Amount."
                                                     />
-                                                    <label>YYYY <sup>*</sup></label>
+                                                    <label>Amount <sup>*</sup></label>
+                                                    <span class="error-message required">Amount is required.</span>
                                                 </div>
-                                            </div>
-                                            <div class="card-fields">
-                                                <div class="styled-input cvv">
+            
+                                                <div class="styled-input">
                                                     <input type="text"
-                                                        name="cardCode" id="cardCode"
+                                                        name="cardNumber" id="cardNumber"
                                                         required
                                                         class="number-only"
-                                                        maxlength="3"
-                                                        data-required="CVV is required."
-                                                        data-invalid="Please enter a valid CVV."
+                                                        maxlength="16"
+                                                        data-required="Card Number is required."
+                                                        data-invalid="Please enter a valid Card Number."
                                                     />
-                                                    <label>CVV <sup>*</sup></label>
+                                                    <label>Card Number <sup>*</sup></label>
+                                                    <span class="error-message required">Card Number is required.</span>
                                                 </div>
+                                                <div class="card-exp-cvv">
+                                                    <div class="card-fields">
+                                                        <div class="styled-input">
+                                                            <input type="text"
+                                                                name="expMonth" id="expMonth"
+                                                                required
+                                                                class="number-only exp"
+                                                                maxlength="2"
+                                                                data-required="expiry is required."
+                                                                data-invalid="Please enter a valid expiry date (MM)."
+                                                            />
+                                                            <label>MM <sup>*</sup></label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-fields">
+                                                        <div class="styled-input">
+                                                            <input type="text"
+                                                                name="expYear" id="expYear"
+                                                                required
+                                                                class="number-only exp"
+                                                                maxlength="4"
+                                                                data-required="expiry is required."
+                                                                data-invalid="Please enter a valid expiry date (YYYY)."
+                                                            />
+                                                            <label>YYYY <sup>*</sup></label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-fields">
+                                                        <div class="styled-input cvv">
+                                                            <input type="text"
+                                                                name="cardCode" id="cardCode"
+                                                                required
+                                                                class="number-only"
+                                                                maxlength="3"
+                                                                data-required="CVV is required."
+                                                                data-invalid="Please enter a valid CVV."
+                                                            />
+                                                            <label>CVV <sup>*</sup></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+            
                                             </div>
                                         </div>
                                         <input type="hidden" name="dataValue" id="dataValue" />
